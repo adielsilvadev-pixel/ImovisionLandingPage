@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Imovision Digital - Artigos sobre automação, IA e transformação digital para o mercado imobiliário.">
+    <title>Blog - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html#solucao">Solução</a></li>
+                    <li><a href="index.html#beneficios">Benefícios</a></li>
+                    <li><a href="index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="index.html#resultados">Resultados</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Blog</span>
+                <h1 class="section-title">Insights para o Mercado Imobiliário</h1>
+                <p class="section-description">
+                    Artigos sobre automação, inteligência artificial e transformação digital para imobiliárias.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-listagem">
+        <div class="container">
+            <!-- Filtros de categoria -->
+            <div class="blog-filtros" id="blogFiltros">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+            </div>
+
+            <!-- Grid de artigos -->
+            <div class="blog-grid" id="blogGrid">
+                <div class="blog-loading">
+                    <div class="loading-spinner"></div>
+                    <p>A carregar artigos...</p>
+                </div>
+            </div>
+
+            <!-- Sem resultados -->
+            <div class="blog-empty" id="blogEmpty" style="display:none;">
+                <p>Nenhum artigo encontrado nesta categoria.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Pronto para Transformar a sua Imobiliária?</h2>
+                <p>Agende uma demonstração gratuita e veja como a Imovision Digital pode revolucionar os seus resultados.</p>
+                <a href="index.html#contato" class="btn btn-primary btn-large">Agendar Demonstração Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#solucao">Solução</a></li>
+                        <li><a href="index.html#beneficios">Benefícios</a></li>
+                        <li><a href="index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="index.html#resultados">Resultados</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        let todosArtigos = [];
+        let categoriaAtiva = 'todos';
+
+        async function carregarArtigos() {
+            try {
+                const resposta = await fetch('artigos.json');
+                todosArtigos = await resposta.json();
+                todosArtigos.sort((a, b) => new Date(b.data) - new Date(a.data));
+                construirFiltros();
+                renderizarArtigos(todosArtigos);
+            } catch (erro) {
+                document.getElementById('blogGrid').innerHTML =
+                    '<p class="blog-erro">Não foi possível carregar os artigos. Tente novamente mais tarde.</p>';
+            }
+        }
+
+        function construirFiltros() {
+            const categorias = ['todos', ...new Set(todosArtigos.map(a => a.categoria))];
+            const filtrosEl = document.getElementById('blogFiltros');
+            filtrosEl.innerHTML = categorias.map(cat => `
+                <button class="filtro-btn ${cat === 'todos' ? 'active' : ''}" data-categoria="${cat}">
+                    ${cat === 'todos' ? 'Todos' : cat}
+                </button>
+            `).join('');
+
+            filtrosEl.querySelectorAll('.filtro-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filtrosEl.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    categoriaAtiva = btn.dataset.categoria;
+                    const filtrados = categoriaAtiva === 'todos'
+                        ? todosArtigos
+                        : todosArtigos.filter(a => a.categoria === categoriaAtiva);
+                    renderizarArtigos(filtrados);
+                });
+            });
+        }
+
+        function renderizarArtigos(artigos) {
+            const grid = document.getElementById('blogGrid');
+            const empty = document.getElementById('blogEmpty');
+
+            if (artigos.length === 0) {
+                grid.innerHTML = '';
+                empty.style.display = 'block';
+                return;
+            }
+            empty.style.display = 'none';
+
+            grid.innerHTML = artigos.map(artigo => `
+                <article class="blog-card">
+                    <div class="blog-card-categoria">${artigo.categoria}</div>
+                    <div class="blog-card-body">
+                        <h2 class="blog-card-titulo">
+                            <a href="${artigo.url}">${artigo.titulo}</a>
+                        </h2>
+                        <p class="blog-card-resumo">${artigo.resumo}</p>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-data">${artigo.dataFormatada}</span>
+                            <span class="blog-card-tempo">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                ${artigo.tempoLeitura} de leitura
+                            </span>
+                        </div>
+                        <a href="${artigo.url}" class="blog-card-link">
+                            Ler artigo
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        carregarArtigos();
+    </script>
+</body>
+</html>

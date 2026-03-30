@@ -1,0 +1,32 @@
+[
+  {
+    "id": "automacao-imobiliaria-2024",
+    "titulo": "Como a Automação Está Transformando o Mercado Imobiliário",
+    "resumo": "Descubra como as imobiliárias líderes estão a usar inteligência artificial e automação para gerar mais leads, fechar mais negócios e libertar a equipa de tarefas repetitivas.",
+    "categoria": "Automação",
+    "data": "2024-03-10",
+    "dataFormatada": "10 de Março de 2024",
+    "tempoLeitura": "6 min",
+    "url": "artigos/automacao-imobiliaria-2024.html"
+  },
+  {
+    "id": "5-estrategias-leads-qualificados",
+    "titulo": "5 Estratégias para Gerar Mais Leads Qualificados na sua Imobiliária",
+    "resumo": "Aprenda as táticas que as melhores imobiliárias usam para atrair compradores e vendedores com real interesse, reduzindo o desperdício de tempo com contactos que não convertem.",
+    "categoria": "Geração de Leads",
+    "data": "2024-02-20",
+    "dataFormatada": "20 de Fevereiro de 2024",
+    "tempoLeitura": "8 min",
+    "url": "artigos/5-estrategias-leads-qualificados.html"
+  },
+  {
+    "id": "ia-setor-imobiliario-guia",
+    "titulo": "Inteligência Artificial no Setor Imobiliário: O Guia Completo",
+    "resumo": "Tudo o que precisa de saber sobre como a IA está a mudar o imobiliário — desde a avaliação automática de imóveis até à previsão de tendências de mercado.",
+    "categoria": "Inteligência Artificial",
+    "data": "2024-01-15",
+    "dataFormatada": "15 de Janeiro de 2024",
+    "tempoLeitura": "10 min",
+    "url": "artigos/ia-setor-imobiliario-guia.html"
+  }
+]

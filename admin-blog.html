@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Blog - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="logo_imagotipo_-08.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-black: #000000;
+            --color-blue: #0369BF;
+            --color-yellow: #D9D906;
+            --color-light-gray: #F2F2F2;
+            --color-white: #FFFFFF;
+            --font-title: 'Space Grotesk', sans-serif;
+            --font-text: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-text);
+            background: #f8f9fa;
+            color: var(--color-black);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .admin-header {
+            background: var(--color-white);
+            border-bottom: 3px solid var(--color-blue);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .admin-header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .admin-logo { height: 45px; width: auto; }
+
+        .admin-header h1 {
+            font-family: var(--font-title);
+            font-size: 1.25rem;
+            color: var(--color-blue);
+        }
+
+        .admin-header-right { display: flex; gap: 0.75rem; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            border: none;
+            transition: all 0.2s;
+            font-family: var(--font-text);
+        }
+
+        .btn-primary { background: var(--color-blue); color: white; }
+        .btn-primary:hover { background: #0256a0; transform: translateY(-1px); }
+        .btn-secondary { background: var(--color-light-gray); color: var(--color-black); }
+        .btn-secondary:hover { background: #e0e0e0; }
+        .btn-success { background: #10b981; color: white; }
+        .btn-success:hover { background: #059669; }
+        .btn-outline { background: transparent; color: var(--color-blue); border: 2px solid var(--color-blue); }
+        .btn-outline:hover { background: var(--color-blue); color: white; }
+        .btn-sm { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+        .btn-lg { padding: 0.9rem 2rem; font-size: 1rem; }
+
+        /* Layout */
+        .admin-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 0;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--color-white);
+            border-right: 1px solid #e5e7eb;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        .sidebar-section-title {
+            font-family: var(--font-title);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .artigo-existente {
+            background: var(--color-light-gray);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border-left: 3px solid var(--color-blue);
+            cursor: default;
+        }
+
+        .artigo-existente-titulo {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            color: var(--color-black);
+        }
+
+        .artigo-existente-meta {
+            font-size: 0.78rem;
+            color: #6b7280;
+        }
+
+        .artigo-existente-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .categoria-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            background: var(--color-blue);
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .tab-bar {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0;
+        }
+
+        .tab-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: transparent;
+            font-family: var(--font-text);
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #6b7280;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            color: var(--color-blue);
+            border-bottom-color: var(--color-blue);
+        }
+
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+
+        /* Form */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group.full-width { grid-column: 1 / -1; }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #374151;
+        }
+
+        .form-group label span.req { color: #ef4444; }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.65rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: var(--font-text);
+            transition: border-color 0.2s;
+            color: var(--color-black);
+            background: var(--color-white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-blue);
+        }
+
+        .form-group .hint {
+            font-size: 0.78rem;
+            color: #6b7280;
+        }
+
+        /* Editor */
+        .editor-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            padding: 0.6rem;
+            background: var(--color-light-gray);
+            border: 2px solid #e5e7eb;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .editor-toolbar-sep {
+            width: 1px;
+            background: #d1d5db;
+            margin: 0 0.2rem;
+        }
+
+        .toolbar-btn {
+            padding: 0.3rem 0.6rem;
+            border: 1px solid #d1d5db;
+            background: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #374151;
+            transition: all 0.15s;
+            font-family: var(--font-text);
+        }
+
+        .toolbar-btn:hover { background: var(--color-blue); color: white; border-color: var(--color-blue); }
+
+        .editor-content {
+            min-height: 350px;
+            border: 2px solid #e5e7eb;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            padding: 1.25rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-family: var(--font-text);
+            outline: none;
+            background: white;
+            overflow-y: auto;
+        }
+
+        .editor-content:focus { border-color: var(--color-blue); }
+
+        .editor-content h2 {
+            font-family: var(--font-title);
+            font-size: 1.5rem;
+            margin: 1.25rem 0 0.75rem;
+            color: var(--color-black);
+        }
+
+        .editor-content h3 {
+            font-family: var(--font-title);
+            font-size: 1.2rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .editor-content p { margin-bottom: 0.75rem; }
+
+        .editor-content ul, .editor-content ol {
+            margin: 0.75rem 0 0.75rem 1.5rem;
+        }
+
+        .editor-content li { margin-bottom: 0.3rem; }
+
+        .editor-content a { color: var(--color-blue); }
+
+        .editor-content strong { font-weight: 700; }
+
+        /* Card container */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card-title {
+            font-family: var(--font-title);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--color-light-gray);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Output area */
+        .output-section { margin-top: 2rem; }
+
+        .output-box {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 10px;
+            padding: 1.25rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            line-height: 1.6;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .output-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .output-label {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Steps */
+        .steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            min-width: 32px;
+            height: 32px;
+            background: var(--color-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .step-text { padding-top: 0.2rem; line-height: 1.5; font-size: 0.95rem; }
+        .step-text strong { color: var(--color-blue); }
+
+        /* Preview */
+        .preview-iframe-wrapper {
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .preview-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            background: white;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .alert-info { background: #eff6ff; border-left: 4px solid var(--color-blue); color: #1d4ed8; }
+        .alert-success { background: #f0fdf4; border-left: 4px solid #10b981; color: #065f46; }
+        .alert-warning { background: #fffbeb; border-left: 4px solid #f59e0b; color: #92400e; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .admin-layout { grid-template-columns: 1fr; }
+            .sidebar { border-right: none; border-bottom: 1px solid #e5e7eb; }
+            .form-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 90px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            z-index: 9999;
+            animation: slideIn 0.3s ease-out;
+            max-width: 380px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(120%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .copy-success { background: #10b981; }
+        .copy-default { background: var(--color-blue); }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 2rem;
+            color: #6b7280;
+        }
+
+        .loading-inline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #e5e7eb;
+            border-top-color: var(--color-blue);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="admin-header">
+    <div class="admin-header-left">
+        <img src="logo_imagotipo_horizontal_cortada.png" alt="Imovision" class="admin-logo">
+        <div>
+            <div style="font-size:0.7rem; color:#6b7280; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Administração</div>
+            <h1>Gestão do Blog</h1>
+        </div>
+    </div>
+    <div class="admin-header-right">
+        <a href="blog.html" target="_blank" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Ver Blog
+        </a>
+        <a href="index.html" target="_blank" class="btn btn-secondary btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Site
+        </a>
+    </div>
+</header>
+
+<div class="admin-layout">
+    <!-- Sidebar: artigos existentes -->
+    <aside class="sidebar">
+        <div class="sidebar-section-title">Artigos Publicados</div>
+        <div id="listaArtigos">
+            <div class="loading-inline">
+                <div class="spinner"></div>
+                A carregar...
+            </div>
+        </div>
+        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+            <button class="btn btn-primary" style="width:100%;" onclick="mostrarTab('criar')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Novo Artigo
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+        <div class="tab-bar">
+            <button class="tab-btn active" onclick="mostrarTab('criar')" id="tab-criar">✍️ Criar Artigo</button>
+            <button class="tab-btn" onclick="mostrarTab('instrucoes')" id="tab-instrucoes">📋 Como Publicar</button>
+        </div>
+
+        <!-- TAB: Criar Artigo -->
+        <div class="tab-panel active" id="panel-criar">
+            <div class="alert alert-info">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="min-width:18px;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <div>Preencha os campos abaixo e clique em <strong>Gerar Ficheiros</strong>. Receberá o HTML do artigo e a entrada JSON prontos a usar.</div>
+            </div>
+
+            <!-- Metadados -->
+            <div class="card">
+                <div class="card-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Informações do Artigo
+                </div>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Título <span class="req">*</span></label>
+                        <input type="text" id="f-titulo" placeholder="Ex: Como a IA está a transformar as vendas imobiliárias">
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria <span class="req">*</span></label>
+                        <input type="text" id="f-categoria" list="categorias-list" placeholder="Ex: Automação, IA, Leads...">
+                        <datalist id="categorias-list">
+                            <option value="Automação">
+                            <option value="Inteligência Artificial">
+                            <option value="Geração de Leads">
+                            <option value="Mercado Imobiliário">
+                            <option value="Tecnologia">
+                            <option value="Vendas">
+                            <option value="Marketing Digital">
+                        </datalist>
+                        <span class="hint">Pode escrever uma nova ou escolher das sugestões</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Autor <span class="req">*</span></label>
+                        <input type="text" id="f-autor" value="Equipa Imovision Digital" placeholder="Nome do autor">
+                    </div>
+                    <div class="form-group">
+                        <label>Data de Publicação <span class="req">*</span></label>
+                        <input type="date" id="f-data">
+                    </div>
+                    <div class="form-group">
+                        <label>Tempo de Leitura <span class="req">*</span></label>
+                        <input type="text" id="f-tempo" placeholder="Ex: 5 min" value="5 min">
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Resumo / Descrição <span class="req">*</span></label>
+                        <textarea id="f-resumo" rows="3" placeholder="Uma ou duas frases que descrevem o artigo. Aparece no cartão do blog."></textarea>
+                        <span class="hint">Idealmente entre 100–200 caracteres</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editor de conteúdo -->
+            <div class="card">
+                <div class="card-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    Conteúdo do Artigo
+                </div>
+
+                <!-- Toolbar -->
+                <div class="editor-toolbar">
+                    <button class="toolbar-btn" onclick="formatarTexto('h2')" title="Título H2">H2</button>
+                    <button class="toolbar-btn" onclick="formatarTexto('h3')" title="Título H3">H3</button>
+                    <div class="editor-toolbar-sep"></div>
+                    <button class="toolbar-btn" onclick="formatarTexto('bold')" title="Negrito"><b>B</b></button>
+                    <button class="toolbar-btn" onclick="formatarTexto('italic')" title="Itálico"><i>I</i></button>
+                    <div class="editor-toolbar-sep"></div>
+                    <button class="toolbar-btn" onclick="formatarTexto('insertUnorderedList')" title="Lista">• Lista</button>
+                    <button class="toolbar-btn" onclick="formatarTexto('insertOrderedList')" title="Lista numerada">1. Lista</button>
+                    <div class="editor-toolbar-sep"></div>
+                    <button class="toolbar-btn" onclick="inserirLink()" title="Inserir link">🔗 Link</button>
+                    <div class="editor-toolbar-sep"></div>
+                    <button class="toolbar-btn" onclick="limparEditor()" title="Limpar tudo" style="color:#ef4444">✕ Limpar</button>
+                </div>
+
+                <!-- Contenteditable editor -->
+                <div
+                    id="editor"
+                    class="editor-content"
+                    contenteditable="true"
+                    spellcheck="true"
+                ><h2>Introdução</h2><p>Escreva aqui o conteúdo do seu artigo. Use os botões da barra acima para formatar o texto.</p><h2>Desenvolvimento</h2><p>Adicione mais secções conforme necessário...</p><h2>Conclusão</h2><p>Termine com uma chamada à ação relevante.</p></div>
+            </div>
+
+            <!-- Botão gerar -->
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                <button class="btn btn-primary btn-lg" onclick="gerarFicheiros()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/><path d="M9 18H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></svg>
+                    Gerar Ficheiros
+                </button>
+                <button class="btn btn-secondary btn-lg" onclick="limparFormulario()">
+                    Limpar Formulário
+                </button>
+            </div>
+
+            <!-- Output -->
+            <div class="output-section" id="outputSection" style="display:none;">
+                <div class="alert alert-success">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="min-width:18px;margin-top:1px"><polyline points="20 6 9 17 4 12"/></svg>
+                    <div>Ficheiros gerados com sucesso! Siga os passos abaixo para publicar o artigo.</div>
+                </div>
+
+                <!-- HTML File -->
+                <div class="card">
+                    <div class="card-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        Ficheiro HTML do Artigo
+                    </div>
+                    <div class="output-header">
+                        <span class="output-label">
+                            <span id="nomeArquivoDisplay" style="font-family:monospace; background:#f3f4f6; padding:0.2rem 0.5rem; border-radius:4px;"></span>
+                        </span>
+                        <div style="display:flex;gap:0.5rem;">
+                            <button class="btn btn-success btn-sm" onclick="downloadHTML()">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download HTML
+                            </button>
+                            <button class="btn btn-secondary btn-sm" onclick="copiarHTML()">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                                Copiar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="output-box" id="htmlOutput"></div>
+                    <p style="font-size:0.82rem;color:#6b7280;margin-top:0.75rem;">
+                        💾 Faça download e guarde em: <strong>artigos/<span id="nomeArquivoHint"></span></strong>
+                    </p>
+                </div>
+
+                <!-- JSON Entry -->
+                <div class="card">
+                    <div class="card-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        Entrada para artigos.json
+                    </div>
+                    <div class="output-header">
+                        <span class="output-label">Copie e adicione ao ficheiro <code style="background:#f3f4f6;padding:0.15rem 0.4rem;border-radius:4px;">artigos.json</code></span>
+                        <button class="btn btn-secondary btn-sm" onclick="copiarJSON()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Copiar JSON
+                        </button>
+                    </div>
+                    <div class="output-box" id="jsonOutput"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Instruções -->
+        <div class="tab-panel" id="panel-instrucoes">
+            <div class="card">
+                <div class="card-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Como Publicar um Novo Artigo
+                </div>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-text">
+                            Vá ao separador <strong>✍️ Criar Artigo</strong> e preencha todos os campos obrigatórios: título, categoria, autor, data, resumo e conteúdo.
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-text">
+                            Clique em <strong>"Gerar Ficheiros"</strong>. A página vai gerar automaticamente o HTML do artigo e a entrada JSON correspondente.
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-text">
+                            Clique em <strong>"Download HTML"</strong> e guarde o ficheiro dentro da pasta <code style="background:#f3f4f6;padding:0.1rem 0.4rem;border-radius:4px;">artigos/</code>. O nome do ficheiro já será gerado automaticamente a partir do título.
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-text">
+                            Abra o ficheiro <code style="background:#f3f4f6;padding:0.1rem 0.4rem;border-radius:4px;">artigos.json</code> e adicione a entrada JSON gerada ao array (antes do primeiro artigo ou no final, antes do <code>]</code>). <strong>Não esqueça a vírgula entre entradas!</strong>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">5</div>
+                        <div class="step-text">
+                            Pronto! O novo artigo já aparece no blog automaticamente, sem precisar tocar em mais nenhum ficheiro.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Estrutura de Ficheiros do Blog
+                </div>
+                <div class="output-box" style="font-size:0.9rem;">ImovisionLandingPage/
+├── artigos.json          ← índice de todos os artigos
+├── blog.html             ← listagem do blog
+├── admin-blog.html       ← esta página de administração
+└── artigos/              ← pasta com os HTMLs dos artigos
+    ├── automacao-imobiliaria-2024.html
+    ├── 5-estrategias-leads-qualificados.html
+    ├── ia-setor-imobiliario-guia.html
+    └── [novo-artigo].html  ← aqui guarda os novos artigos</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    Dicas de Formatação do Editor
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;font-size:0.9rem;line-height:1.6;">
+                    <div>
+                        <p><strong>H2</strong> — Título de secção principal</p>
+                        <p><strong>H3</strong> — Subtítulo dentro de uma secção</p>
+                        <p><strong>B</strong> — Texto em negrito para destaque</p>
+                        <p><strong>I</strong> — Itálico para termos técnicos</p>
+                    </div>
+                    <div>
+                        <p><strong>• Lista</strong> — Lista de pontos/tópicos</p>
+                        <p><strong>1. Lista</strong> — Lista numerada/passos</p>
+                        <p><strong>🔗 Link</strong> — Inserir hiperligação</p>
+                        <p><strong>✕ Limpar</strong> — Apaga todo o conteúdo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+// =============================================
+// UTILIDADES
+// =============================================
+
+function gerarSlug(texto) {
+    return texto
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9\s-]/g, '')
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .substring(0, 60);
+}
+
+function formatarDataPt(dataStr) {
+    if (!dataStr) return '';
+    const meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+    const [ano, mes, dia] = dataStr.split('-');
+    return `${parseInt(dia)} de ${meses[parseInt(mes)-1]} de ${ano}`;
+}
+
+function mostrarNotificacao(msg, tipo = 'default') {
+    const existing = document.querySelector('.notification');
+    if (existing) existing.remove();
+    const n = document.createElement('div');
+    n.className = `notification copy-${tipo}`;
+    n.textContent = msg;
+    document.body.appendChild(n);
+    setTimeout(() => { n.style.opacity = '0'; n.style.transition = 'opacity 0.3s'; setTimeout(() => n.remove(), 300); }, 2500);
+}
+
+// =============================================
+// TABS
+// =============================================
+
+function mostrarTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
+}
+
+// =============================================
+// EDITOR
+// =============================================
+
+function formatarTexto(comando) {
+    const editor = document.getElementById('editor');
+    editor.focus();
+    if (comando === 'h2' || comando === 'h3') {
+        document.execCommand('formatBlock', false, '<' + comando + '>');
+    } else {
+        document.execCommand(comando, false, null);
+    }
+}
+
+function inserirLink() {
+    const url = prompt('URL do link (ex: https://imovisiondigital.pt):');
+    if (!url) return;
+    const texto = prompt('Texto do link:') || url;
+    document.getElementById('editor').focus();
+    document.execCommand('insertHTML', false, `<a href="${url}" target="_blank">${texto}</a>`);
+}
+
+function limparEditor() {
+    if (confirm('Tem a certeza que quer limpar todo o conteúdo do editor?')) {
+        document.getElementById('editor').innerHTML = '<p>Escreva aqui o conteúdo do artigo...</p>';
+    }
+}
+
+function limparFormulario() {
+    if (!confirm('Tem a certeza que quer limpar todo o formulário?')) return;
+    document.getElementById('f-titulo').value = '';
+    document.getElementById('f-categoria').value = '';
+    document.getElementById('f-autor').value = 'Equipa Imovision Digital';
+    document.getElementById('f-data').value = '';
+    document.getElementById('f-tempo').value = '5 min';
+    document.getElementById('f-resumo').value = '';
+    document.getElementById('editor').innerHTML = '<h2>Introdução</h2><p>Escreva aqui o conteúdo do artigo...</p>';
+    document.getElementById('outputSection').style.display = 'none';
+}
+
+// =============================================
+// GERAR FICHEIROS
+// =============================================
+
+let htmlGerado = '';
+let jsonGerado = '';
+let nomeArquivo = '';
+
+function gerarFicheiros() {
+    const titulo = document.getElementById('f-titulo').value.trim();
+    const categoria = document.getElementById('f-categoria').value.trim();
+    const autor = document.getElementById('f-autor').value.trim();
+    const data = document.getElementById('f-data').value;
+    const tempo = document.getElementById('f-tempo').value.trim();
+    const resumo = document.getElementById('f-resumo').value.trim();
+    const conteudo = document.getElementById('editor').innerHTML;
+
+    // Validar campos obrigatórios
+    if (!titulo || !categoria || !autor || !data || !tempo || !resumo) {
+        mostrarNotificacao('⚠️ Preencha todos os campos obrigatórios!', 'default');
+        return;
+    }
+
+    const slug = gerarSlug(titulo);
+    const dataFormatada = formatarDataPt(data);
+    nomeArquivo = slug + '.html';
+
+    // Gerar HTML
+    htmlGerado = gerarHTMLArtigo({ titulo, categoria, autor, data, dataFormatada, tempo, resumo, conteudo, slug });
+
+    // Gerar JSON
+    const entradaJSON = {
+        id: slug,
+        titulo,
+        resumo,
+        categoria,
+        data,
+        dataFormatada,
+        tempoLeitura: tempo,
+        url: `artigos/${nomeArquivo}`
+    };
+    jsonGerado = JSON.stringify(entradaJSON, null, 2) + ',';
+
+    // Mostrar outputs
+    document.getElementById('htmlOutput').textContent = htmlGerado;
+    document.getElementById('jsonOutput').textContent = jsonGerado;
+    document.getElementById('nomeArquivoDisplay').textContent = nomeArquivo;
+    document.getElementById('nomeArquivoHint').textContent = nomeArquivo;
+    document.getElementById('outputSection').style.display = 'block';
+
+    // Scroll até output
+    document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    mostrarNotificacao('✓ Ficheiros gerados com sucesso!', 'success');
+}
+
+function gerarHTMLArtigo({ titulo, categoria, autor, dataFormatada, tempo, resumo, conteudo }) {
+    return `<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="${resumo.replace(/"/g, '&quot;')}">
+    <title>${titulo} - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="../logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#solucao">Solução</a></li>
+                    <li><a href="../index.html#beneficios">Benefícios</a></li>
+                    <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="../index.html#resultados">Resultados</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artigo -->
+    <main class="artigo-main">
+        <div class="container">
+            <nav class="artigo-breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="../blog.html">Blog</a>
+                <span>/</span>
+                <span>${titulo}</span>
+            </nav>
+
+            <article class="artigo-conteudo">
+                <header class="artigo-header">
+                    <div class="blog-card-categoria">${categoria}</div>
+                    <h1 class="artigo-titulo">${titulo}</h1>
+                    <div class="artigo-meta">
+                        <span class="artigo-autor">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            ${autor}
+                        </span>
+                        <span class="artigo-data">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            ${dataFormatada}
+                        </span>
+                        <span class="artigo-tempo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            ${tempo} de leitura
+                        </span>
+                    </div>
+                    <p class="artigo-resumo">${resumo}</p>
+                </header>
+
+                <div class="artigo-corpo">
+                    ${conteudo}
+                </div>
+
+                <footer class="artigo-footer">
+                    <a href="../blog.html" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar ao Blog
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Pronto para Transformar a sua Imobiliária?</h2>
+                <p>Agende uma demonstração gratuita e veja como a Imovision Digital pode revolucionar os seus resultados.</p>
+                <a href="../index.html#contato" class="btn btn-primary btn-large">Agendar Demonstração Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#solucao">Solução</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="../index.html#resultados">Resultados</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ${new Date().getFullYear()} Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"><\/script>
+</body>
+</html>`;
+}
+
+// =============================================
+// DOWNLOAD / COPIAR
+// =============================================
+
+function downloadHTML() {
+    if (!htmlGerado) return;
+    const blob = new Blob([htmlGerado], { type: 'text/html;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = nomeArquivo;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    mostrarNotificacao('✓ HTML descarregado: ' + nomeArquivo, 'success');
+}
+
+function copiarHTML() {
+    navigator.clipboard.writeText(htmlGerado)
+        .then(() => mostrarNotificacao('✓ HTML copiado para a área de transferência!', 'success'))
+        .catch(() => mostrarNotificacao('Erro ao copiar. Selecione e copie manualmente.', 'default'));
+}
+
+function copiarJSON() {
+    navigator.clipboard.writeText(jsonGerado)
+        .then(() => mostrarNotificacao('✓ JSON copiado!', 'success'))
+        .catch(() => mostrarNotificacao('Erro ao copiar. Selecione e copie manualmente.', 'default'));
+}
+
+// =============================================
+// CARREGAR ARTIGOS EXISTENTES
+// =============================================
+
+async function carregarArtigosExistentes() {
+    const lista = document.getElementById('listaArtigos');
+    try {
+        const resp = await fetch('artigos.json');
+        const artigos = await resp.json();
+        artigos.sort((a, b) => new Date(b.data) - new Date(a.data));
+
+        if (artigos.length === 0) {
+            lista.innerHTML = '<div class="empty-state">Nenhum artigo publicado.</div>';
+            return;
+        }
+
+        lista.innerHTML = artigos.map(a => `
+            <div class="artigo-existente">
+                <div class="categoria-badge">${a.categoria}</div>
+                <div class="artigo-existente-titulo">${a.titulo}</div>
+                <div class="artigo-existente-meta">${a.dataFormatada} · ${a.tempoLeitura} leitura</div>
+                <div class="artigo-existente-actions">
+                    <a href="${a.url}" target="_blank" class="btn btn-secondary btn-sm">Ver</a>
+                </div>
+            </div>
+        `).join('');
+    } catch (e) {
+        lista.innerHTML = `
+            <div class="alert alert-warning" style="font-size:0.82rem;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="min-width:16px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <div>Não foi possível carregar os artigos. Abra esta página via servidor local (não file://).</div>
+            </div>`;
+    }
+}
+
+// =============================================
+// INIT
+// =============================================
+
+// Preencher data de hoje por defeito
+document.getElementById('f-data').value = new Date().toISOString().split('T')[0];
+
+carregarArtigosExistentes();
+</script>
+</body>
+</html>
