@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preços +18,9%, transações -4,7% e Euribor a subir pela 1ª vez desde 2024. Os números reais do mercado imobiliário português em 2026 — e o que deves fazer já.">
+    <title>Mercado Imobiliário Português em 2026: O Que os Números Dizem - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="../logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Numeração das secções de dados */
+        .dado-numero {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #0369BF, #0284d4);
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-radius: 50%;
+            margin-right: 0.6rem;
+            flex-shrink: 0;
+            font-family: var(--font-title, 'Space Grotesk', sans-serif);
+        }
+
+        .dado-titulo {
+            display: flex;
+            align-items: center;
+            margin-top: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .dado-titulo h2 {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0d0e12;
+            line-height: 1.35;
+        }
+
+        .dado-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(3, 105, 191, 0.08);
+            border: 1px solid rgba(3, 105, 191, 0.2);
+            color: #0369BF;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .dado-tag.subida {
+            background: rgba(220, 38, 38, 0.08);
+            border-color: rgba(220, 38, 38, 0.2);
+            color: #dc2626;
+        }
+
+        .dado-tag.descida {
+            background: rgba(22, 163, 74, 0.08);
+            border-color: rgba(22, 163, 74, 0.2);
+            color: #16a34a;
+        }
+
+        .dado-tag.atencao {
+            background: rgba(217, 119, 6, 0.08);
+            border-color: rgba(217, 119, 6, 0.2);
+            color: #d97706;
+        }
+
+        .separador-artigo {
+            border: none;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            margin: 2rem 0;
+        }
+
+        /* Caixa de estatísticas em destaque */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 2.5rem 0;
+        }
+
+        .stat-card {
+            background: #0d0e12;
+            border: 1px solid rgba(3, 105, 191, 0.25);
+            border-radius: 14px;
+            padding: 1.5rem 1.3rem;
+            color: #fff;
+            text-align: left;
+        }
+
+        .stat-card .stat-value {
+            font-family: var(--font-title, 'Space Grotesk', sans-serif);
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .stat-card .stat-value.up {
+            color: #ff6b6b;
+        }
+
+        .stat-card .stat-value.down {
+            color: #3ddc97;
+        }
+
+        .stat-card .stat-label {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.82rem;
+            line-height: 1.4;
+        }
+
+        .stat-card .stat-source {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.7rem;
+            margin-top: 0.6rem;
+            display: block;
+        }
+
+        .resumo-numeros {
+            background: #0d0e12;
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            border: 1px solid rgba(3, 105, 191, 0.25);
+        }
+
+        .resumo-numeros h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 0 0 1.2rem;
+        }
+
+        .resumo-numeros ul {
+            margin: 0;
+            padding-left: 1.2rem;
+            list-style: none;
+        }
+
+        .resumo-numeros li {
+            color: rgba(255,255,255,0.78);
+            font-size: 0.92rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.55;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .resumo-numeros li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #0369BF;
+            font-weight: 700;
+        }
+
+        .resumo-numeros li strong {
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .resumo-numeros { padding: 1.5rem; }
+            .stat-card .stat-value { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#solucao">Solução</a></li>
+                    <li><a href="../index.html#beneficios">Benefícios</a></li>
+                    <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="../index.html#resultados">Resultados</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artigo -->
+    <main class="artigo-main">
+        <div class="container">
+            <nav class="artigo-breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="../blog.html">Blog</a>
+                <span>/</span>
+                <span>Mercado Imobiliário Português em 2026</span>
+            </nav>
+
+            <article class="artigo-conteudo">
+                <header class="artigo-header">
+                    <div class="blog-card-categoria">Mercado &amp; Tendências</div>
+
+                    <h1 class="artigo-titulo">Mercado Imobiliário Português em 2026: O Que os Números Dizem — e O Que Tens Mesmo de Fazer</h1>
+
+                    <div class="artigo-meta">
+                        <span class="artigo-autor">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Equipa Imovision Digital
+                        </span>
+                        <span class="artigo-data">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            22 de Abril de 2026
+                        </span>
+                        <span class="artigo-tempo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            10 min de leitura
+                        </span>
+                    </div>
+
+                    <p class="artigo-resumo">Os preços subiram 18,9% em 2025, as transações caíram 4,7% no último trimestre, a Euribor voltou a mexer pela primeira vez desde janeiro de 2024 e o peso dos estrangeiros desceu para 27,6%. O mercado não está a arrefecer — está a mudar de ciclo. Quem perceber os sinais primeiro vai fechar os negócios que os outros vão perder.</p>
+                </header>
+
+                <!-- Corpo do artigo -->
+                <div class="artigo-corpo">
+
+                    <p>Se ouvires dez consultores imobiliários a descrever o mercado português neste momento, vais ouvir dez versões diferentes. Uns dizem que está "a rebentar pelas costuras". Outros juram que "finalmente começou a arrefecer". Um terceiro grupo garante que "nunca foi tão difícil vender".</p>
+
+                    <p>Todos eles têm parte de razão — e é precisamente por isso que nenhum deles tem razão toda. O mercado imobiliário em Portugal, em 2026, está no ponto mais contraditório dos últimos dez anos: preços a bater recordes com menos compradores a fechar negócio, estrangeiros a comprar mais em valor mas menos em peso, e o crédito a encarecer depois de quase dois anos a descer.</p>
+
+                    <p>Este artigo não é mais uma leitura genérica sobre "o futuro do imobiliário". É um olhar direto sobre os números que estão a sair agora — dos relatórios do INE, do Idealista, do Banco de Portugal — e o que eles significam concretamente para quem vive de fechar negócios todas as semanas.</p>
+
+                    <!-- Resumo rápido -->
+                    <div class="resumo-numeros">
+                        <h3>Os números que explicam 2026 — em 30 segundos</h3>
+                        <ul>
+                            <li><strong>+18,9%</strong> — subida dos preços de venda em Portugal no 4.º trimestre de 2025 (a segunda maior da UE, só atrás da Hungria)</li>
+                            <li><strong>3.107 €/m²</strong> — preço mediano das casas à venda em Portugal em março de 2026 (+1,0% face a fevereiro)</li>
+                            <li><strong>−4,7%</strong> — queda do número de transações no último trimestre de 2025</li>
+                            <li><strong>3,088%</strong> — taxa implícita do crédito à habitação em março de 2026 (primeira subida desde janeiro de 2024)</li>
+                            <li><strong>−19%</strong> — queda do valor dos novos créditos à habitação no início de 2026 face ao final de 2025</li>
+                            <li><strong>27,6%</strong> — peso dos estrangeiros no total de aquisições (em descida pelo terceiro ano consecutivo)</li>
+                            <li><strong>≈25.000</strong> — consultores ativos nas cinco maiores redes imobiliárias do país</li>
+                        </ul>
+                    </div>
+
+                    <p>Vamos olhar para cada um destes números com calma — e traduzir o que significam para o teu dia-a-dia.</p>
+
+                    <hr class="separador-artigo">
+
+                    <!-- TEMA 1 -->
+                    <div class="dado-titulo">
+                        <span class="dado-numero">1</span>
+                        <h2>Os preços continuam a subir — mas a dinâmica já mudou</h2>
+                    </div>
+                    <div class="dado-tag subida">Preço: +18,9% anual</div>
+
+                    <p>O Eurostat confirmou em abril que Portugal registou no 4.º trimestre de 2025 uma subida de 18,9% nos preços de venda de habitação, face ao mesmo período de 2024. Foi a segunda maior variação da União Europeia — apenas ultrapassada pela Hungria.</p>
+
+                    <p>Olhando para o ano inteiro, o Índice de Preços da Habitação do INE subiu 17,6% em 2025, contra 9,1% em 2024. Ou seja: a aceleração é clara. Nos últimos dez anos, os preços acumulam uma subida superior a 180%.</p>
+
+                    <p>À primeira vista, parece bom para quem vende: preços mais altos, comissões mais altas. Mas se olhares para o terreno, a história é outra — e é aí que muitos consultores estão a falhar.</p>
+
+                    <div class="callout">
+                        <p><strong>O que mudou na prática:</strong> o comprador português médio já não consegue acompanhar a subida. A prestação estimada de um T2 em Portugal ronda agora os 1.225 € por mês — cerca de 52% do rendimento típico de um casal. Isto significa que há cada vez mais visitas, mais perguntas, mais interesse declarado — mas menos capacidade real de fechar. A tua taxa de conversão vai parecer estranha a não ser que percebas isto.</p>
+                    </div>
+
+                    <p>Traduzindo para a linguagem do funil: a parte de cima enche-se mais depressa, mas a parte do meio está mais apertada. Precisas de mais contactos para gerar a mesma proposta — e de um processo mais fino para separar quem pode mesmo comprar de quem está "só a ver".</p>
+
+                    <hr class="separador-artigo">
+
+                    <!-- TEMA 2 -->
+                    <div class="dado-titulo">
+                        <span class="dado-numero">2</span>
+                        <h2>As transações começaram a descer (e isto é novo)</h2>
+                    </div>
+                    <div class="dado-tag descida">Transações: −4,7% trimestrais</div>
+
+                    <p>Durante anos, Portugal viveu um mercado em que qualquer casa posta à venda vendia — muitas vezes acima do preço pedido. Esse ciclo terminou silenciosamente em 2025. No 4.º trimestre, o número de transações caiu 4,7% face ao trimestre anterior, quebrando uma sequência de subidas consistentes.</p>
+
+                    <p>No 3.º trimestre foram registadas 41.117 transações de habitação em Portugal — um número robusto, mas abaixo dos picos anteriores. Em paralelo, o preço mediano de transação subiu para os 2.111 €/m². Ou seja: vende-se menos, mas mais caro — e ambos os movimentos vão contra quem depende de volume.</p>
+
+                    <div class="callout">
+                        <p><strong>A raiz do problema:</strong> o mercado tornou-se seletivo. Ativos sobreavaliados ficam parados. O comprador demora mais tempo a decidir, visita mais imóveis e negoceia mais. Para o consultor, isto significa que os pipelines estão mais longos e os leads precisam de um acompanhamento mais consistente — não mais agressivo.</p>
+                    </div>
+
+                    <p>Se no passado um lead "quente" fechava em 30 a 45 dias, hoje é normal que o ciclo se estenda para 60 a 90 dias no segmento residencial médio. Quem não tiver processo de follow-up organizado vai parecer ter "menos leads" — quando na verdade só não está a aguentá-los o tempo suficiente para maturarem.</p>
+
+                    <hr class="separador-artigo">
+
+                    <!-- TEMA 3 -->
+                    <div class="dado-titulo">
+                        <span class="dado-numero">3</span>
+                        <h2>A Euribor voltou a mexer — e altera a conversa com o comprador</h2>
+                    </div>
+                    <div class="dado-tag atencao">Crédito: taxa implícita 3,088%</div>
+
+                    <p>Em março de 2026, pela primeira vez desde janeiro de 2024, a taxa de juro implícita do conjunto dos contratos de crédito à habitação em Portugal subiu — para 3,088%, segundo os dados divulgados pelo INE e confirmados pelo Banco de Portugal. Parece pouco. Não é.</p>
+
+                    <p>É o fim de uma narrativa que muitos consultores usaram nos últimos 18 meses: "agora é altura de comprar, as taxas só podem descer". Essa frase deixou de ser verdade a partir de março. A Euribor a 6 e a 12 meses já ultrapassou os 2,5% e, pelas leituras do mercado, deverá estabilizar em torno dos 2% ao longo de 2026 — sem grandes movimentos do BCE em qualquer sentido.</p>
+
+                    <p>As taxas médias dos novos contratos estão agora próximas destes valores:</p>
+
+                    <table class="tabela-comparativa">
+                        <thead>
+                            <tr>
+                                <th>Tipo de taxa</th>
+                                <th>Taxa média (nova produção)</th>
+                                <th>Quando faz sentido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mista</strong></td>
+                                <td class="td-ok">≈ 2,72%</td>
+                                <td>Comprador que quer previsibilidade nos primeiros anos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Variável</strong></td>
+                                <td class="td-destaque">≈ 2,79%</td>
+                                <td>Comprador com rendimento folgado e apetite para risco</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fixa</strong></td>
+                                <td>≈ 3,55%</td>
+                                <td>Comprador que prioriza estabilidade total da prestação</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>O impacto no bolso é real. Num crédito típico de 150 mil euros a 30 anos, a atualização de abril já representa um aumento de cerca de 15 € na prestação mensal para quem tem taxa variável. Em cima de uma prestação que já é 50% do rendimento, esses 15 € pesam na decisão.</p>
+
+                    <div class="callout">
+                        <p><strong>O que muda para ti:</strong> se vais acompanhar um comprador em 2026, tens de saber falar de crédito com precisão — ou trabalhar com um intermediário de confiança que o faça. O comprador informado chega à reunião contigo já com simulações feitas. Chegar sem resposta a "e se a Euribor subir mais 0,5%?" é, hoje, sinal de amadorismo.</p>
+                    </div>
+
+                    <hr class="separador-artigo">
+
+                    <!-- TEMA 4 -->
+                    <div class="dado-titulo">
+                        <span class="dado-numero">4</span>
+                        <h2>Os estrangeiros estão a mudar (não a desaparecer)</h2>
+                    </div>
+                    <div class="dado-tag subida">41.086 casas</div>
+
+                    <p>Em 2025, foram 41.086 as casas compradas por pessoas com naturalidade diferente da portuguesa — mais 6,6% do que em 2024, em termos absolutos. Em peso relativo, porém, o número desce: os estrangeiros pesam agora 27,6% no total das aquisições, contra mais de 30% no pico. É o terceiro ano consecutivo em que os não residentes perdem peso.</p>
+
+                    <p>O perfil também mudou. Há menos compradores de outros países europeus com estatuto RNH (o regime foi reformado) e mais compradores brasileiros e angolanos a fixar residência. Do total de estrangeiros, o <strong>Brasil concentra 23,9% das aquisições</strong>, seguido de Angola (4.145 casas) e França (3.765 casas). Os preços médios são claramente diferentes por origem:</p>
+
+                    <ul>
+                        <li><strong>Compradores portugueses:</strong> preço médio de 234.120 €</li>
+                        <li><strong>Compradores da UE:</strong> preço médio de 335.640 €</li>
+                        <li><strong>Compradores de fora da UE:</strong> preço médio de 470.277 € (o dobro do nacional)</li>
+                    </ul>
+
+                    <p>Para quem trabalha segmentos médio-alto e alto, isto é informação operacional — não académica. Significa que há comunidades específicas com padrões de decisão próprios, idiomas diferentes, processos de financiamento distintos e expectativas de acompanhamento diferentes do comprador português tradicional.</p>
+
+                    <h3>A consequência prática</h3>
+                    <p>Um consultor que fala apenas português, atende apenas em horário laboral de Lisboa e não está preparado para gerir conversas em inglês ou português do Brasil está a ficar de fora de uma fatia cada vez mais rentável do mercado. Não é uma opinião — é um número. Perder um único comprador brasileiro no valor médio (≈ 335 mil €) representa uma comissão potencial de 8 a 10 mil euros que foi para outro consultor.</p>
+
+                    <hr class="separador-artigo">
+
+                    <!-- TEMA 5 -->
+                    <div class="dado-titulo">
+                        <span class="dado-numero">5</span>
+                        <h2>A descentralização já não é promessa — é realidade</h2>
+                    </div>
+                    <div class="dado-tag atencao">Novos polos em crescimento</div>
+
+                    <p>Lisboa continua a liderar com 5.000 €/m² de preço mediano de transação, seguida de Cascais (4.713 €/m²) e Oeiras (4.361 €/m²). Mas o crescimento mais acelerado no último trimestre de 2025 não foi em Lisboa — foi em <strong>Coimbra e Setúbal</strong>, os dois municípios com maior subida entre as 24 maiores câmaras do país.</p>
+
+                    <p>Braga, Évora e Leiria surgem como polos alternativos. Oferecem preços competitivos, conectividade decente aos centros urbanos e, crucialmente, inventário disponível. O comprador português médio, apertado pelas prestações em Lisboa, está a abrir o raio de procura. E o comprador estrangeiro, que antes ia direto ao Algarve, está a descobrir Évora ou a margem sul.</p>
+
+                    <div class="callout">
+                        <p><strong>Sinal operacional:</strong> se o teu negócio depende apenas de uma zona, 2026 é o ano para te perguntares se não estás a deixar pipeline em cima da mesa. A especialização continua a ser crítica — mas ser especialista em Lisboa pode hoje incluir ter um referenciador sólido em Setúbal ou Alcochete, onde o comprador acaba por fechar.</p>
+                    </div>
+
+                    <hr class="separador-artigo">
+
+                    <!-- TEMA 6 -->
+                    <div class="dado-titulo">
+                        <span class="dado-numero">6</span>
+                        <h2>O consultor de 2026 não é o mesmo de 2023</h2>
+                    </div>
+                    <div class="dado-tag">Profissão em transformação</div>
+
+                    <p>As cinco maiores redes imobiliárias em Portugal faturaram, em conjunto, mais 24,4% em 2025. Ao mesmo tempo, o número de consultores ativos nessas redes aproxima-se dos 25.000. Duas leituras tiram-se daqui: o mercado profissionalizou-se, e a concorrência por lead é maior do que nunca.</p>
+
+                    <p>Mais 25.000 pessoas a competir pelos mesmos formulários no idealista, no SUPERCASA e no Imovirtual. Mais 25.000 telefones a tocar quando um proprietário decide vender. Mais 25.000 anúncios na mesma hora quando um T2 entra no mercado em Benfica.</p>
+
+                    <p>A consequência é simples: <strong>velocidade e consistência deixaram de ser diferenciais — passaram a ser o preço de entrada</strong>. O consultor que responde em 5 minutos, que faz follow-up em 6 tentativas distribuídas por 14 dias, que regista tudo e que aparece sempre que o lead entra na plataforma — esse consultor é quase o mínimo esperado. Há dois anos, era um top performer.</p>
+
+                    <div class="callout">
+                        <p><strong>A tendência que já não é opinião:</strong> o relatório da Confidencial Imobiliário, o observatório da APEMIP e a análise do idealista para 2026 convergem no mesmo ponto — o consultor que vence em 2026 é o "consultor híbrido": usa tecnologia para o que é repetitivo (primeiro contacto, qualificação inicial, follow-up programado, registo de interações) e guarda o tempo humano para o que paga comissão (a reunião, a visita, a negociação, o fecho).</p>
+                    </div>
+
+                    <h3>O dado que ninguém quer ver</h3>
+                    <p>Num mercado com 25.000 concorrentes, a diferença entre o consultor que fatura 3 negócios/mês e o que fatura 8 raramente está no talento. Está no <strong>sistema</strong> que cada um tem por trás. Um trabalha com cabeça e memória. O outro trabalha com um processo que não depende do dia que ele está a ter.</p>
+
+                    <hr class="separador-artigo">
+
+                    <!-- O QUE FAZER -->
+                    <h2>O Que Deves Fazer nos Próximos 90 Dias</h2>
+
+                    <p>Os dados de 2026 não pedem grandes planos estratégicos. Pedem ajustes operacionais concretos — coisas que se decidem esta semana e se aplicam na próxima. Se só tens tempo para atacar cinco frentes, estas são as que dão retorno em 90 dias:</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value up">&lt; 5 min</div>
+                            <div class="stat-label">Tempo máximo até responder ao primeiro contacto de um lead novo.</div>
+                            <span class="stat-source">Padrão de mercado 2026</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value up">6+</div>
+                            <div class="stat-label">Tentativas de contacto por lead, distribuídas por 14 dias, em canais variados.</div>
+                            <span class="stat-source">Benchmark B2C alta intenção</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value down">60-90</div>
+                            <div class="stat-label">Dias médios do ciclo atual — aguenta o lead até maturar.</div>
+                            <span class="stat-source">Segmento residencial médio</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value up">2+</div>
+                            <div class="stat-label">Línguas úteis (PT + EN mínimo) para não perder fatia estrangeira.</div>
+                            <span class="stat-source">Perfil do comprador 2026</span>
+                        </div>
+                    </div>
+
+                    <ol>
+                        <li><strong>Reduz o tempo de primeira resposta para menos de 5 minutos, 24/7.</strong> Se não consegues fazê-lo pessoalmente (ninguém consegue), automatiza o primeiro contacto. O objetivo não é fechar — é manter o lead quente até conseguires falar com ele.</li>
+                        <li><strong>Define uma sequência de 6 tentativas em 14 dias.</strong> Por telefone, WhatsApp e email, em horários variados. Escreve-a, automatiza a parte automatizável, e mede a taxa de contacto efetivo.</li>
+                        <li><strong>Prepara uma conversa sobre crédito.</strong> Tem simuladores à mão, conhece as taxas médias do mercado e um intermediário de crédito com quem trabalhas. Os compradores de 2026 estão informados — precisas de falar a mesma linguagem.</li>
+                        <li><strong>Amplia o teu alcance geográfico com parcerias.</strong> Se és especialista em Lisboa, tem um parceiro em Setúbal, Alcochete ou Oeiras. A descentralização está a acontecer e o comprador segue o preço.</li>
+                        <li><strong>Regista tudo num sistema — não na cabeça.</strong> Com 60 a 90 dias de ciclo, um lead que entra em maio tem de ser recuperável em agosto. Sem histórico registado, não é. E sem histórico, não há retorno sobre os custos de aquisição que estás a pagar.</li>
+                    </ol>
+
+                    <h2>Em Resumo</h2>
+
+                    <p>O mercado imobiliário português de 2026 não é o de 2022 — e também não é o que vai ser em 2028. É um momento de transição. Os preços ainda sobem mas mais lentamente. As transações descem pela primeira vez em anos. O crédito encarece. Os estrangeiros mudam de perfil. A descentralização acelera. E há 25.000 consultores a competir pelos mesmos leads.</p>
+
+                    <p>Neste cenário, continuar a operar como se nada tivesse mudado é a forma mais segura de perder quota. O consultor que ganha em 2026 não é o que trabalha mais horas — é o que tem o melhor sistema a trabalhar por ele quando ele não pode.</p>
+
+                    <div class="callout">
+                        <p><strong>A síntese:</strong> 2026 recompensa velocidade, consistência e estrutura. Penaliza improviso, lentidão e desorganização. Os números deixam isto à vista de qualquer um que os queira ler.</p>
+                    </div>
+
+                    <h2>Como a Imovision Digital Te Ajuda a Acompanhar Este Mercado</h2>
+
+                    <p>A nossa plataforma foi desenhada exatamente para o consultor que quer responder em segundos, manter uma sequência de follow-up consistente e ter visibilidade total sobre cada lead — sem ter de trabalhar mais horas. Atende o lead automaticamente no primeiro contacto, qualifica-o com perguntas essenciais, organiza o follow-up por 14 dias e alerta-te quando a conversa humana é necessária.</p>
+
+                    <p><a href="../index.html#contato">Agenda uma demonstração de 20 minutos</a> e vê, com os teus próprios dados, quantos leads estás a perder por não responder a tempo — e como recuperar a maioria deles já no próximo mês.</p>
+
+                </div>
+
+                <!-- Rodapé do artigo -->
+                <footer class="artigo-footer">
+                    <a href="../blog.html" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar ao Blog
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Posiciona-te para o Mercado de 2026</h2>
+                <p>Responde em segundos, mantém o follow-up consistente e deixa de perder leads porque estavas numa visita. Experimenta 14 dias grátis — sem cartão de crédito.</p>
+                <a href="../index.html#contato" class="btn btn-primary btn-large">Ver Como Funciona</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#solucao">Solução</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="../index.html#resultados">Resultados</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
