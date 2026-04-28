@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lead frio, morno ou pronto a comprar? Aprende a distinguir cada tipo de lead imobiliário, o que perguntar e como poupar horas sem perder negócios.">
+    <title>Leads Imobiliários: Lead Frio vs. Cliente Pronto a Comprar (Como Distinguir) - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="../logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Temperatura dos leads */
+        .temperatura-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.3rem 0.85rem;
+            border-radius: 20px;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .temperatura-label.frio {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            color: #2563eb;
+        }
+
+        .temperatura-label.morno {
+            background: rgba(217, 119, 6, 0.1);
+            border: 1px solid rgba(217, 119, 6, 0.25);
+            color: #d97706;
+        }
+
+        .temperatura-label.quente {
+            background: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.25);
+            color: #dc2626;
+        }
+
+        .temperatura-titulo {
+            display: flex;
+            align-items: center;
+            margin-top: 2.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .temperatura-titulo h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0d0e12;
+            line-height: 1.35;
+        }
+
+        .separador-artigo {
+            border: none;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            margin: 2rem 0;
+        }
+
+        /* Caixa de resumo rápido */
+        .resumo-leads {
+            background: #0d0e12;
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            border: 1px solid rgba(3, 105, 191, 0.25);
+        }
+
+        .resumo-leads h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 0 0 1.2rem;
+        }
+
+        .resumo-leads ul {
+            margin: 0;
+            padding-left: 1.4rem;
+        }
+
+        .resumo-leads li {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.55;
+        }
+
+        .resumo-leads li strong {
+            color: #fff;
+        }
+
+        /* Cards de temperatura */
+        .temperatura-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2.5rem 0;
+        }
+
+        .temperatura-card {
+            border-radius: 14px;
+            padding: 1.5rem 1.3rem;
+            border: 1px solid;
+        }
+
+        .temperatura-card.frio {
+            background: rgba(59, 130, 246, 0.05);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .temperatura-card.morno {
+            background: rgba(217, 119, 6, 0.05);
+            border-color: rgba(217, 119, 6, 0.2);
+        }
+
+        .temperatura-card.quente {
+            background: rgba(220, 38, 38, 0.05);
+            border-color: rgba(220, 38, 38, 0.2);
+        }
+
+        .temperatura-card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .temperatura-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin: 0 0 0.4rem;
+            color: #0d0e12;
+        }
+
+        .temperatura-card p {
+            font-size: 0.85rem;
+            color: #555;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .temperatura-card .taxa {
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-top: 0.7rem;
+            font-family: var(--font-title, 'Space Grotesk', sans-serif);
+        }
+
+        .temperatura-card.frio .taxa { color: #2563eb; }
+        .temperatura-card.morno .taxa { color: #d97706; }
+        .temperatura-card.quente .taxa { color: #dc2626; }
+
+        /* Checklist de qualificação */
+        .checklist-qualificacao {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 1.75rem 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(0,0,0,0.07);
+        }
+
+        .checklist-qualificacao h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0d0e12;
+            margin: 0 0 1.1rem;
+        }
+
+        .checklist-qualificacao ol {
+            margin: 0;
+            padding-left: 1.4rem;
+        }
+
+        .checklist-qualificacao li {
+            font-size: 0.92rem;
+            color: #374151;
+            margin-bottom: 0.6rem;
+            line-height: 1.55;
+        }
+
+        .checklist-qualificacao li strong {
+            color: #0d0e12;
+        }
+
+        /* Destaque principal */
+        .destaque-principal {
+            background: linear-gradient(135deg, #0369BF 0%, #0284d4 100%);
+            border-radius: 16px;
+            padding: 2rem 2.4rem;
+            margin: 2.5rem 0;
+            color: #fff;
+        }
+
+        .destaque-principal p {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #fff;
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        .destaque-principal p strong {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+            .resumo-leads { padding: 1.5rem; }
+            .checklist-qualificacao { padding: 1.4rem; }
+            .destaque-principal { padding: 1.5rem; }
+            .temperatura-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#solucao">Solução</a></li>
+                    <li><a href="../index.html#beneficios">Benefícios</a></li>
+                    <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="../index.html#resultados">Resultados</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artigo -->
+    <main class="artigo-main">
+        <div class="container">
+            <nav class="artigo-breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="../blog.html">Blog</a>
+                <span>/</span>
+                <span>Leads Imobiliários: Frios vs. Prontos a Comprar</span>
+            </nav>
+
+            <article class="artigo-conteudo">
+                <header class="artigo-header">
+                    <div class="blog-card-categoria">Gestão de Leads</div>
+
+                    <h1 class="artigo-titulo">Leads Imobiliários: a Diferença entre um Contacto Frio e um Cliente Pronto a Comprar (e Como Saber a Diferença)</h1>
+
+                    <div class="artigo-meta">
+                        <span class="artigo-autor">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Equipa Imovision Digital
+                        </span>
+                        <span class="artigo-data">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            29 de Abril de 2026
+                        </span>
+                        <span class="artigo-tempo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            9 min de leitura
+                        </span>
+                    </div>
+
+                    <p class="artigo-resumo">79% dos leads gerados no imobiliário nunca convertem em negócio. O problema raramente é a qualidade da campanha — é tratar um contacto curioso exatamente da mesma forma que um cliente pronto a comprar. Este artigo ensina-te a distinguir os dois, em menos de 3 minutos de conversa.</p>
+                </header>
+
+                <!-- Corpo do artigo -->
+                <div class="artigo-corpo">
+
+                    <p>Imagina que são 19h de uma terça-feira. Acabas de receber dois leads novos através do portal: o João e a Margarida. Ambos preencheram o mesmo formulário, no mesmo imóvel, à mesma hora. Do ponto de vista do sistema, são idênticos.</p>
+
+                    <p>O João está a "explorar opções" — não tem data definida, ainda não sabe se quer comprar ou arrendar, e o orçamento está a ser "afinado". A Margarida tem contrato de trabalho assinado para Lisboa, mudança marcada para daqui a seis semanas e pré-aprovação bancária desde o mês passado.</p>
+
+                    <p>Se lhes dedicares o mesmo tempo, a mesma energia e o mesmo processo de follow-up, vais fazer uma de duas coisas: perder a Margarida para um concorrente mais ágil, ou esgotar-te com o João antes de ele estar pronto. Os melhores consultores aprenderam a distinguir os dois — não por intuição, mas por método.</p>
+
+                    <!-- Resumo rápido -->
+                    <div class="resumo-leads">
+                        <h3>O que vais aprender neste artigo</h3>
+                        <ul>
+                            <li><strong>Lead frio:</strong> o que é, como se comporta e como tratar sem desperdiçar tempo</li>
+                            <li><strong>Lead morno:</strong> o tipo mais subestimado — e o mais rentável a longo prazo</li>
+                            <li><strong>Lead quente / cliente pronto:</strong> os sinais que identificam quem está a dias de decidir</li>
+                            <li><strong>As 5 perguntas de qualificação</strong> para classificar qualquer lead em menos de 3 minutos</li>
+                            <li><strong>O erro que custa mais negócios:</strong> tratar todos da mesma forma</li>
+                        </ul>
+                    </div>
+
+                    <p>Vamos por partes.</p>
+
+                    <hr class="separador-artigo">
+
+                    <!-- LEAD FRIO -->
+                    <div class="temperatura-titulo">
+                        <h2>O Lead Frio: Curiosidade, Não Intenção</h2>
+                    </div>
+                    <div class="temperatura-label frio">❄️ Lead Frio</div>
+
+                    <p>Um lead frio é alguém que demonstrou interesse superficial num imóvel ou num tema — mas ainda não tem os elementos necessários para avançar para uma decisão real. Não é um mau lead. É um lead prematuro.</p>
+
+                    <p>No contexto imobiliário português, os leads frios têm perfis reconhecíveis. São pessoas que estão "a ver o que há no mercado" sem pressão temporal, que ainda não têm aprovação bancária nem orçamento definido, que enviaram vários formulários em portais diferentes ao mesmo tempo, ou que mencionam datas vagas como "talvez para o próximo ano" ou "quando a situação estabilizar".</p>
+
+                    <p>Os dados internacionais apontam para conversões de 1% a 4% nos leads provenientes de portais digitais — exatamente porque a maioria entra nesta categoria fria. Não porque não vão comprar algum dia, mas porque ainda não estão prontos.</p>
+
+                    <div class="callout">
+                        <p><strong>Como tratar um lead frio:</strong> Não investas 45 minutos a marcar visitas e preparar propostas. Faz um primeiro contacto rápido de qualificação, coloca-o numa sequência de nurturing automatizada (email quinzenal, WhatsApp com novidades do mercado) e mantém o canal aberto. Os leads frios de hoje são os clientes de amanhã — desde que não os abandones.</p>
+                    </div>
+
+                    <hr class="separador-artigo">
+
+                    <!-- LEAD MORNO -->
+                    <div class="temperatura-titulo">
+                        <h2>O Lead Morno: O Tipo Mais Subestimado do Imobiliário</h2>
+                    </div>
+                    <div class="temperatura-label morno">🌡️ Lead Morno</div>
+
+                    <p>O lead morno é aquele que muitos consultores ignoram sem saber que estão a cometer um erro caro. É a pessoa que tem intenção real, mas ainda precisa de um ou dois fatores para se tornar num cliente ativo.</p>
+
+                    <p>Reconheces-te nesta situação? Alguém faz uma visita, parece interessado, pede tempo para "pensar" — e depois não atende mais. A maioria dos consultores desiste. Alguns persistem. A diferença entre os dois é o resultado de fim de mês.</p>
+
+                    <p>Um lead morno pode estar à espera de vender o imóvel atual, de confirmar uma transferência de emprego, de terminar uma separação ou divórcio, ou de obter aprovação bancária ainda em processo. A janela de oportunidade existe — só ainda não abriu completamente.</p>
+
+                    <div class="callout">
+                        <p><strong>Como tratar um lead morno:</strong> Sequência de follow-up estruturada ao longo de 30 a 90 dias, com contactos espaçados (não diários) e conteúdo útil — dados do mercado, novos imóveis que correspondam ao perfil, alertas de preço. O objetivo é seres o primeiro a quem ligam quando estiverem prontos. E isso só acontece se mantiveres presença sem seres intrusivo.</p>
+                    </div>
+
+                    <hr class="separador-artigo">
+
+                    <!-- LEAD QUENTE -->
+                    <div class="temperatura-titulo">
+                        <h2>O Lead Quente: o Cliente que Está a Dias de Decidir</h2>
+                    </div>
+                    <div class="temperatura-label quente">🔥 Lead Quente</div>
+
+                    <p>O lead quente tem urgência real, intenção clara e os meios para avançar. É o tipo de lead que, se não fores tu a responder em menos de 5 minutos, vai ser o teu concorrente a fechar o negócio.</p>
+
+                    <p>Os sinais são claros quando sabes o que procurar: a pessoa tem data de mudança definida (por trabalho, escola dos filhos, fim de contrato de arrendamento), já tem pré-aprovação bancária ou capital disponível, faz perguntas específicas sobre o imóvel (estado da cozinha, certificação energética, quando se pode mudar), e demonstra urgência — "quero visitar esta semana" ou "posso reservar hoje se gostar".</p>
+
+                    <p>Estudos recentes sobre o mercado imobiliário mostram que leads contactados nos primeiros 5 minutos têm 21 vezes mais probabilidade de serem qualificados do que leads contactados 30 minutos depois. Num lead quente, essa janela pode ser ainda mais estreita — a urgência que o moveu a preencher o formulário é real e tem prazo de validade.</p>
+
+                    <div class="callout">
+                        <p><strong>Como tratar um lead quente:</strong> Resposta imediata, com confirmação do interesse e agendamento de visita na mesma conversa. Nada de "vou verificar disponibilidade e já te digo" — isso diz-lhe que não és ágil. A resposta deve chegar antes que ele encontre uma alternativa.</p>
+                    </div>
+
+                    <hr class="separador-artigo">
+
+                    <!-- COMPARAÇÃO -->
+                    <h2>Os Três Tipos em Perspetiva</h2>
+
+                    <p>A diferença de conversão entre os três tipos é brutal. Um lead frio converte, em média, a uma décima da taxa de um lead quente. Leads por referência — onde já existe confiança prévia e, portanto, um grau de "calor" incorporado — convertem entre 15% e 25%. Leads digitais frios ficam entre 1% e 4%.</p>
+
+                    <div class="temperatura-grid">
+                        <div class="temperatura-card frio">
+                            <div class="temperatura-card-icon">❄️</div>
+                            <h4>Lead Frio</h4>
+                            <p>Curiosidade. Sem urgência, sem critérios definidos, sem prazo.</p>
+                            <span class="taxa">1–4%</span>
+                            <p>taxa de conversão média</p>
+                        </div>
+                        <div class="temperatura-card morno">
+                            <div class="temperatura-card-icon">🌡️</div>
+                            <h4>Lead Morno</h4>
+                            <p>Intenção real, mas depende de um fator externo para avançar.</p>
+                            <span class="taxa">8–15%</span>
+                            <p>taxa de conversão c/ nurturing</p>
+                        </div>
+                        <div class="temperatura-card quente">
+                            <div class="temperatura-card-icon">🔥</div>
+                            <h4>Lead Quente</h4>
+                            <p>Urgência definida, meios disponíveis, pronto a decidir.</p>
+                            <span class="taxa">15–25%</span>
+                            <p>taxa de conversão c/ resposta rápida</p>
+                        </div>
+                    </div>
+
+                    <p>Estes números não são fixos — variam com o mercado, a região e o tipo de imóvel. Mas a relação entre eles é consistente: um lead quente bem tratado converte a uma taxa que pode ser 10 vezes superior a um lead frio tratado da mesma forma.</p>
+
+                    <hr class="separador-artigo">
+
+                    <!-- AS 5 PERGUNTAS -->
+                    <h2>As 5 Perguntas para Qualificar Qualquer Lead em Menos de 3 Minutos</h2>
+
+                    <p>Não precisas de uma entrevista de 20 minutos para perceber com que tipo de lead estás a lidar. Precisas de cinco perguntas certas, feitas na ordem certa. Este é o framework que os consultores mais eficientes utilizam — e que pode ser adaptado tanto para chamadas telefónicas como para WhatsApp.</p>
+
+                    <div class="checklist-qualificacao">
+                        <h3>Framework de Qualificação Rápida — 5 Perguntas</h3>
+                        <ol>
+                            <li><strong>"Já visitou outros imóveis? O que achou?"</strong> — Revela nível de pesquisa, critérios reais e fase do processo. Quem já visitou muitos imóveis sabe o que quer. Quem ainda não visitou nenhum está na fase de exploração.</li>
+                            <li><strong>"Tem data em mente para a mudança?"</strong> — A pergunta mais reveladora. Uma data concreta (mesmo que seja daqui a 3 meses) indica intenção real. "Não sei ainda" ou "talvez para o próximo ano" classifica imediatamente como lead frio.</li>
+                            <li><strong>"Já falou com o banco / tem financiamento tratado?"</strong> — Define a capacidade real de avançar. Um lead sem aprovação bancária, independentemente do entusiasmo, não pode fechar. Isto não significa ignorá-lo — significa saber em que fase está.</li>
+                            <li><strong>"O que é mais importante para si no imóvel?"</strong> — Distingue quem sabe o que quer (lead mais avançado) de quem ainda está a descobrir (lead frio). Critérios claros e prioritários = maior probabilidade de decisão rápida.</li>
+                            <li><strong>"Se encontrasse o imóvel certo esta semana, estava em condições de avançar?"</strong> — A pergunta de fecho de qualificação. Confirma intenção + capacidade de forma direta. Leads quentes dizem sim sem hesitar. Leads frios desviam a resposta.</li>
+                        </ol>
+                    </div>
+
+                    <p>Este framework não é um interrogatório — é uma conversa. As melhores versões soam naturais e geram confiança. O objetivo não é filtrar leads, é <em>servir melhor</em> cada um deles de acordo com onde estão no processo.</p>
+
+                    <hr class="separador-artigo">
+
+                    <!-- O ERRO FATAL -->
+                    <h2>O Erro Fatal: Tratar Todos os Leads da Mesma Forma</h2>
+
+                    <p>A maioria dos consultores tem um único processo para todos os leads: receber, ligar, marcar visita, tentar fechar. Funciona para leads quentes. Falha completamente para todos os outros — e os "todos os outros" representam mais de 75% do total de contactos que recebes.</p>
+
+                    <p>Tratar um lead frio com a intensidade de um lead quente cria pressão desnecessária e afasta o cliente antes de ele estar pronto. Pior: desperdiça o teu tempo mais valioso — as horas em que podias estar a tratar um lead quente com a atenção que ele merece.</p>
+
+                    <p>O inverso também é verdade: tratar um lead quente com a leveza de um lead frio (sequências lentas, follow-up passivo) significa perdê-lo para quem respondeu mais depressa. Cada lead quente que não converte dentro das primeiras 48 horas tem uma probabilidade crescente de fechar com outro consultor.</p>
+
+                    <div class="callout">
+                        <p><strong>A solução não é trabalhar mais horas.</strong> É ter um sistema que identifica automaticamente o tipo de cada lead e aciona o processo certo — urgência imediata para os quentes, nurturing estruturado para os mornos, comunicação de baixo esforço para os frios. O trabalho é o mesmo; o resultado é radicalmente diferente.</p>
+                    </div>
+
+                    <hr class="separador-artigo">
+
+                    <!-- O FACTOR TEMPO -->
+                    <h2>Um Detalhe Que Muitos Ignoram: a Temperatura de um Lead Muda</h2>
+
+                    <p>Um lead que hoje está frio pode estar quente daqui a 6 semanas. A transferência de emprego confirma-se. O banco aprova o crédito. O divórcio fica resolvido. O imóvel que estava para vender, vende.</p>
+
+                    <p>Os consultores que não têm um sistema de nurturing perdem estes clientes — não porque não os trataram bem no início, mas porque quando o lead ficou quente, tinham desaparecido do radar. O cliente liga ao primeiro consultor de quem se lembra, ou ao primeiro que ainda lhe envia uma mensagem de tempos a tempos.</p>
+
+                    <p>A investigação sobre comportamento de compra imobiliário mostra que o score de interesse de um lead decresce aproximadamente 25% por mês sem qualquer contacto. Ao fim de 4 meses sem comunicação, um lead morno está praticamente frio — como se nunca tivesses falado com ele.</p>
+
+                    <p>Manter presença sem ser intrusivo é uma competência. E, nos consultores que a dominam, traduz-se diretamente em negócios fechados meses depois do primeiro contacto — negócios que os colegas que desistiram cedo nunca chegam a contabilizar.</p>
+
+                    <!-- Destaque principal -->
+                    <div class="destaque-principal">
+                        <p><strong>A ideia central deste artigo:</strong> O problema não é ter poucos leads — é não saber o que fazer com cada tipo. Um lead frio tratado como quente cria pressão e afasta. Um lead quente tratado como frio perde-se em 48 horas. A diferença entre os consultores que mais faturam e os que mais trabalham está, muitas vezes, apenas nisto: saber ler a temperatura de cada contacto e agir em conformidade.</p>
+                    </div>
+
+                    <!-- CONCLUSÃO -->
+                    <h2>Por Onde Começar</h2>
+
+                    <p>Se saíres deste artigo com uma única mudança de comportamento, que seja esta: antes de investires tempo num novo lead, faz as 5 perguntas. Dois minutos de qualificação podem poupar-te duas horas de trabalho desperdiçado — e garantir que os teus leads quentes não ficam à espera enquanto tratas de leads frios.</p>
+
+                    <p>A longo prazo, a solução mais eficaz é um sistema que faz esta triagem de forma automática: classifica o lead ao primeiro contacto, aciona a resposta adequada e mantém o nurturing dos leads mornos sem que tenhas de pensar nisso. É exatamente isso que a Imovision Digital faz — para que te possas focar nos clientes prontos a avançar.</p>
+
+                    <p>No próximo artigo, vamos ao detalhe de como responder a um lead imobiliário em menos de 2 minutos, mesmo quando estás numa visita, a dormir ou ao fim de semana. <a href="erros-gestao-leads-imobiliario.html">Enquanto isso, podes ler sobre os 10 erros mais comuns na gestão de leads</a> — e perceber se algum deles se aplica ao teu processo hoje.</p>
+
+                </div>
+
+                <!-- Rodapé do artigo -->
+                <footer class="artigo-footer">
+                    <a href="../blog.html" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar ao Blog
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Qualifica os Teus Leads Automaticamente — Sem Esforço Extra</h2>
+                <p>A Imovision Digital identifica o tipo de cada lead ao primeiro contacto e aciona a resposta certa: urgência imediata para os quentes, nurturing automático para os mornos. Agenda uma demonstração e vê como funciona na prática.</p>
+                <a href="../index.html#contato" class="btn btn-primary btn-large">Agendar Demonstração Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#solucao">Solução</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="../index.html#resultados">Resultados</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
