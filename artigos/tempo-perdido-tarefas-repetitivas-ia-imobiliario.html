@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="70% do tempo de um consultor imobiliário é consumido por tarefas repetitivas que a IA já consegue fazer. Usa esta calculadora e descobre quantas horas perdes por semana — e o que podes recuperar.">
+    <title>Quanto Tempo Perdes por Semana em Tarefas que uma IA Pode Fazer por Ti? - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="../logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .resumo-artigo {
+            background: #0d0e12;
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            border: 1px solid rgba(3,105,191,0.25);
+        }
+        .resumo-artigo h3 { color: #fff; font-size: 1.05rem; margin: 0 0 1.1rem; }
+        .resumo-artigo ul { margin: 0; padding-left: 1.4rem; }
+        .resumo-artigo li { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 0.5rem; line-height: 1.55; }
+        .resumo-artigo li strong { color: #fff; }
+
+        .separador-artigo { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 2rem 0; }
+
+        .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+        .stat-box { background: #f8fafc; border-radius: 12px; padding: 1.4rem 1rem; text-align: center; border: 1px solid rgba(0,0,0,0.07); }
+        .stat-box .stat-valor { font-size: 2rem; font-weight: 800; color: #0369BF; font-family: 'Space Grotesk', sans-serif; display: block; line-height: 1.1; }
+        .stat-box .stat-descricao { font-size: 0.8rem; color: #555; margin-top: 0.4rem; line-height: 1.45; }
+
+        .destaque-principal { background: linear-gradient(135deg, #0369BF 0%, #0284c7 100%); border-radius: 14px; padding: 2rem 2.2rem; margin: 2.5rem 0; color: #fff; }
+        .destaque-principal p { font-size: 1.1rem; line-height: 1.65; margin: 0; color: rgba(255,255,255,0.95); }
+        .destaque-principal p strong { color: #fff; }
+
+        .citacao-box { background: #f8fafc; border-left: 4px solid #0369BF; border-radius: 0 12px 12px 0; padding: 1.5rem 1.8rem; margin: 2rem 0; }
+        .citacao-box p { font-size: 1rem; color: #333; font-style: italic; line-height: 1.7; margin: 0 0 0.6rem; }
+        .citacao-box span { font-size: 0.82rem; color: #777; font-weight: 600; }
+
+        .cta-inline { background: #0d0e12; border-radius: 14px; padding: 2rem 2.2rem; margin: 2.5rem 0; text-align: center; border: 1px solid rgba(3,105,191,0.3); }
+        .cta-inline h3 { color: #fff; font-size: 1.2rem; margin: 0 0 0.8rem; }
+        .cta-inline p { color: rgba(255,255,255,0.7); font-size: 0.92rem; margin: 0 0 1.4rem; }
+        .cta-inline a { display: inline-block; background: #0369BF; color: #fff; padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: background 0.2s; }
+        .cta-inline a:hover { background: #0284c7; }
+
+        .tarefa-card { background: #f8fafc; border-radius: 12px; padding: 1.5rem 1.6rem; margin-bottom: 1.2rem; border: 1px solid rgba(0,0,0,0.07); }
+        .tarefa-icone { display: inline-block; background: #0369BF; color: #fff; border-radius: 6px; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.6rem; }
+        .tarefa-card h4 { font-size: 1rem; font-weight: 700; color: #0d0e12; margin: 0 0 0.5rem; }
+        .tarefa-card p { font-size: 0.88rem; color: #555; margin: 0; line-height: 1.6; }
+
+        /* Calculadora interativa */
+        .calculadora-wrapper {
+            background: #f0f7ff;
+            border: 2px solid #0369BF;
+            border-radius: 16px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+        }
+        .calculadora-wrapper h3 {
+            color: #0d0e12;
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .calculadora-wrapper .calc-subtitulo {
+            font-size: 0.88rem;
+            color: #555;
+            margin: 0 0 1.6rem;
+        }
+        .calc-linha {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.9rem;
+            flex-wrap: wrap;
+        }
+        .calc-linha label {
+            flex: 1;
+            font-size: 0.88rem;
+            color: #333;
+            min-width: 220px;
+            line-height: 1.45;
+        }
+        .calc-linha input[type="number"] {
+            width: 80px;
+            padding: 0.5rem 0.7rem;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            color: #0d0e12;
+            background: #fff;
+            text-align: center;
+            transition: border-color 0.2s;
+        }
+        .calc-linha input[type="number"]:focus {
+            outline: none;
+            border-color: #0369BF;
+        }
+        .calc-linha .calc-unidade {
+            font-size: 0.82rem;
+            color: #777;
+            white-space: nowrap;
+        }
+        .calc-separador { border: none; border-top: 1px solid #bfdbfe; margin: 1.2rem 0; }
+        .calc-resultado {
+            background: #0369BF;
+            border-radius: 12px;
+            padding: 1.4rem 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.2rem;
+        }
+        .calc-resultado-label {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.92rem;
+            line-height: 1.4;
+        }
+        .calc-resultado-valor {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            white-space: nowrap;
+        }
+        .calc-resultado-sub {
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: 0.2rem;
+        }
+        .calc-aviso {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 0.8rem;
+            font-style: italic;
+        }
+
+        .recuperar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0; }
+        .recuperar-card { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 1.4rem 1.5rem; }
+        .recuperar-card h4 { font-size: 0.92rem; font-weight: 700; color: #15803d; margin: 0 0 0.4rem; }
+        .recuperar-card p { font-size: 0.85rem; color: #555; margin: 0; line-height: 1.55; }
+
+        .automacao-tabela { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.88rem; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); }
+        .automacao-tabela th { background: #0d0e12; color: #fff; padding: 0.9rem 1.1rem; text-align: left; font-size: 0.85rem; font-weight: 600; }
+        .automacao-tabela td { padding: 0.85rem 1.1rem; border-bottom: 1px solid rgba(0,0,0,0.06); color: #444; line-height: 1.5; vertical-align: top; }
+        .automacao-tabela tr:last-child td { border-bottom: none; }
+        .automacao-tabela tr:nth-child(even) td { background: #f8fafc; }
+        .badge-sim { display: inline-block; background: #dcfce7; color: #15803d; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 99px; }
+        .badge-manual { display: inline-block; background: #fee2e2; color: #991b1b; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 99px; }
+        .horas-semana { font-weight: 700; color: #0369BF; }
+
+        @media (max-width: 768px) {
+            .stats-row { grid-template-columns: 1fr; }
+            .recuperar-grid { grid-template-columns: 1fr; }
+            .resumo-artigo { padding: 1.5rem; }
+            .destaque-principal { padding: 1.5rem; }
+            .calculadora-wrapper { padding: 1.5rem; }
+            .calc-resultado { flex-direction: column; text-align: center; }
+            .automacao-tabela { font-size: 0.8rem; }
+            .automacao-tabela th, .automacao-tabela td { padding: 0.7rem 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#solucao">Solução</a></li>
+                    <li><a href="../index.html#beneficios">Benefícios</a></li>
+                    <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="../index.html#resultados">Resultados</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artigo -->
+    <main class="artigo-main">
+        <div class="container">
+            <nav class="artigo-breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="../blog.html">Blog</a>
+                <span>/</span>
+                <span>Tempo Perdido em Tarefas Repetitivas</span>
+            </nav>
+
+            <article class="artigo-conteudo">
+                <header class="artigo-header">
+                    <div class="blog-card-categoria">Automação &amp; Produtividade</div>
+
+                    <h1 class="artigo-titulo">Quanto Tempo Perdes por Semana em Tarefas que uma IA Pode Fazer por Ti? (Calcula Aqui)</h1>
+
+                    <div class="artigo-meta">
+                        <span class="artigo-autor">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Equipa Imovision Digital
+                        </span>
+                        <span class="artigo-data">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            29 de Junho de 2026
+                        </span>
+                        <span class="artigo-tempo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            10 min de leitura
+                        </span>
+                    </div>
+
+                    <p class="artigo-resumo">Estudos do setor mostram que 70% do tempo de um consultor imobiliário é consumido por tarefas que não exigem o seu talento: responder aos mesmos emails, actualizar o CRM manualmente, fazer follow-up que deveria ser automático. Esta calculadora mostra exactamente quanto tempo estás a perder — e o que podes recuperar esta semana.</p>
+                </header>
+
+                <div class="artigo-corpo">
+
+                    <div class="resumo-artigo">
+                        <h3>O que vais encontrar neste artigo</h3>
+                        <ul>
+                            <li><strong>A calculadora interativa</strong> que te mostra, ao minuto, quanto tempo perdes por semana em tarefas repetitivas que a IA já consegue fazer</li>
+                            <li><strong>Os dados reais do setor</strong> sobre onde vai o tempo de um consultor imobiliário — os números são mais graves do que imaginas</li>
+                            <li><strong>O que podes fazer com as horas recuperadas</strong> — e como isso se traduz directamente em mais negócios fechados</li>
+                            <li><strong>A tabela completa de tarefas automatizáveis</strong> com estimativas de tempo e o impacto imediato da automação em cada uma</li>
+                            <li><strong>Um plano para começar esta semana</strong>, sem curva de aprendizagem longa nem investimento inicial</li>
+                        </ul>
+                    </div>
+
+                    <p>Imagina que contratavas um assistente que chegava ao escritório todas as manhãs, respondia a todos os leads que tinham chegado durante a noite, actualizava o CRM com as interacções da véspera, enviava os follow-ups agendados para esta semana, qualificava os novos contactos com base no perfil de cada um e ainda mandava as mensagens de confirmação de visita — tudo antes de tu chegares.</p>
+
+                    <p>Esse assistente existe. Chama-se automação. E a maioria dos consultores imobiliários em Portugal ainda não o contratou — continuando a fazer esse trabalho manualmente, minuto a minuto, semana após semana.</p>
+
+                    <p>A questão não é filosófica. É matemática. Se passas 3 horas por dia em tarefas que uma ferramenta de IA consegue fazer por ti, estás a perder 15 horas por semana que podias estar a usar para visitas, negociações, prospeção ou simplesmente para descansar. Este artigo coloca os números na mesa — e dá-te a calculadora para confirmares os teus próprios.</p>
+
+                    <hr class="separador-artigo">
+
+                    <h2>O Diagnóstico: Para Onde Vai o Tempo de um Consultor Imobiliário</h2>
+
+                    <p>Antes da calculadora, o contexto. Vários estudos do setor em 2026 apontam para um padrão consistente: a maior fatia do tempo de um consultor imobiliário não é passada a vender. É passada em redor das vendas — a preparar, registar, acompanhar e comunicar coisas que, na maioria dos casos, poderiam ser automatizadas sem perda de qualidade ou de relação com o cliente.</p>
+
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-valor">70%</span>
+                            <span class="stat-descricao">do tempo de um consultor é consumido por tarefas administrativas e repetitivas — resposta a leads, actualizações de CRM, follow-up manual</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">3–4h</span>
+                            <span class="stat-descricao">por dia é o tempo médio que um agente imobiliário passa em tarefas que não exigem presença humana directa</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">15h+</span>
+                            <span class="stat-descricao">por semana é o que consultores que adoptaram IA reportam ter recuperado — tempo que foi directamente para mais clientes e mais negócios</span>
+                        </div>
+                    </div>
+
+                    <p>Estes números não são teóricos. São o resultado de analisar como consultores reais distribuem o seu tempo em semanas típicas — não semanas excepcionais, mas semanas normais com visitas, leads, follow-ups e gestão de pipeline. O padrão repete-se: quem não automatiza está a trabalhar como se fosse 2018.</p>
+
+                    <h2>A Tua Calculadora de Tempo Perdido</h2>
+
+                    <p>Usa os valores abaixo como ponto de partida — são médias do setor. Ajusta para a tua realidade e o resultado final mostra exactamente quanto tempo recuperas por semana se automatizares as tarefas que a IA já consegue fazer melhor do que nós.</p>
+
+                    <div class="calculadora-wrapper">
+                        <h3>🕐 Calculadora de Horas Recuperáveis por Semana</h3>
+                        <p class="calc-subtitulo">Insere quantas vezes fazes cada tarefa por semana e o tempo médio que demoras. Os valores pré-preenchidos são médias do sector — ajusta ao teu ritmo real.</p>
+
+                        <div class="calc-linha">
+                            <label><strong>Resposta manual a leads novos</strong><br>Emails, SMS, mensagens de portal — a primeira resposta a cada lead que chega</label>
+                            <input type="number" id="t1-freq" value="25" min="0"> <span class="calc-unidade">leads/sem ×</span>
+                            <input type="number" id="t1-min" value="8" min="0"> <span class="calc-unidade">min cada</span>
+                        </div>
+
+                        <div class="calc-linha">
+                            <label><strong>Follow-up manual de leads em aberto</strong><br>Contactos de acompanhamento que tens de te lembrar de fazer e enviar um a um</label>
+                            <input type="number" id="t2-freq" value="30" min="0"> <span class="calc-unidade">contactos/sem ×</span>
+                            <input type="number" id="t2-min" value="6" min="0"> <span class="calc-unidade">min cada</span>
+                        </div>
+
+                        <div class="calc-linha">
+                            <label><strong>Actualização manual do CRM</strong><br>Registar interacções, actualizar estado de leads, adicionar notas após chamadas e visitas</label>
+                            <input type="number" id="t3-freq" value="20" min="0"> <span class="calc-unidade">registos/sem ×</span>
+                            <input type="number" id="t3-min" value="5" min="0"> <span class="calc-unidade">min cada</span>
+                        </div>
+
+                        <div class="calc-linha">
+                            <label><strong>Confirmações e lembretes de visitas</strong><br>Mensagens de confirmação, lembretes no dia anterior, informações de acesso ao imóvel</label>
+                            <input type="number" id="t4-freq" value="10" min="0"> <span class="calc-unidade">visitas/sem ×</span>
+                            <input type="number" id="t4-min" value="7" min="0"> <span class="calc-unidade">min cada</span>
+                        </div>
+
+                        <div class="calc-linha">
+                            <label><strong>Qualificação inicial de leads</strong><br>Perguntas básicas para perceber orçamento, tipologia, urgência — antes de saber se vale a pena avançar</label>
+                            <input type="number" id="t5-freq" value="15" min="0"> <span class="calc-unidade">leads/sem ×</span>
+                            <input type="number" id="t5-min" value="12" min="0"> <span class="calc-unidade">min cada</span>
+                        </div>
+
+                        <div class="calc-linha">
+                            <label><strong>Respostas a perguntas repetitivas</strong><br>"Qual o preço por m²?", "Aceita permuta?", "Tem garagem?" — as mesmas perguntas em loop</label>
+                            <input type="number" id="t6-freq" value="20" min="0"> <span class="calc-unidade">perguntas/sem ×</span>
+                            <input type="number" id="t6-min" value="4" min="0"> <span class="calc-unidade">min cada</span>
+                        </div>
+
+                        <div class="calc-linha">
+                            <label><strong>Relatórios de actividade e pipeline</strong><br>Preparar resumos para o gestor, actualizar tabelas de acompanhamento, preparar reuniões de equipa</label>
+                            <input type="number" id="t7-freq" value="1" min="0"> <span class="calc-unidade">relatórios/sem ×</span>
+                            <input type="number" id="t7-min" value="45" min="0"> <span class="calc-unidade">min cada</span>
+                        </div>
+
+                        <hr class="calc-separador">
+
+                        <div class="calc-resultado" id="resultado">
+                            <div>
+                                <div class="calc-resultado-label">Total de horas recuperáveis por semana</div>
+                                <div class="calc-resultado-sub">se automatizares estas 7 categorias de tarefas</div>
+                            </div>
+                            <div>
+                                <div class="calc-resultado-valor" id="total-horas">--</div>
+                            </div>
+                        </div>
+                        <p class="calc-aviso">* Este cálculo representa o tempo que uma plataforma de automação com IA consegue executar de forma autónoma. Algumas tarefas requerem supervisão — mas não execução manual.</p>
+                    </div>
+
+                    <p>Se o teu resultado ficou entre 8 e 20 horas por semana, estás dentro da média do setor. Se ficou acima de 20 horas, estás a perder mais de metade de uma semana de trabalho útil em tarefas que uma ferramenta já faz por ti — e que nunca exigiram o teu talento para começar.</p>
+
+                    <div class="destaque-principal">
+                        <p><strong>A pergunta que este exercício levanta não é "quanto tempo perco?"</strong> — é "o que poderia fazer com essas horas?". Cada hora recuperada da automação é uma hora que podes dedicar a uma visita adicional, a uma prospeção que estavas a adiar, a uma negociação que merece a tua total atenção — ou simplesmente a desligar sem culpa ao fim do dia.</p>
+                    </div>
+
+                    <h2>O Que os Dados do Setor Confirmam</h2>
+
+                    <p>Os números da calculadora não são arbitrários. Reflectem padrões documentados em estudos de produtividade de consultores imobiliários em 2025 e 2026. E a consistência dos resultados em diferentes mercados diz algo importante sobre a natureza do problema.</p>
+
+                    <div class="tarefa-card">
+                        <span class="tarefa-icone">DADO 1</span>
+                        <h4>48% dos consultores nunca fazem follow-up após o primeiro contacto</h4>
+                        <p>Segundo a National Association of Realtors, quase metade dos agentes não volta a contactar um lead depois da primeira interacção. Mas 80% das vendas imobiliárias acontecem entre o 5.º e o 12.º contacto. O paradoxo é evidente: o follow-up é crítico para fechar negócios, mas os consultores não o fazem porque é demorado e fácil de esquecer. A automação elimina exactamente esta falha — não porque os consultores não queiram fazer follow-up, mas porque deixa de depender de se lembrarem de o fazer manualmente.</p>
+                    </div>
+
+                    <div class="tarefa-card">
+                        <span class="tarefa-icone">DADO 2</span>
+                        <h4>O tempo médio de resposta a um lead é 917 minutos — mais de 15 horas</h4>
+                        <p>Um inquérito Inman de 2025 revelou que o tempo médio de resposta de um agente imobiliário a um novo lead é de 917 minutos. Quinze horas e meia. Para contextualizar: consultores que respondem em menos de 5 minutos têm uma probabilidade 21 vezes maior de converter esse lead do que quem espera 30 minutos. A ironia é que o delay não acontece porque o consultor não quer responder — acontece porque estava numa visita, numa reunião ou simplesmente não recebeu a notificação a tempo. Um agente de IA responde em segundos, sem excepção.</p>
+                    </div>
+
+                    <div class="tarefa-card">
+                        <span class="tarefa-icone">DADO 3</span>
+                        <h4>Consultores com IA reportam 15 a 25 horas recuperadas por semana</h4>
+                        <p>Dados de plataformas de automação imobiliária com base nos EUA e Europa mostram que consultores que adoptaram IA para follow-up, qualificação e actualização de CRM recuperam em média entre 15 a 25 horas semanais — sobretudo ao eliminar a triagem manual de leads e a redacção repetitiva de emails e mensagens. Para um consultor a trabalhar 45 horas por semana, isso equivale a recuperar até 55% do seu tempo efectivo.</p>
+                    </div>
+
+                    <div class="tarefa-card">
+                        <span class="tarefa-icone">DADO 4</span>
+                        <h4>97% dos agentes já adoptaram alguma ferramenta de IA — mas só 17% sentem impacto real</h4>
+                        <p>Um inquérito da Delta Media de início de 2026 revelou que 97% dos agentes imobiliários usam alguma ferramenta de IA — mas apenas 17% reportam um impacto positivo significativo nos seus resultados de negócio. A explicação é simples: a maioria usa IA para tarefas isoladas e pontuais, não como sistema integrado. Usar ChatGPT para escrever uma descrição de imóvel de vez em quando não é automação — é uma ferramenta avulsa. O impacto real vem de um sistema que funciona 24 horas por dia, integrado no teu processo, sem que precises de accioná-lo manualmente.</p>
+                    </div>
+
+                    <div class="cta-inline">
+                        <h3>Vê a Automação em Acção no Teu Processo</h3>
+                        <p>Mostramos-te como configurar um sistema que responde, qualifica e faz follow-up automaticamente — sem que percas o controlo ou o lado humano das relações com os teus clientes.</p>
+                        <a href="../index.html#contato">Experimenta a Plataforma Grátis &rarr;</a>
+                    </div>
+
+                    <h2>O Que Podes Fazer com as Horas Recuperadas</h2>
+
+                    <p>A questão não é abstracta. Se recuperas 15 horas por semana — um valor conservador para quem ainda não automatizou nada — existem formas concretas de converter esse tempo em resultados de negócio imediatos.</p>
+
+                    <div class="recuperar-grid">
+                        <div class="recuperar-card">
+                            <h4>Mais visitas qualificadas por semana</h4>
+                            <p>Uma visita a um imóvel, desde o contacto até ao regresso, ocupa em média 1,5 a 2 horas. Com 15 horas recuperadas, tens margem para fazer 7 a 10 visitas adicionais por semana — sem aumentar as horas totais de trabalho.</p>
+                        </div>
+                        <div class="recuperar-card">
+                            <h4>Prospeção activa de proprietários</h4>
+                            <p>A prospeção é a tarefa que os consultores mais adiam quando o tempo aperta — e a que tem maior impacto no pipeline a médio prazo. Com horas recuperadas da automação, tens blocos de tempo protegidos para a prospeção proactiva que faz crescer a carteira.</p>
+                        </div>
+                        <div class="recuperar-card">
+                            <h4>Negociações mais preparadas</h4>
+                            <p>As negociações perdidas raramente se perdem por falta de talento — perdem-se por falta de preparação. Com mais tempo disponível, preparas melhor cada reunião: mais dados de mercado, mais conhecimento do cliente, mais argumentos sólidos para fechar.</p>
+                        </div>
+                        <div class="recuperar-card">
+                            <h4>Equilíbrio entre trabalho e vida pessoal</h4>
+                            <p>Não é só sobre fechar mais negócios. É sobre não levar para casa a sensação de que havia uma lista interminável de coisas por fazer. Quando as tarefas repetitivas estão automatizadas, a cabeça fica livre para aquilo que realmente importa — dentro e fora do trabalho.</p>
+                        </div>
+                    </div>
+
+                    <h2>Quais Tarefas Podes Automatizar Já Esta Semana</h2>
+
+                    <p>Não precisas de automatizar tudo de uma vez. A tabela abaixo mostra as tarefas com maior impacto imediato em termos de tempo recuperado, o que uma plataforma de IA já consegue fazer e o que ainda precisa de presença humana.</p>
+
+                    <table class="automacao-tabela">
+                        <thead>
+                            <tr>
+                                <th>Tarefa</th>
+                                <th>Tempo típico/semana</th>
+                                <th>Automatizável com IA?</th>
+                                <th>O que a IA faz</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Primeira resposta a leads novos</strong></td>
+                                <td class="horas-semana">3–5h</td>
+                                <td><span class="badge-sim">✓ Sim</span></td>
+                                <td>Responde em segundos, 24h/dia, com informação do imóvel e qualificação inicial</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sequências de follow-up</strong></td>
+                                <td class="horas-semana">4–6h</td>
+                                <td><span class="badge-sim">✓ Sim</span></td>
+                                <td>Envia mensagens de acompanhamento nos dias certos, sem se esquecer de nenhum lead</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Qualificação inicial de leads</strong></td>
+                                <td class="horas-semana">2–4h</td>
+                                <td><span class="badge-sim">✓ Sim</span></td>
+                                <td>Faz as perguntas de qualificação (orçamento, tipologia, urgência) antes de o consultor entrar em cena</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Confirmações e lembretes de visitas</strong></td>
+                                <td class="horas-semana">1–2h</td>
+                                <td><span class="badge-sim">✓ Sim</span></td>
+                                <td>Envia confirmação automática, lembrete no dia anterior e informações de acesso</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Respostas a perguntas repetitivas</strong></td>
+                                <td class="horas-semana">1–2h</td>
+                                <td><span class="badge-sim">✓ Sim</span></td>
+                                <td>Responde automaticamente às perguntas mais comuns sobre cada imóvel</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Actualização de CRM</strong></td>
+                                <td class="horas-semana">1–2h</td>
+                                <td><span class="badge-sim">✓ Parcial</span></td>
+                                <td>Regista interacções automaticamente; o consultor revê e completa com contexto qualitativo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Negociação com proprietários e compradores</strong></td>
+                                <td class="horas-semana">—</td>
+                                <td><span class="badge-manual">✗ Humano</span></td>
+                                <td>Requer julgamento, empatia e relação de confiança — o trabalho onde o talento do consultor é insubstituível</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reuniões de angariação</strong></td>
+                                <td class="horas-semana">—</td>
+                                <td><span class="badge-manual">✗ Humano</span></td>
+                                <td>A IA prepara os dados; a conversa com o proprietário exige presença e capacidade de construir confiança</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>A lógica é simples: automatizas o que é repetitivo, previsível e não exige julgamento humano. Reservas o teu tempo para o que é irreplaceable — a relação, a negociação, a confiança que um proprietário ou comprador deposita especificamente em ti.</p>
+
+                    <div class="citacao-box">
+                        <p>"Antes de automatizar, passava as primeiras duas horas de cada manhã a responder a leads que tinham chegado durante a noite e a actualizar o CRM com o que tinha acontecido no dia anterior. Hoje acordo com tudo feito. Os leads têm resposta, os follow-ups estão enviados, o CRM está actualizado. Uso as primeiras duas horas para fazer visitas. Nos últimos três meses, fiz mais negócios do que no semestre anterior — trabalhando o mesmo número de horas."</p>
+                        <span>— Consultor imobiliário, agência no Porto</span>
+                    </div>
+
+                    <h2>Como Começar Esta Semana</h2>
+
+                    <p>A barreira mais comum para adoptar automação não é o custo nem a tecnologia — é a sensação de que "vai demorar muito a configurar" ou "vou ter de mudar tudo o que faço". Nenhuma das duas é verdade quando a ferramenta foi desenhada para consultores imobiliários, não para programadores.</p>
+
+                    <div class="tarefa-card">
+                        <span class="tarefa-icone">PASSO 1</span>
+                        <h4>Identifica a tarefa que te consome mais tempo — e começa por lá</h4>
+                        <p>Não tentes automatizar tudo ao mesmo tempo. Olha para a calculadora que fizeste acima e identifica a única categoria onde perdes mais tempo por semana. Para a maioria dos consultores, é a resposta a leads novos ou o follow-up manual. Começa por configurar a automação nessa área e sente o impacto antes de avançar para as restantes.</p>
+                    </div>
+
+                    <div class="tarefa-card">
+                        <span class="tarefa-icone">PASSO 2</span>
+                        <h4>Usa os primeiros 14 dias para medir — não para concluir</h4>
+                        <p>A automação imobiliária tem uma curva de melhoria: as primeiras semanas são de configuração e calibração. Regista o tempo que poupas em cada categoria e compara com o que calculaste acima. Ajusta as mensagens automáticas com base nas respostas que recebes. O sistema fica melhor com o uso — e o impacto no tempo recuperado aumenta à medida que os processos ficam afinados.</p>
+                    </div>
+
+                    <div class="tarefa-card">
+                        <span class="tarefa-icone">PASSO 3</span>
+                        <h4>Redireciona conscientemente o tempo recuperado</h4>
+                        <p>Este passo parece óbvio mas é o que mais se negligencia. Quando a automação começa a funcionar, é tentador preencher o tempo recuperado com outras tarefas administrativas. Não o faças. Define explicitamente o que vais fazer com essas horas — mais visitas, mais prospeção, mais tempo de qualidade com os clientes certos. É essa redireccção deliberada que transforma automação em resultados concretos.</p>
+                    </div>
+
+                    <div class="destaque-principal">
+                        <p><strong>A conta final:</strong> se recuperas 15 horas por semana e consegues converter esse tempo em apenas uma angariação adicional por mês — com uma comissão média de €3.500 —, a automação paga-se em semanas e gera um retorno que nenhuma outra ferramenta consegue igualar. E 15 horas por semana é um valor conservador. Para muitos consultores, o número real é o dobro.</p>
+                    </div>
+
+                    <h2>Em Resumo</h2>
+
+                    <p>O tempo é o único recurso que um consultor imobiliário não consegue comprar nem recuperar — a não ser através de automação. Os dados do setor são inequívocos: 70% do tempo de trabalho é consumido por tarefas que a IA já consegue fazer, e quem adoptou sistemas de automação integrada reporta 15 a 25 horas recuperadas por semana.</p>
+
+                    <p>A calculadora deste artigo não é um exercício abstracto. É o primeiro passo para tomar uma decisão informada sobre onde estás a gastar o teu recurso mais valioso — e o que ganhas se o redireccionares para o trabalho que só tu consegues fazer.</p>
+
+                    <div class="cta-inline">
+                        <h3>Recupera as Tuas Horas — Experimenta a Plataforma Grátis</h3>
+                        <p>Os primeiros 14 dias são gratuitos, sem cartão de crédito. Em menos de uma semana, o sistema está a responder, qualificar e fazer follow-up automaticamente — e tu estás a usar esse tempo para o que realmente importa.</p>
+                        <a href="../index.html#contato">Começa Hoje, Grátis &rarr;</a>
+                    </div>
+
+                </div>
+
+                <footer class="artigo-footer">
+                    <a href="../blog.html" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar ao Blog
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Pronto para Transformar a sua Imobiliária?</h2>
+                <p>Agende uma demonstração gratuita e veja como a Imovision Digital pode revolucionar os seus resultados.</p>
+                <a href="../index.html#contato" class="btn btn-primary btn-large">Agendar Demonstração Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#solucao">Solução</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="../index.html#resultados">Resultados</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Calculadora interativa
+        function calcularTempo() {
+            const campos = [
+                { freq: 't1-freq', min: 't1-min' },
+                { freq: 't2-freq', min: 't2-min' },
+                { freq: 't3-freq', min: 't3-min' },
+                { freq: 't4-freq', min: 't4-min' },
+                { freq: 't5-freq', min: 't5-min' },
+                { freq: 't6-freq', min: 't6-min' },
+                { freq: 't7-freq', min: 't7-min' },
+            ];
+
+            let totalMinutos = 0;
+            campos.forEach(function(c) {
+                var freq = parseFloat(document.getElementById(c.freq).value) || 0;
+                var min = parseFloat(document.getElementById(c.min).value) || 0;
+                totalMinutos += freq * min;
+            });
+
+            var horas = totalMinutos / 60;
+            var horasFormatadas = horas % 1 === 0
+                ? horas.toFixed(0) + 'h'
+                : horas.toFixed(1).replace('.', ',') + 'h';
+
+            document.getElementById('total-horas').textContent = horasFormatadas + '/semana';
+        }
+
+        // Inicializar e adicionar listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            calcularTempo();
+            var inputs = document.querySelectorAll('.calculadora-wrapper input[type="number"]');
+            inputs.forEach(function(input) {
+                input.addEventListener('input', calcularTempo);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A IA vai substituir-te? É cara? Os teus dados ficam seguros? Respondemos às 8 perguntas que todo consultor faz antes de experimentar IA.">
+    <title>IA no Imobiliário: as 8 Perguntas que Todo Consultor Faz Antes de Experimentar (Respondidas) - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="../logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .resumo-artigo {
+            background: #0d0e12;
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            border: 1px solid rgba(3,105,191,0.25);
+        }
+        .resumo-artigo h3 { color: #fff; font-size: 1.05rem; margin: 0 0 1.1rem; }
+        .resumo-artigo ul { margin: 0; padding-left: 1.4rem; }
+        .resumo-artigo li { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 0.5rem; line-height: 1.55; }
+        .resumo-artigo li strong { color: #fff; }
+
+        .separador-artigo { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 2rem 0; }
+
+        .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+        .stat-box { background: #f8fafc; border-radius: 12px; padding: 1.4rem 1rem; text-align: center; border: 1px solid rgba(0,0,0,0.07); }
+        .stat-box .stat-valor { font-size: 2rem; font-weight: 800; color: #0369BF; font-family: 'Space Grotesk', sans-serif; display: block; line-height: 1.1; }
+        .stat-box .stat-descricao { font-size: 0.8rem; color: #555; margin-top: 0.4rem; line-height: 1.45; }
+
+        .destaque-principal { background: linear-gradient(135deg, #0369BF 0%, #0284c7 100%); border-radius: 14px; padding: 2rem 2.2rem; margin: 2.5rem 0; color: #fff; }
+        .destaque-principal p { font-size: 1.1rem; line-height: 1.65; margin: 0; color: rgba(255,255,255,0.95); }
+        .destaque-principal p strong { color: #fff; }
+
+        .citacao-box { background: #f8fafc; border-left: 4px solid #0369BF; border-radius: 0 12px 12px 0; padding: 1.5rem 1.8rem; margin: 2rem 0; }
+        .citacao-box p { font-size: 1rem; color: #333; font-style: italic; line-height: 1.7; margin: 0 0 0.6rem; }
+        .citacao-box span { font-size: 0.82rem; color: #777; font-weight: 600; }
+
+        .cta-inline { background: #0d0e12; border-radius: 14px; padding: 2rem 2.2rem; margin: 2.5rem 0; text-align: center; border: 1px solid rgba(3,105,191,0.3); }
+        .cta-inline h3 { color: #fff; font-size: 1.2rem; margin: 0 0 0.8rem; }
+        .cta-inline p { color: rgba(255,255,255,0.7); font-size: 0.92rem; margin: 0 0 1.4rem; }
+        .cta-inline a { display: inline-block; background: #0369BF; color: #fff; padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: background 0.2s; }
+        .cta-inline a:hover { background: #0284c7; }
+
+        .dado-card { background: #f8fafc; border-radius: 12px; padding: 1.5rem 1.6rem; margin-bottom: 1.2rem; border: 1px solid rgba(0,0,0,0.07); }
+        .dado-icone { display: inline-block; background: #0369BF; color: #fff; border-radius: 6px; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.6rem; }
+        .dado-card h4 { font-size: 1rem; font-weight: 700; color: #0d0e12; margin: 0 0 0.5rem; }
+        .dado-card p { font-size: 0.88rem; color: #555; margin: 0; line-height: 1.6; }
+
+        .metodo-comparacao { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 2rem 0; }
+        .metodo-antigo, .metodo-novo { border-radius: 12px; padding: 1.5rem 1.6rem; }
+        .metodo-antigo { background: #fef2f2; border: 1px solid #fecaca; }
+        .metodo-novo { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .metodo-antigo h4 { color: #991b1b; font-size: 0.95rem; margin: 0 0 0.8rem; }
+        .metodo-novo h4 { color: #15803d; font-size: 0.95rem; margin: 0 0 0.8rem; }
+        .metodo-antigo ul, .metodo-novo ul { margin: 0; padding-left: 1.2rem; }
+        .metodo-antigo li, .metodo-novo li { font-size: 0.85rem; color: #444; margin-bottom: 0.55rem; line-height: 1.5; }
+
+        .callout {
+            background: #F0F0F2;
+            border-left: 4px solid #0369BF;
+            border-radius: 0 8px 8px 0;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .callout p { margin-bottom: 0 !important; font-size: 1rem !important; color: rgba(0,0,0,0.75) !important; }
+        .callout strong { color: #0369BF !important; }
+
+        .tabela-comparativa { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); }
+        .tabela-comparativa th { background: #0d0e12; color: #fff; padding: 0.8rem 1rem; text-align: left; font-family: var(--font-title); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .tabela-comparativa td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(0,0,0,0.07); color: rgba(0,0,0,0.75); vertical-align: top; }
+        .tabela-comparativa tr:last-child td { border-bottom: none; }
+        .tabela-comparativa tr:nth-child(even) td { background: rgba(3, 105, 191, 0.04); }
+        .tabela-comparativa .td-destaque { font-weight: 700; color: #c0392b; }
+        .tabela-comparativa .td-ok { font-weight: 700; color: #27ae60; }
+
+        @media (max-width: 768px) {
+            .stats-row { grid-template-columns: 1fr; }
+            .metodo-comparacao { grid-template-columns: 1fr; }
+            .resumo-artigo { padding: 1.5rem; }
+            .destaque-principal { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#solucao">Solução</a></li>
+                    <li><a href="../index.html#beneficios">Benefícios</a></li>
+                    <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="../index.html#resultados">Resultados</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artigo -->
+    <main class="artigo-main">
+        <div class="container">
+            <nav class="artigo-breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="../blog.html">Blog</a>
+                <span>/</span>
+                <span>Perguntas Frequentes sobre IA</span>
+            </nav>
+
+            <article class="artigo-conteudo">
+                <header class="artigo-header">
+                    <div class="blog-card-categoria">Perguntas Frequentes</div>
+
+                    <h1 class="artigo-titulo">IA no Imobiliário: as 8 Perguntas que Todo Consultor Faz Antes de Experimentar (Respondidas)</h1>
+
+                    <div class="artigo-meta">
+                        <span class="artigo-autor">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Equipa Imovision Digital
+                        </span>
+                        <span class="artigo-data">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            27 de Julho de 2026
+                        </span>
+                        <span class="artigo-tempo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            9 min de leitura
+                        </span>
+                    </div>
+
+                    <p class="artigo-resumo">82% dos consultores imobiliários já usam Inteligência Artificial no trabalho diário, mas a maioria das perguntas que ouvimos continuam a ser as mesmas: "vai substituir-me?", "é caro?", "os dados ficam seguros?". Respondemos às 8 perguntas mais frequentes com dados de 2026, sem promessas vazias.</p>
+                </header>
+
+                <div class="artigo-corpo">
+
+                    <div class="resumo-artigo">
+                        <h3>O que vais encontrar neste artigo</h3>
+                        <ul>
+                            <li><strong>As 8 perguntas mais frequentes</strong> que consultores imobiliários fazem antes de experimentar IA — respondidas com dados, não com opiniões</li>
+                            <li><strong>O que muda a partir de 2 de agosto de 2026</strong> com o Regulamento Europeu de IA, e o que isso significa para quem usa estas ferramentas no dia a dia</li>
+                            <li><strong>Uma novidade lançada em Portugal há poucos dias</strong> que mostra por onde o mercado já está a andar</li>
+                            <li><strong>Mitos vs. realidade</strong>: o que a IA no imobiliário realmente faz — e o que ainda não faz</li>
+                            <li><strong>Um checklist prático</strong> para escolheres a ferramenta certa sem te perderes em opções</li>
+                        </ul>
+                    </div>
+
+                    <p>Depois de vários artigos neste blog sobre automação, follow-up e gestão de leads, há uma coisa que se repete em quase todas as conversas com consultores imobiliários: as perguntas são sempre as mesmas. Não é falta de interesse — é falta de respostas diretas, sem jargão e sem promessas de vendedor.</p>
+
+                    <p>Por isso, em vez de mais um artigo a explicar o que é a IA, decidimos responder às perguntas reais que ouvimos, com números de 2026 e sem rodeios.</p>
+
+                    <hr class="separador-artigo">
+
+                    <h2>Pergunta 1: A IA Vai Substituir-me Como Consultor Imobiliário?</h2>
+
+                    <p>Não. E os números de 2026 já dão uma resposta bastante clara a esta dúvida. Segundo o inquérito mais recente da RPR (Realtor Property Resource, subsidiária da associação norte-americana de consultores NAR), 82% dos consultores imobiliários já integraram IA no seu trabalho — e apenas 8% dizem que nunca pretendem usar estas ferramentas. Se a IA estivesse a substituir consultores, não seriam os próprios consultores a adotá-la em massa.</p>
+
+                    <p>O que a IA substitui não são pessoas — são tarefas. Escrever a mesma mensagem de follow-up pela décima vez, responder ao mesmo tipo de pergunta sobre um imóvel, organizar uma agenda de visitas. Reggie Nicolay, responsável de marketing e formação da RPR, resume assim o momento atual do setor: a adoção de IA "já não é a questão" — os consultores já a estão a usar. O verdadeiro desafio agora é a confiança: confiança na qualidade do que a IA produz, na conformidade legal, e em como é usada nas conversas com clientes.</p>
+
+                    <div class="destaque-principal">
+                        <p><strong>A pergunta certa não é "a IA vai substituir-me?"</strong> É "vou ser eu a usar a IA para libertar tempo para o que só um humano faz bem — negociar, aconselhar, construir confiança — ou vou continuar a gastar esse tempo em tarefas que a tecnologia já resolve sozinha?"</p>
+                    </div>
+
+                    <h2>Pergunta 2: Quanto Custa uma Solução de IA para uma Imobiliária Pequena?</h2>
+
+                    <p>Muito menos do que a maioria imagina antes de pesquisar. As soluções de IA para gestão de leads e automação no imobiliário situam-se tipicamente entre 100€ e 500€ por consultor, por mês, consoante as funcionalidades incluídas. Não é um investimento de "grande agência" — é comparável ao que muitos consultores já gastam em publicidade para gerar leads que depois deixam arrefecer por falta de resposta rápida.</p>
+
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-valor">82%</span>
+                            <span class="stat-descricao">dos consultores imobiliários já usam IA no dia a dia — segundo o inquérito da RPR publicado em fevereiro de 2026</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">71%</span>
+                            <span class="stat-descricao">apontam a poupança de tempo como o principal benefício — e 34% poupam mais de 4 horas por semana</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">6-12</span>
+                            <span class="stat-descricao">meses é o prazo típico de retorno do investimento numa ferramenta de IA para gestão de leads</span>
+                        </div>
+                    </div>
+
+                    <p>O retorno costuma vir de dois lados ao mesmo tempo: menos horas gastas em tarefas manuais e mais negócios fechados por responderes mais depressa. Basta um único negócio adicional por trimestre, na maioria dos casos, para o investimento se pagar a si próprio.</p>
+
+                    <h2>Pergunta 3: Os Meus Dados e os dos Meus Clientes Ficam Seguros?</h2>
+
+                    <p>Esta pergunta ganhou ainda mais atualidade neste último mês. A partir de 2 de agosto de 2026, entram em vigor novas obrigações do Regulamento Europeu de Inteligência Artificial (AI Act) — nomeadamente as regras de transparência do Artigo 50, que obrigam a identificar claramente quando um cliente está a interagir com um sistema de IA, e a rotular conteúdo gerado artificialmente.</p>
+
+                    <p>Vale a pena notar que, a 29 de junho de 2026, o Conselho da União Europeia aprovou o chamado "Digital Omnibus", que adiou para 2027 e 2028 as obrigações mais pesadas ligadas a sistemas de IA de "risco elevado". Ou seja: as regras de transparência básica avançam já em agosto de 2026, mas o essencial da conformidade para a maioria das ferramentas usadas no imobiliário — CRMs, assistentes de resposta, qualificação de leads — não muda de um dia para o outro.</p>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">NA PRÁTICA</span>
+                        <h4>O que isto significa para o teu dia a dia</h4>
+                        <p>Qualquer fornecedor de tecnologia sério para o setor imobiliário já trata isto por ti: proteção de dados desde a conceção, informação clara ao cliente quando está a falar com um assistente automático, e supervisão humana disponível a qualquer momento. A tua responsabilidade, como consultor, é escolher fornecedores que cumpram o RGPD e sejam transparentes sobre como tratam os dados dos teus leads — não é teres de te tornar especialista em regulação europeia.</p>
+                    </div>
+
+                    <table class="tabela-comparativa">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>O que muda</th>
+                                <th>Impacto para consultores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 de agosto de 2026</td>
+                                <td>Regras de transparência (Artigo 50) entram em vigor</td>
+                                <td class="td-ok">Baixo — o fornecedor da ferramenta trata disto</td>
+                            </tr>
+                            <tr>
+                                <td>2027 / 2028</td>
+                                <td>Obrigações de sistemas de "risco elevado" (adiadas pelo Digital Omnibus)</td>
+                                <td>Praticamente não aplicável a CRMs de gestão de leads</td>
+                            </tr>
+                            <tr>
+                                <td>Contínuo</td>
+                                <td>RGPD (em vigor desde 2018)</td>
+                                <td class="td-destaque">Continua a ser a base — escolhe fornecedores conformes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Pergunta 4: Preciso de Saber Programar ou Perceber de Tecnologia?</h2>
+
+                    <p>Não. As ferramentas de IA feitas para o setor imobiliário em 2026 são desenhadas para consultores, não para programadores. Configura-se por formulários e definições simples — não por código. Se sabes usar o WhatsApp e um CRM básico, sabes o suficiente para começar.</p>
+
+                    <div class="metodo-comparacao">
+                        <div class="metodo-antigo">
+                            <h4>Mito</h4>
+                            <ul>
+                                <li>"Preciso de perceber de programação"</li>
+                                <li>"Vai levar meses a implementar"</li>
+                                <li>"É só para agências grandes"</li>
+                                <li>"Vai soar robótico com os meus clientes"</li>
+                            </ul>
+                        </div>
+                        <div class="metodo-novo">
+                            <h4>Realidade</h4>
+                            <ul>
+                                <li>Configuração por definições simples, sem código</li>
+                                <li>Implementação tipicamente em dias, não meses</li>
+                                <li>Planos a partir de 100€/mês, por consultor</li>
+                                <li>Tom e mensagens são personalizáveis à tua voz</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Pergunta 5: A IA Consegue Mesmo Qualificar Leads Sozinha, Sem Soar Robótica?</h2>
+
+                    <p>Consegue — e o mercado português acabou de dar mais um sinal disso. A 22 de julho de 2026, menos de uma semana antes da publicação deste artigo, o CRM Inmovilla, da idealista, apresentou em Portugal um qualificador de leads por IA integrado diretamente no CRM: a ferramenta contacta, qualifica e classifica cada lead automaticamente, sem intervenção manual do consultor. Quando um dos maiores portais imobiliários da Europa lança esta funcionalidade para o mercado português, é sinal de que deixou de ser uma experiência de nicho.</p>
+
+                    <p>Sobre o "soar robótico": segundo o mesmo inquérito da RPR, 47% dos consultores já usam chatbots ou assistentes de IA no seu trabalho — a segunda categoria de ferramenta mais adotada, logo a seguir às ferramentas de escrita. As mensagens são configuráveis ao teu tom de voz, e a experiência do cliente não é "falar com um robô" — é receber uma resposta em segundos, em vez de esperar horas.</p>
+
+                    <div class="callout">
+                        <p><strong>Nota importante:</strong> a IA responde primeiro e qualifica o interesse do lead. A conversa que fecha negócio — a negociação, a visita, a relação de confiança — continua a ser sempre humana. É isso que o consenso do setor, desde a APEMIP às associações internacionais, tem repetido: a IA é aliada, não substituta.</p>
+                    </div>
+
+                    <h2>Pergunta 6: Quanto Tempo Demora a Ver Resultados?</h2>
+
+                    <p>A implementação em si é rápida — normalmente dias, não meses, porque a maioria das plataformas já vem configurada para os fluxos mais comuns do setor imobiliário. Os primeiros resultados visíveis, como tempo de resposta e organização de follow-ups, costumam aparecer logo nas primeiras semanas. O retorno financeiro completo — medido em negócios fechados que antes se perdiam — situa-se, como referido, entre 6 e 12 meses na maioria dos casos.</p>
+
+                    <p>O erro mais comum não é a tecnologia demorar a mostrar resultados — é o consultor esperar meses antes de sequer começar, enquanto a distância para quem já automatizou continua a aumentar.</p>
+
+                    <h2>Pergunta 7: E se os Meus Clientes Preferirem Falar com uma Pessoa?</h2>
+
+                    <p>Vão continuar a falar com uma pessoa — só que mais tarde no processo, e melhor preparados. A IA trata do primeiro contacto, das perguntas repetidas e da organização de informação; tu entras quando a conversa exige julgamento, negociação ou confiança — exatamente onde um cliente quer mesmo uma pessoa do outro lado. Aliás, é frequentemente aí que a experiência do cliente melhora: em vez de esperar horas por uma primeira resposta, recebe-a em segundos, e fala contigo já com as perguntas certas esclarecidas.</p>
+
+                    <div class="cta-inline">
+                        <h3>Vê Como Isto Funciona na Prática</h3>
+                        <p>A Imovision Digital responde, qualifica e organiza follow-up automaticamente com os teus leads — sem soar robótica e sem substituir o teu papel na negociação.</p>
+                        <a href="../index.html#contato">Agenda uma Demonstração Gratuita &rarr;</a>
+                    </div>
+
+                    <h2>Pergunta 8: Como Escolho a Ferramenta Certa Entre Tantas Opções?</h2>
+
+                    <p>Com o mercado a crescer depressa — de portais como a idealista a plataformas especializadas em CRM imobiliário — é fácil sentir-se perdido em opções. Antes de escolheres, verifica estes pontos:</p>
+
+                    <ul>
+                        <li><strong>Resposta imediata a novos leads:</strong> a ferramenta responde em segundos, a qualquer hora, sem esperares por horário de expediente?</li>
+                        <li><strong>Follow-up automático configurável:</strong> consegues definir sequências de contacto sem teres de programar nada?</li>
+                        <li><strong>Conformidade com o RGPD:</strong> o fornecedor explica claramente como trata os dados dos teus leads e clientes?</li>
+                        <li><strong>Personalização do tom:</strong> as mensagens automáticas soam como a tua agência, não como um modelo genérico?</li>
+                        <li><strong>Implementação em dias, não meses:</strong> consegues começar a usar a ferramenta na primeira semana?</li>
+                        <li><strong>Suporte em português:</strong> tens apoio real, em português, quando precisas de ajuda?</li>
+                    </ul>
+
+                    <p>Uma ferramenta que cumpra estes seis pontos resolve, na prática, a maioria das dúvidas levantadas neste artigo — sem obrigar a escolher entre "ser tecnológico" e "manter a relação humana" que sempre te distinguiu como consultor.</p>
+
+                    <h2>Em Resumo</h2>
+
+                    <p>A IA no imobiliário chegou a um ponto em que 82% dos consultores já a usam, o mercado português já tem grandes players como a idealista a lançar ferramentas de qualificação automática, e a regulação europeia está a criar regras claras de transparência — sem travar a adoção. As perguntas que ainda geram hesitação — custo, segurança, complexidade, perda do toque humano — têm hoje respostas concretas, não opiniões.</p>
+
+                    <p>A pergunta que fica não é se a IA tem lugar no teu trabalho como consultor. É se vais ser tu a decidir como e quando a usar — ou se vais deixar que a decisão seja tomada por ti, pela distância que se acumula enquanto esperas.</p>
+
+                    <div class="cta-inline">
+                        <h3>Ainda Tens Dúvidas? Fala Connosco Diretamente</h3>
+                        <p>Sem calculadoras, sem jargão — só uma conversa sobre o que a Imovision Digital pode automatizar na tua imobiliária esta semana.</p>
+                        <a href="../index.html#contato">Começa Hoje, Grátis &rarr;</a>
+                    </div>
+
+                </div>
+
+                <footer class="artigo-footer">
+                    <a href="../blog.html" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar ao Blog
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Pronto para Transformar a sua Imobiliária?</h2>
+                <p>Agende uma demonstração gratuita e veja como a Imovision Digital pode revolucionar os seus resultados.</p>
+                <a href="../index.html#contato" class="btn btn-primary btn-large">Agendar Demonstração Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#solucao">Solução</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="../index.html#resultados">Resultados</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

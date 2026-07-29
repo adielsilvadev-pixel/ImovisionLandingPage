@@ -1,5 +1,115 @@
 [
   {
+    "id": "ia-imobiliario-perguntas-frequentes-2026",
+    "titulo": "IA no Imobiliário: as 8 Perguntas que Todo Consultor Faz Antes de Experimentar (Respondidas)",
+    "resumo": "82% dos consultores imobiliários já usam Inteligência Artificial no trabalho diário, mas as dúvidas continuam as mesmas: vai substituir-me? é caro? os dados ficam seguros? Respondemos às 8 perguntas mais frequentes com dados de 2026.",
+    "categoria": "Perguntas Frequentes",
+    "data": "2026-07-27",
+    "dataFormatada": "27 de Julho de 2026",
+    "tempoLeitura": "9 min",
+    "url": "artigos/ia-imobiliario-perguntas-frequentes-2026.html"
+  },
+  {
+    "id": "quanto-custa-nao-ter-tecnologia-imobiliaria",
+    "titulo": "Quanto Custa NÃO Ter Tecnologia na Tua Imobiliária? (A Conta que Ninguém Quer Fazer)",
+    "resumo": "97% dos líderes de agências imobiliárias já dizem que os seus consultores usam Inteligência Artificial — há dois anos, eram 80%. Calcula, com dados reais, quanto te está a custar por mês continuar sem tecnologia.",
+    "categoria": "ROI & Resultados",
+    "data": "2026-07-20",
+    "dataFormatada": "20 de Julho de 2026",
+    "tempoLeitura": "11 min",
+    "url": "artigos/quanto-custa-nao-ter-tecnologia-imobiliaria.html"
+  },
+  {
+    "id": "redes-sociais-consultores-imobiliarios-2026",
+    "titulo": "Redes Sociais para Consultores Imobiliários: o Que Realmente Funciona em Portugal em 2026",
+    "resumo": "73% dos portugueses já estão nas redes sociais e o TikTok ultrapassou todas as outras plataformas em tempo de ecrã. Descobre, com dados de 2026, que rede social realmente gera leads para um consultor imobiliário — e como escolher a tua sem te dispersares por todas.",
+    "categoria": "Redes Sociais & Marketing",
+    "data": "2026-07-06",
+    "dataFormatada": "6 de Julho de 2026",
+    "tempoLeitura": "10 min",
+    "url": "artigos/redes-sociais-consultores-imobiliarios-2026.html"
+  },
+  {
+    "id": "tempo-perdido-tarefas-repetitivas-ia-imobiliario",
+    "titulo": "Quanto Tempo Perdes por Semana em Tarefas que uma IA Pode Fazer por Ti? (Calcula Aqui)",
+    "resumo": "Estudos do setor mostram que 70% do tempo de um consultor imobiliário é consumido por tarefas repetitivas que a IA já faz automaticamente. Usa esta calculadora interativa para descobrir exactamente quantas horas perdes por semana — e o que recuperas se as automatizares.",
+    "categoria": "Automação & Produtividade",
+    "data": "2026-06-29",
+    "dataFormatada": "29 de Junho de 2026",
+    "tempoLeitura": "10 min",
+    "url": "artigos/tempo-perdido-tarefas-repetitivas-ia-imobiliario.html"
+  },
+  {
+    "id": "angariar-imoveis-2026-tecnologia",
+    "titulo": "Angariar Imóveis em 2026: Como a Tecnologia Está a Mudar Quem Chega Primeiro ao Proprietário",
+    "resumo": "O stock de imóveis para venda caiu 14% no primeiro trimestre de 2026. Em 18 dos 20 distritos portugueses, há menos casas no mercado do que há um ano. Neste contexto de escassez, a angariação deixou de ser uma questão de talento — passou a ser uma questão de quem chega primeiro ao proprietário. A tecnologia está a redefinir exactamente esta vantagem.",
+    "categoria": "Angariação & Tecnologia",
+    "data": "2026-06-22",
+    "dataFormatada": "22 de Junho de 2026",
+    "tempoLeitura": "10 min",
+    "url": "artigos/angariar-imoveis-2026-tecnologia.html"
+  },
+  {
+    "id": "lead-scoring-imobiliario-triplicar-eficiencia",
+    "titulo": "O que é Lead Scoring e Como Pode Triplicar a Eficiência da Tua Equipa de Vendas Imobiliárias",
+    "resumo": "A maioria dos consultores imobiliários trata todos os leads da mesma forma — e é por isso que 79% nunca convertem. Lead scoring é o sistema que atribui uma pontuação a cada contacto e diz-te exactamente em quem deves concentrar o teu tempo. Este guia explica como funciona e como implementar.",
+    "categoria": "Gestão de Leads",
+    "data": "2026-06-18",
+    "dataFormatada": "18 de Junho de 2026",
+    "tempoLeitura": "10 min",
+    "url": "artigos/lead-scoring-imobiliario-triplicar-eficiencia.html"
+  },
+  {
+    "id": "whatsapp-para-imobiliarias-fechar-negocios",
+    "titulo": "WhatsApp para Imobiliárias: Como Usar a Ferramenta que Já Tens para Fechar Mais Negócios",
+    "resumo": "O WhatsApp tem 98% de taxa de abertura e já é o canal preferido dos compradores portugueses. Descobre como usá-lo para responder mais rápido, qualificar leads e nunca mais perder um negócio por falta de contacto.",
+    "categoria": "Ferramentas & CRM",
+    "data": "2026-06-10",
+    "dataFormatada": "10 de Junho de 2026",
+    "tempoLeitura": "10 min",
+    "url": "artigos/whatsapp-para-imobiliarias-fechar-negocios.html"
+  },
+  {
+    "id": "agencia-conversoes-40-por-cento-sem-contratar",
+    "titulo": "Como Esta Agência Imobiliária Aumentou as Conversões em 40% Sem Contratar Mais Nenhum Consultor",
+    "resumo": "Uma agência com 8 consultores e resultados estagnados. Sem recrutar ninguém, sem aumentar o orçamento de publicidade — o que mudou em 90 dias e o que qualquer agência pode replicar.",
+    "categoria": "Caso de Sucesso",
+    "data": "2026-06-03",
+    "dataFormatada": "3 de Junho de 2026",
+    "tempoLeitura": "10 min",
+    "url": "artigos/agencia-conversoes-40-por-cento-sem-contratar.html"
+  },
+  {
+    "id": "follow-up-imobiliario-guia-completo",
+    "titulo": "Follow-up Imobiliário: O Guia Completo para Nunca Mais Perder um Cliente por Falta de Contacto",
+    "resumo": "80% das vendas imobiliárias acontecem entre o 5.º e o 12.º contacto. A maioria dos consultores desiste ao 2.º. Este guia mostra como construir uma sequência de follow-up de 90 dias que converte — sem pareceres intrusivo.",
+    "categoria": "Gestão de Leads",
+    "data": "2026-05-22",
+    "dataFormatada": "22 de Maio de 2026",
+    "tempoLeitura": "11 min",
+    "url": "artigos/follow-up-imobiliario-guia-completo.html"
+  },
+  {
+    "id": "ia-imobiliario-guia-sem-jargao",
+    "titulo": "Inteligência Artificial no Imobiliário: O Guia Sem Jargão para Consultores que Querem Resultados",
+    "resumo": "72% das imobiliárias mundiais planeiam aumentar o investimento em IA em 2026. Em Portugal, a adoção já está a acontecer. Este guia explica o que a IA realmente faz no imobiliário, sem uma linha de código — e como começas a usá-la esta semana.",
+    "categoria": "Inteligência Artificial",
+    "data": "2026-05-13",
+    "dataFormatada": "13 de Maio de 2026",
+    "tempoLeitura": "10 min",
+    "url": "artigos/ia-imobiliario-guia-sem-jargao.html"
+  },
+  {
+    "id": "responder-lead-imobiliario-2-minutos",
+    "titulo": "Como Responder a um Lead Imobiliário em Menos de 2 Minutos (Mesmo Quando Estás a Dormir)",
+    "resumo": "47% dos leads imobiliários chegam fora do horário de expediente. Um agente de IA responde em segundos — mesmo durante visitas, ao fim de semana ou a dormir. Vê como funciona e quanto impacto tem na tua taxa de conversão.",
+    "categoria": "Automação",
+    "data": "2026-05-06",
+    "dataFormatada": "6 de Maio de 2026",
+    "tempoLeitura": "8 min",
+    "url": "artigos/responder-lead-imobiliario-2-minutos.html"
+  },
+  {
     "id": "leads-frios-vs-clientes-prontos",
     "titulo": "Leads Imobiliários: a Diferença entre um Contacto Frio e um Cliente Pronto a Comprar (e Como Saber a Diferença)",
     "resumo": "79% dos leads gerados no imobiliário nunca convertem. O problema raramente é a campanha — é tratar um contacto curioso exatamente da mesma forma que um cliente pronto a comprar. Aprende a distinguir os dois em menos de 3 minutos de conversa.",

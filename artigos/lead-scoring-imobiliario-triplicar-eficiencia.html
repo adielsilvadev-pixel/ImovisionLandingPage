@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lead scoring é o sistema que separa os consultores que fecham negócios dos que perdem tempo com leads que nunca vão comprar. Aprende como funciona e como triplicar a eficiência da tua equipa imobiliária.">
+    <title>Lead Scoring para Imobiliárias: Como Triplicar a Eficiência da Tua Equipa de Vendas - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="../logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .resumo-artigo {
+            background: #0d0e12;
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            border: 1px solid rgba(3,105,191,0.25);
+        }
+        .resumo-artigo h3 {
+            color: #fff;
+            font-size: 1.05rem;
+            margin: 0 0 1.1rem;
+        }
+        .resumo-artigo ul {
+            margin: 0;
+            padding-left: 1.4rem;
+        }
+        .resumo-artigo li {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.55;
+        }
+        .resumo-artigo li strong {
+            color: #fff;
+        }
+
+        .separador-artigo {
+            border: none;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            margin: 2rem 0;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .stat-box {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.4rem 1rem;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.07);
+        }
+        .stat-box .stat-valor {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0369BF;
+            font-family: 'Space Grotesk', sans-serif;
+            display: block;
+            line-height: 1.1;
+        }
+        .stat-box .stat-descricao {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 0.4rem;
+            line-height: 1.45;
+        }
+
+        .stats-row-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .destaque-principal {
+            background: linear-gradient(135deg, #0369BF 0%, #0284c7 100%);
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+        }
+        .destaque-principal p {
+            font-size: 1.1rem;
+            line-height: 1.65;
+            margin: 0;
+            color: rgba(255,255,255,0.95);
+        }
+        .destaque-principal p strong {
+            color: #fff;
+        }
+
+        .citacao-box {
+            background: #f8fafc;
+            border-left: 4px solid #0369BF;
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0;
+        }
+        .citacao-box p {
+            font-size: 1rem;
+            color: #333;
+            font-style: italic;
+            line-height: 1.7;
+            margin: 0 0 0.6rem;
+        }
+        .citacao-box span {
+            font-size: 0.82rem;
+            color: #777;
+            font-weight: 600;
+        }
+
+        .cta-inline {
+            background: #0d0e12;
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            text-align: center;
+            border: 1px solid rgba(3,105,191,0.3);
+        }
+        .cta-inline h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 0 0 0.8rem;
+        }
+        .cta-inline p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.92rem;
+            margin: 0 0 1.4rem;
+        }
+        .cta-inline a {
+            display: inline-block;
+            background: #0369BF;
+            color: #fff;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .cta-inline a:hover {
+            background: #0284c7;
+        }
+
+        .estrategia-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem 1.6rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid rgba(0,0,0,0.07);
+        }
+        .estrategia-numero {
+            display: inline-block;
+            background: #0369BF;
+            color: #fff;
+            border-radius: 6px;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.6rem;
+        }
+        .estrategia-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0d0e12;
+            margin: 0 0 0.5rem;
+        }
+        .estrategia-card p {
+            font-size: 0.88rem;
+            color: #555;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .scoring-tabela {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.88rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        .scoring-tabela th {
+            background: #0d0e12;
+            color: #fff;
+            padding: 0.9rem 1.1rem;
+            text-align: left;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .scoring-tabela td {
+            padding: 0.85rem 1.1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            color: #444;
+            line-height: 1.5;
+            vertical-align: top;
+        }
+        .scoring-tabela tr:last-child td {
+            border-bottom: none;
+        }
+        .scoring-tabela tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+        .pontos-alto {
+            color: #065f46;
+            font-weight: 700;
+        }
+        .pontos-medio {
+            color: #92400e;
+            font-weight: 700;
+        }
+        .pontos-baixo {
+            color: #9f1239;
+            font-weight: 700;
+        }
+
+        .nivel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .nivel-card {
+            border-radius: 12px;
+            padding: 1.4rem 1.5rem;
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        .nivel-card.frio {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+        }
+        .nivel-card.morno {
+            background: #fffbeb;
+            border-color: #fde68a;
+        }
+        .nivel-card.quente {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+        .nivel-card .nivel-badge {
+            display: inline-block;
+            border-radius: 6px;
+            padding: 0.2rem 0.7rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 0.7rem;
+        }
+        .nivel-card.frio .nivel-badge { background: #dbeafe; color: #1d4ed8; }
+        .nivel-card.morno .nivel-badge { background: #fef3c7; color: #b45309; }
+        .nivel-card.quente .nivel-badge { background: #dcfce7; color: #15803d; }
+        .nivel-card h4 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #0d0e12;
+            margin: 0 0 0.4rem;
+        }
+        .nivel-card p {
+            font-size: 0.83rem;
+            color: #555;
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        .erros-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .erro-card {
+            background: #fff5f5;
+            border: 1px solid #fecaca;
+            border-radius: 12px;
+            padding: 1.4rem 1.5rem;
+        }
+        .erro-card h4 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #dc2626;
+            margin: 0 0 0.4rem;
+        }
+        .erro-card p {
+            font-size: 0.85rem;
+            color: #555;
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        @media (max-width: 768px) {
+            .stats-row { grid-template-columns: 1fr; }
+            .stats-row-4 { grid-template-columns: repeat(2, 1fr); }
+            .nivel-grid { grid-template-columns: 1fr; }
+            .erros-grid { grid-template-columns: 1fr; }
+            .resumo-artigo { padding: 1.5rem; }
+            .destaque-principal { padding: 1.5rem; }
+            .scoring-tabela { font-size: 0.8rem; }
+            .scoring-tabela th, .scoring-tabela td { padding: 0.7rem 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#solucao">Solução</a></li>
+                    <li><a href="../index.html#beneficios">Benefícios</a></li>
+                    <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="../index.html#resultados">Resultados</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artigo -->
+    <main class="artigo-main">
+        <div class="container">
+            <nav class="artigo-breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="../blog.html">Blog</a>
+                <span>/</span>
+                <span>Lead Scoring para Imobiliárias</span>
+            </nav>
+
+            <article class="artigo-conteudo">
+                <header class="artigo-header">
+                    <div class="blog-card-categoria">Gestão de Leads</div>
+
+                    <h1 class="artigo-titulo">O que é Lead Scoring e Como Pode Triplicar a Eficiência da Tua Equipa de Vendas Imobiliárias</h1>
+
+                    <div class="artigo-meta">
+                        <span class="artigo-autor">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Equipa Imovision Digital
+                        </span>
+                        <span class="artigo-data">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            18 de Junho de 2026
+                        </span>
+                        <span class="artigo-tempo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            10 min de leitura
+                        </span>
+                    </div>
+
+                    <p class="artigo-resumo">A maioria dos consultores imobiliários trata todos os leads da mesma forma — e é exactamente por isso que 79% dos leads nunca convertem. Lead scoring é o sistema que muda isso: atribui uma pontuação a cada contacto com base no seu comportamento e perfil, e diz-te exactamente em quem deves concentrar o teu tempo. Este guia explica como funciona, como implementar e que resultados esperar.</p>
+                </header>
+
+                <div class="artigo-corpo">
+
+                    <div class="resumo-artigo">
+                        <h3>O que vais aprender neste artigo</h3>
+                        <ul>
+                            <li><strong>O que é lead scoring</strong> e por que é a ferramenta que separa os consultores de topo dos que vivem a correr atrás de leads que não fecham</li>
+                            <li><strong>Os critérios exactos</strong> que definem se um lead vale 10 ou 80 pontos — com um modelo prático que podes adaptar hoje</li>
+                            <li><strong>Os 3 níveis de lead</strong> (frio, morno e quente) e o que fazer com cada um para não desperdiçar energia nem perder oportunidades</li>
+                            <li><strong>Como a IA está a transformar o lead scoring</strong> de um processo manual para um sistema automático e contínuo</li>
+                            <li><strong>Os 4 erros de implementação</strong> que fazem o lead scoring não funcionar — e como evitá-los</li>
+                        </ul>
+                    </div>
+
+                    <p>Imagina que tens 25 leads activos esta semana. Sabes que dentro desses 25 há 3 ou 4 que estão mesmo prontos para comprar — orçamento definido, urgência real, imóvel em mente. Os outros 21 estão em diferentes estados: alguns estão a explorar, alguns precisam de vender primeiro, alguns ainda nem sabem bem o que querem.</p>
+
+                    <p>O problema é que sem um sistema de qualificação, esses 25 leads parecem todos iguais na tua lista de contactos. Todos têm um nome, um número, um email. Todos chegaram pelo mesmo portal, ou pela mesma campanha. E como não tens uma forma de os ordenar por prioridade, fazes o que a maioria dos consultores faz: trabalhas por ordem de chegada, pelos mais recentes, pelos mais simpáticos a responder — não pelos mais prontos a fechar.</p>
+
+                    <p>O resultado está nos dados: a taxa de conversão média no imobiliário é de 0,4% a 1,2%. Os consultores que usam lead scoring convertem entre 3% e 5%. Não é sorte — é metodologia.</p>
+
+                    <hr class="separador-artigo">
+
+                    <h2>O Que é Lead Scoring (e o Que Não É)</h2>
+
+                    <p>Lead scoring é um sistema de pontuação que atribui um valor numérico a cada lead com base em dois tipos de informação: quem ele é (perfil demográfico e situação) e o que ele faz (comportamento e interações). Quanto mais o lead se aproxima do teu perfil de cliente ideal e quanto mais sinais de intenção de compra demonstrar, maior a pontuação.</p>
+
+                    <p>O que o lead scoring <em>não é</em>: não é uma opinião. Não é "este lead pareceu-me interessado na chamada." Não é a intuição de um consultor experiente — embora essa intuição seja valiosa, não é escalável e não funciona quando tens 40 leads activos ao mesmo tempo. O lead scoring é um critério objetivo, consistente e replicável. Significa que dois consultores diferentes, a olhar para o mesmo lead, chegam à mesma conclusão sobre a sua prioridade.</p>
+
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-valor">3–5×</span>
+                            <span class="stat-descricao">maior taxa de conversão nos consultores que utilizam lead scoring face à média do sector</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">21×</span>
+                            <span class="stat-descricao">mais provável qualificar um lead ao responder nos primeiros 5 minutos — um dos critérios de pontuação mais impactantes</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">20%</span>
+                            <span class="stat-descricao">de aumento médio na taxa de conversão com lead scoring assistido por inteligência artificial</span>
+                        </div>
+                    </div>
+
+                    <p>A lógica é simples: tempo é o recurso mais escasso num consultor imobiliário. Uma visita demora 2 horas. Uma chamada de qualificação demora 20 minutos. Uma proposta elaborada demora uma tarde. Se investes esse tempo num lead de 15 pontos em vez de num lead de 75 pontos, não é só uma oportunidade perdida — é dinheiro activamente desperdiçado. O lead scoring diz-te, antes de pegares no telefone, onde colocar a tua energia.</p>
+
+                    <h2>Como Funciona na Prática: Os Critérios de Pontuação</h2>
+
+                    <p>Um sistema de lead scoring eficaz para o imobiliário combina duas dimensões: <strong>perfil</strong> (quem é o lead) e <strong>intenção</strong> (o que está a fazer). Cada dimensão é composta por critérios específicos, cada um com um peso diferente na pontuação final.</p>
+
+                    <p>A tabela abaixo é um modelo de referência que podes adaptar ao teu mercado e ao teu tipo de carteira. Os critérios não são fixos — o que importa é que reflitam o perfil do teu cliente ideal com base na tua experiência real.</p>
+
+                    <table class="scoring-tabela">
+                        <thead>
+                            <tr>
+                                <th>Critério</th>
+                                <th>Sinal positivo (pontos)</th>
+                                <th>Sinal negativo (pontos)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Orçamento definido</strong></td>
+                                <td class="pontos-alto">Sim, indicou faixa (+25)</td>
+                                <td class="pontos-baixo">Não sabe / não indicou (0)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Urgência de compra</strong></td>
+                                <td class="pontos-alto">Menos de 3 meses (+30)</td>
+                                <td class="pontos-medio">6 a 12 meses (+10)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Imóvel actual</strong></td>
+                                <td class="pontos-alto">Já vendeu ou arrendou (+20)</td>
+                                <td class="pontos-medio">Ainda precisa de vender (+5)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pré-aprovação de crédito</strong></td>
+                                <td class="pontos-alto">Aprovado (+25)</td>
+                                <td class="pontos-medio">Em processo (+10)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Resposta ao primeiro contacto</strong></td>
+                                <td class="pontos-alto">Respondeu em menos de 1 hora (+15)</td>
+                                <td class="pontos-baixo">Sem resposta após 48h (−10)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Número de visitas agendadas</strong></td>
+                                <td class="pontos-alto">Agendou visita (+20)</td>
+                                <td class="pontos-medio">Pediu informações extras (+5)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Interação com conteúdo</strong></td>
+                                <td class="pontos-medio">Abriu emails / visitou site (+10)</td>
+                                <td class="pontos-baixo">Nenhuma interação (0)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Zona e tipologia precisas</strong></td>
+                                <td class="pontos-alto">Critérios muito específicos (+15)</td>
+                                <td class="pontos-baixo">Critérios vagos ou muito amplos (0)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>Com este modelo, a pontuação máxima possível é de 160 pontos. Um lead que indique orçamento, urgência a 3 meses, pré-aprovação de crédito e responda em menos de uma hora já soma 95 pontos — sem ter feito uma única visita. Um lead que chegou pelo portal mas não respondeu a dois contactos e não deu qualquer informação sobre si fica abaixo de 10 pontos. A diferença de tratamento que cada um merece é óbvia quando está assim representada.</p>
+
+                    <h2>Os 3 Níveis de Lead e O Que Fazer com Cada Um</h2>
+
+                    <p>Uma vez atribuída a pontuação, o passo seguinte é definir o que acontece a cada nível. Sem esta definição, o lead scoring torna-se um número sem consequência. A pontuação só ganha valor quando determina uma acção concreta.</p>
+
+                    <div class="nivel-grid">
+                        <div class="nivel-card frio">
+                            <span class="nivel-badge">LEAD FRIO — 0 a 40 pts</span>
+                            <h4>Ainda a explorar — nutrir, não fechar</h4>
+                            <p>Interesse real mas sem urgência ou critérios definidos. Acção correcta: follow-up de baixa frequência (1 contacto por semana), envio de conteúdo útil — artigos, dados de mercado, novas angariações relevantes. Objectivo: estar presente quando a decisão avançar, sem gastar energia de qualificação activa.</p>
+                        </div>
+                        <div class="nivel-card morno">
+                            <span class="nivel-badge">LEAD MORNO — 41 a 70 pts</span>
+                            <h4>Em processo de decisão — acompanhar activamente</h4>
+                            <p>Já tem critérios definidos mas falta um ou dois elementos-chave (pré-aprovação, venda do imóvel actual). Acção correcta: contacto de 2 em 2 dias, qualificação activa para perceber o bloqueio específico, oferta de valor concreto (visita, análise de mercado). Este nível tem o maior potencial de conversão a médio prazo.</p>
+                        </div>
+                        <div class="nivel-card quente">
+                            <span class="nivel-badge">LEAD QUENTE — 71+ pts</span>
+                            <h4>Pronto para comprar — velocidade máxima</h4>
+                            <p>Orçamento definido, urgência real, pré-aprovação em curso ou concluída, responde aos contactos. Acção correcta: contacto imediato (menos de 2 horas após entrada), visita agendada no próprio dia se possível, acompanhamento diário. Este é o lead que fechar esta semana — se não perderes para um concorrente mais rápido.</p>
+                        </div>
+                    </div>
+
+                    <div class="citacao-box">
+                        <p>"Antes de implementar lead scoring, gastava o mesmo tempo com um lead que queria comprar daqui a dois anos e com um que estava pronto para assinar na semana seguinte. Parecia justo — tratar todos igual. Mas não é justo para o negócio. Hoje, um lead quente tem resposta em menos de uma hora, a qualquer dia da semana. Os frios entram numa sequência automática. Os mornos acompanho eu pessoalmente. As conversões duplicaram em quatro meses."</p>
+                        <span>— Consultor imobiliário, agência no Porto</span>
+                    </div>
+
+                    <h2>Lead Scoring Manual vs. Automático: A Diferença que a IA Faz</h2>
+
+                    <p>Lead scoring pode ser feito manualmente — com uma folha de cálculo, critérios definidos e disciplina do consultor para actualizar a pontuação a cada interação. Para um consultor solo com menos de 20 leads activos, este sistema funciona. Não é o ideal, mas é melhor do que não ter nenhum sistema.</p>
+
+                    <p>O problema surge quando o volume aumenta. Com 40 ou 50 leads activos — o que é comum numa agência de média dimensão — manter a pontuação actualizada manualmente é quase impossível sem deixar cair outros aspectos do trabalho. A pontuação fica desactualizada, os consultores perdem confiança no sistema e voltam a trabalhar por intuição. O sistema colapsa pela complexidade, não pela falta de vontade.</p>
+
+                    <p>É aqui que a inteligência artificial transforma o lead scoring de uma boa ideia num sistema que realmente funciona à escala. Um CRM com IA actualiza a pontuação de cada lead automaticamente e em tempo real, com base em cada interação:</p>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">ACTUALIZAÇÃO AUTOMÁTICA</span>
+                        <h4>A pontuação muda a cada sinal — sem intervenção humana</h4>
+                        <p>O lead abre o email com as novas angariações → +5 pontos. Clica numa propriedade específica → +10 pontos. Visita a página de preços do teu site → +15 pontos. Não responde a dois contactos consecutivos → −10 pontos. Cada uma destas acções acontece sem que o consultor precise de registar nada — o CRM vê o comportamento e actualiza a pontuação sozinho. Quando o consultor abre o CRM de manhã, cada lead já tem a pontuação actualizada com as interações das últimas 24 horas.</p>
+                    </div>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">QUALIFICAÇÃO POR CONVERSA</span>
+                        <h4>A IA extrai critérios de pontuação directamente da conversa</h4>
+                        <p>Quando um lead chega pelo WhatsApp ou pelo formulário do site e tem uma conversa com um agente de IA, este não está apenas a responder — está a qualificar. "Qual é o teu orçamento?" "Procuras para compra ou arrendamento?" "Tens crédito aprovado?" As respostas são analisadas e traduzidas automaticamente em pontos de scoring no CRM. O consultor recebe o lead já com uma ficha de qualificação preenchida — não precisa de fazer as perguntas básicas na chamada de apresentação.</p>
+                    </div>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">ALERTAS EM TEMPO REAL</span>
+                        <h4>Notificação imediata quando um lead muda de nível</h4>
+                        <p>Um lead que estava com 35 pontos (frio) e de repente volta ao site, abre três emails seguidos e pede uma segunda visita pode subir para 80 pontos em 48 horas. Com IA, o consultor recebe um alerta imediato: "Lead X passou de frio para quente — acção recomendada: contacto nas próximas 2 horas." Sem automação, este sinal seria invisível — o lead estaria numa lista de "baixa prioridade" enquanto o timing ideal passava.</p>
+                    </div>
+
+                    <div class="destaque-principal">
+                        <p><strong>O número que resume tudo:</strong> consultores que utilizam lead scoring automático via CRM com IA reportam uma redução de 40% a 60% no tempo gasto em leads que não convertem — e um aumento de 3 a 5 vezes na taxa de conversão dos leads de alta pontuação. A eficiência não vem de trabalhar mais — vem de trabalhar nos leads certos, na altura certa.</p>
+                    </div>
+
+                    <h2>Os 4 Erros que Fazem o Lead Scoring Não Funcionar</h2>
+
+                    <p>O lead scoring é um sistema simples em conceito mas frágil na implementação quando certos erros são cometidos. Conhece-los com antecedência poupa meses de frustração.</p>
+
+                    <div class="erros-grid">
+                        <div class="erro-card">
+                            <h4>Erro 1 — Critérios demasiado complexos</h4>
+                            <p>Criar um sistema com 25 critérios e pesos decimais pode parecer rigoroso, mas na prática nenhum consultor vai usá-lo. A regra de ouro: se não consegues explicar o sistema em dois minutos a um colega novo, é demasiado complexo. Começa com 6 a 8 critérios e aumenta a sofisticação com o tempo.</p>
+                        </div>
+                        <div class="erro-card">
+                            <h4>Erro 2 — Não actualizar os critérios com o mercado</h4>
+                            <p>Um sistema de lead scoring criado há dois anos pode estar a pontuar errado hoje. Se o mercado mudou — se o prazo médio de decisão encurtou, se o perfil do comprador mudou — os critérios precisam de ser revistos. Agenda uma revisão trimestral do modelo de scoring com base nos negócios que realmente fechaste.</p>
+                        </div>
+                        <div class="erro-card">
+                            <h4>Erro 3 — Ignorar os leads frios a longo prazo</h4>
+                            <p>Lead scoring não significa descartar os leads de baixa pontuação — significa tratá-los de forma diferente, não com a mesma intensidade. Um lead frio hoje pode ser um lead quente daqui a três meses. A sequência de nurturing automático existe exactamente para manter a presença sem gastar energia activa — e estar lá quando a decisão avançar.</p>
+                        </div>
+                        <div class="erro-card">
+                            <h4>Erro 4 — Confiar apenas na pontuação sem leitura humana</h4>
+                            <p>O lead scoring é uma ferramenta de apoio à decisão, não um oráculo. Um lead de 80 pontos que na chamada demonstra sinais claros de ambiguidade pode precisar de uma abordagem diferente. A pontuação define a prioridade e o timing — a leitura humana da conversa define a estratégia. Os dois trabalham juntos.</p>
+                        </div>
+                    </div>
+
+                    <h2>Como Implementar Lead Scoring na Tua Imobiliária: 3 Passos</h2>
+
+                    <p>Independentemente da dimensão da tua operação, a implementação segue sempre a mesma sequência. Não precisas de tecnologia cara para começar — precisas de clareza sobre o processo.</p>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">PASSO 1</span>
+                        <h4>Define o teu perfil de cliente ideal — com base nos negócios que já fechaste</h4>
+                        <p>Antes de criar qualquer critério, analisa os últimos 10 a 15 negócios fechados. Que características tinham em comum esses compradores? Qual era o orçamento típico? Qual o prazo de decisão? Tinham pré-aprovação antes de contactar? Vieram de que fonte? Este exercício — que demora uma tarde — dá-te os critérios de scoring baseados em evidência real, não em teoria. É a fundação de todo o sistema.</p>
+                    </div>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">PASSO 2</span>
+                        <h4>Cria o teu modelo de pontuação e integra-o no CRM</h4>
+                        <p>Com os critérios definidos, atribui pontos a cada um e configura-os no teu CRM. Se usas um CRM que suporte lead scoring nativo (a maioria das plataformas modernas para imobiliário inclui esta funcionalidade), configura as regras de automatização para que a pontuação seja actualizada sem intervenção manual. Se ainda não tens CRM, começa com uma folha de cálculo partilhada com a equipa — é menos eficiente, mas melhor do que nada enquanto não migras.</p>
+                    </div>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">PASSO 3</span>
+                        <h4>Define o protocolo de acção para cada nível — e cumpre-o</h4>
+                        <p>O sistema só funciona se a pontuação determinar uma acção diferente. Define por escrito: leads acima de 70 pontos têm resposta em menos de 2 horas, sempre, por quem estiver disponível. Leads entre 40 e 70 têm contacto em 24 horas e entram numa sequência de follow-up de 14 dias. Leads abaixo de 40 entram numa sequência de nurturing automatizada com um contacto por semana. Com este protocolo escrito, o sistema funciona mesmo quando um consultor está de férias ou em visitas o dia todo.</p>
+                    </div>
+
+                    <div class="cta-inline">
+                        <h3>Queres Ver o Lead Scoring a Funcionar com os Teus Leads?</h3>
+                        <p>Mostramos-te como configurar lead scoring automático no teu CRM em menos de uma semana — com os teus critérios, integrado com o WhatsApp e com alertas em tempo real.</p>
+                        <a href="../index.html#contato">Agendar Demonstração Gratuita →</a>
+                    </div>
+
+                    <h2>Em Resumo</h2>
+
+                    <p>A diferença entre converter 1% e converter 4% dos teus leads raramente está na qualidade do produto que vendes ou no teu talento de negociação. Está na forma como geres o tempo antes de chegares à negociação. Lead scoring é o sistema que garante que esse tempo vai para os leads com maior probabilidade de fechar — não para os mais recentes, não para os mais simpáticos, não para os que lembraste de contactar.</p>
+
+                    <p>O modelo que apresentámos é um ponto de partida. Os critérios exactos vão variar consoante o teu mercado, o teu tipo de carteira e o perfil dos teus clientes. O que não varia é o princípio: sem uma forma objectiva de priorizar leads, estás a competir com uma mão atada nas costas contra consultores que já sabem onde colocar a energia.</p>
+
+                    <p>Começa simples. Define 6 critérios, atribui pontos, cria três níveis de acção. Revê ao fim de 90 dias com base nos negócios que fechaste. Cada iteração torna o sistema mais preciso — e cada ponto percentual ganho na taxa de conversão representa, no imobiliário português, vários milhares de euros em comissões anuais.</p>
+
+                </div>
+
+                <footer class="artigo-footer">
+                    <a href="../blog.html" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar ao Blog
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Pronto para Parar de Tratar Todos os Leads da Mesma Forma?</h2>
+                <p>Vê como a Imovision Digital implementa lead scoring automático com IA — e como podes triplicar a eficiência da tua equipa esta semana.</p>
+                <a href="../index.html#contato" class="btn btn-primary btn-large">Agendar Demonstração Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#solucao">Solução</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="../index.html#resultados">Resultados</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="97% das agências já usam IA. Descobre quanto te custa por mês ficar de fora — com a calculadora que revela a conta que ninguém quer fazer.">
+    <title>Quanto Custa NÃO Ter Tecnologia na Tua Imobiliária? (A Conta que Ninguém Quer Fazer) - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="../logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .resumo-artigo {
+            background: #0d0e12;
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            border: 1px solid rgba(3,105,191,0.25);
+        }
+        .resumo-artigo h3 { color: #fff; font-size: 1.05rem; margin: 0 0 1.1rem; }
+        .resumo-artigo ul { margin: 0; padding-left: 1.4rem; }
+        .resumo-artigo li { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 0.5rem; line-height: 1.55; }
+        .resumo-artigo li strong { color: #fff; }
+
+        .separador-artigo { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 2rem 0; }
+
+        .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+        .stat-box { background: #f8fafc; border-radius: 12px; padding: 1.4rem 1rem; text-align: center; border: 1px solid rgba(0,0,0,0.07); }
+        .stat-box .stat-valor { font-size: 2rem; font-weight: 800; color: #0369BF; font-family: 'Space Grotesk', sans-serif; display: block; line-height: 1.1; }
+        .stat-box .stat-descricao { font-size: 0.8rem; color: #555; margin-top: 0.4rem; line-height: 1.45; }
+
+        .destaque-principal { background: linear-gradient(135deg, #0369BF 0%, #0284c7 100%); border-radius: 14px; padding: 2rem 2.2rem; margin: 2.5rem 0; color: #fff; }
+        .destaque-principal p { font-size: 1.1rem; line-height: 1.65; margin: 0; color: rgba(255,255,255,0.95); }
+        .destaque-principal p strong { color: #fff; }
+
+        .citacao-box { background: #f8fafc; border-left: 4px solid #0369BF; border-radius: 0 12px 12px 0; padding: 1.5rem 1.8rem; margin: 2rem 0; }
+        .citacao-box p { font-size: 1rem; color: #333; font-style: italic; line-height: 1.7; margin: 0 0 0.6rem; }
+        .citacao-box span { font-size: 0.82rem; color: #777; font-weight: 600; }
+
+        .cta-inline { background: #0d0e12; border-radius: 14px; padding: 2rem 2.2rem; margin: 2.5rem 0; text-align: center; border: 1px solid rgba(3,105,191,0.3); }
+        .cta-inline h3 { color: #fff; font-size: 1.2rem; margin: 0 0 0.8rem; }
+        .cta-inline p { color: rgba(255,255,255,0.7); font-size: 0.92rem; margin: 0 0 1.4rem; }
+        .cta-inline a { display: inline-block; background: #0369BF; color: #fff; padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: background 0.2s; }
+        .cta-inline a:hover { background: #0284c7; }
+
+        .dado-card { background: #f8fafc; border-radius: 12px; padding: 1.5rem 1.6rem; margin-bottom: 1.2rem; border: 1px solid rgba(0,0,0,0.07); }
+        .dado-icone { display: inline-block; background: #0369BF; color: #fff; border-radius: 6px; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.6rem; }
+        .dado-card h4 { font-size: 1rem; font-weight: 700; color: #0d0e12; margin: 0 0 0.5rem; }
+        .dado-card p { font-size: 0.88rem; color: #555; margin: 0; line-height: 1.6; }
+
+        .metodo-comparacao { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 2rem 0; }
+        .metodo-antigo, .metodo-novo { border-radius: 12px; padding: 1.5rem 1.6rem; }
+        .metodo-antigo { background: #fef2f2; border: 1px solid #fecaca; }
+        .metodo-novo { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .metodo-antigo h4 { color: #991b1b; font-size: 0.95rem; margin: 0 0 0.8rem; }
+        .metodo-novo h4 { color: #15803d; font-size: 0.95rem; margin: 0 0 0.8rem; }
+        .metodo-antigo ul, .metodo-novo ul { margin: 0; padding-left: 1.2rem; }
+        .metodo-antigo li, .metodo-novo li { font-size: 0.85rem; color: #444; margin-bottom: 0.55rem; line-height: 1.5; }
+
+        .callout {
+            background: #F0F0F2;
+            border-left: 4px solid #0369BF;
+            border-radius: 0 8px 8px 0;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .callout p { margin-bottom: 0 !important; font-size: 1rem !important; color: rgba(0,0,0,0.75) !important; }
+        .callout strong { color: #0369BF !important; }
+
+        /* Calculadora interativa */
+        .calc-wrapper {
+            background: #0d0e12;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            box-shadow: 0 20px 60px rgba(3, 105, 191, 0.18);
+            border: 1px solid rgba(3, 105, 191, 0.25);
+        }
+        .calc-wrapper h3 { color: #fff !important; font-size: 1.3rem !important; margin: 0 0 0.4rem !important; }
+        .calc-intro { color: rgba(255,255,255,0.55); font-size: 0.9rem; margin-bottom: 1.8rem; }
+        .calc-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 1.8rem; }
+        @media (max-width: 600px) { .calc-fields { grid-template-columns: 1fr; } .calc-wrapper { padding: 1.5rem; } }
+        .calc-field label {
+            display: block; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em;
+            text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem;
+        }
+        .calc-field .input-group {
+            display: flex; align-items: center; background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; transition: border-color 0.2s;
+        }
+        .calc-field .input-group:focus-within { border-color: #0369BF; }
+        .calc-field .input-unit {
+            padding: 0 0.75rem; color: rgba(255,255,255,0.35); font-size: 0.9rem; font-weight: 600;
+            background: rgba(255,255,255,0.04); border-right: 1px solid rgba(255,255,255,0.08);
+            align-self: stretch; display: flex; align-items: center; min-width: 44px; justify-content: center;
+        }
+        .calc-field .input-unit.unit-right { border-right: none; border-left: 1px solid rgba(255,255,255,0.08); }
+        .calc-field input[type="number"] {
+            background: transparent; border: none; outline: none; color: #fff; font-size: 1.1rem; font-weight: 600;
+            padding: 0.7rem 0.8rem; width: 100%; font-family: var(--font-title); -moz-appearance: textfield;
+        }
+        .calc-field input[type="number"]::-webkit-inner-spin-button,
+        .calc-field input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+        .calc-field .hint { font-size: 0.76rem; color: rgba(255,255,255,0.3); margin-top: 0.3rem; }
+        .calc-btn {
+            width: 100%; padding: 1rem 1.5rem; background: linear-gradient(135deg, #0369BF, #0284d4); color: #fff;
+            border: none; border-radius: 10px; font-size: 1rem; font-weight: 700; font-family: var(--font-title);
+            cursor: pointer; transition: all 0.25s ease; letter-spacing: 0.01em;
+        }
+        .calc-btn:hover { background: linear-gradient(135deg, #0284d4, #039ae0); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(3, 105, 191, 0.4); }
+        .calc-resultado { display: none; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2rem; }
+        .calc-resultado.visivel { display: block; animation: fadeInUp 0.45s ease-out; }
+        .resultado-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+        @media (max-width: 600px) { .resultado-grid { grid-template-columns: 1fr; } }
+        .resultado-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.1rem 1rem; text-align: center; }
+        .resultado-card.destaque { background: rgba(217, 217, 6, 0.08); border-color: rgba(217, 217, 6, 0.35); }
+        .resultado-card .rc-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.4); margin-bottom: 0.4rem; }
+        .resultado-card .rc-valor { font-family: var(--font-title); font-size: 1.6rem; font-weight: 700; color: #fff; line-height: 1.1; }
+        .resultado-card.destaque .rc-valor { color: #D9D906; font-size: 2rem; }
+        .resultado-card .rc-sub { font-size: 0.76rem; color: rgba(255,255,255,0.3); margin-top: 0.25rem; }
+        .resultado-mensagem { background: rgba(3, 105, 191, 0.12); border: 1px solid rgba(3, 105, 191, 0.3); border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.85); }
+        .resultado-mensagem strong { color: #fff; }
+        .calc-cta-btn {
+            display: block; width: 100%; margin-top: 1.2rem; padding: 1rem 1.5rem; background: #D9D906; color: #0d0e12;
+            border-radius: 10px; font-size: 1rem; font-weight: 700; text-align: center; text-decoration: none;
+            font-family: var(--font-title); transition: all 0.25s ease;
+        }
+        .calc-cta-btn:hover { background: #e8e90a; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(217, 217, 6, 0.3); }
+
+        .tabela-comparativa { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); }
+        .tabela-comparativa th { background: #0d0e12; color: #fff; padding: 0.8rem 1rem; text-align: left; font-family: var(--font-title); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+        .tabela-comparativa td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(0,0,0,0.07); color: rgba(0,0,0,0.75); vertical-align: top; }
+        .tabela-comparativa tr:last-child td { border-bottom: none; }
+        .tabela-comparativa tr:nth-child(even) td { background: rgba(3, 105, 191, 0.04); }
+        .tabela-comparativa .td-destaque { font-weight: 700; color: #c0392b; }
+        .tabela-comparativa .td-ok { font-weight: 700; color: #27ae60; }
+
+        @media (max-width: 768px) {
+            .stats-row { grid-template-columns: 1fr; }
+            .metodo-comparacao { grid-template-columns: 1fr; }
+            .resumo-artigo { padding: 1.5rem; }
+            .destaque-principal { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#solucao">Solução</a></li>
+                    <li><a href="../index.html#beneficios">Benefícios</a></li>
+                    <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="../index.html#resultados">Resultados</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artigo -->
+    <main class="artigo-main">
+        <div class="container">
+            <nav class="artigo-breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="../blog.html">Blog</a>
+                <span>/</span>
+                <span>Quanto Custa NÃO Ter Tecnologia</span>
+            </nav>
+
+            <article class="artigo-conteudo">
+                <header class="artigo-header">
+                    <div class="blog-card-categoria">ROI & Resultados</div>
+
+                    <h1 class="artigo-titulo">Quanto Custa NÃO Ter Tecnologia na Tua Imobiliária? (A Conta que Ninguém Quer Fazer)</h1>
+
+                    <div class="artigo-meta">
+                        <span class="artigo-autor">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Equipa Imovision Digital
+                        </span>
+                        <span class="artigo-data">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            20 de Julho de 2026
+                        </span>
+                        <span class="artigo-tempo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            11 min de leitura
+                        </span>
+                    </div>
+
+                    <p class="artigo-resumo">97% dos líderes de agências imobiliárias já dizem que os seus consultores usam Inteligência Artificial no dia a dia — há dois anos, eram 80%. Enquanto isso, tu continuas a fazer tudo manualmente e a dizer a ti mesmo que "não é assim tão urgente". Este artigo faz a conta que evitas fazer: quanto te custa, em euros, todos os meses, continuar a trabalhar como em 2022.</p>
+                </header>
+
+                <div class="artigo-corpo">
+
+                    <div class="resumo-artigo">
+                        <h3>O que vais encontrar neste artigo</h3>
+                        <ul>
+                            <li><strong>Os números mais recentes sobre adoção de tecnologia</strong> no imobiliário — em Portugal e no mundo — e o que dizem sobre quem está a ficar para trás</li>
+                            <li><strong>O que se decidiu na última Convenção APEMIP</strong> sobre o papel da IA na mediação imobiliária, e porque já não é um tema de nicho</li>
+                            <li><strong>Uma calculadora interativa</strong> que soma o custo real das horas perdidas em tarefas manuais e dos negócios que escapam por falta de automação</li>
+                            <li><strong>Três custos escondidos</strong> que não aparecem em nenhum extrato bancário — mas estão a sair-te do bolso todos os meses</li>
+                            <li><strong>Um caminho concreto</strong> para parar de perder dinheiro sem teres de mudar tudo de um dia para o outro</li>
+                        </ul>
+                    </div>
+
+                    <p>Há uma pergunta que quase nenhum consultor imobiliário se faz: "quanto me custa continuar a trabalhar como sempre trabalhei?" Fazemos contas ao investimento em publicidade, ao custo de um CRM, ao preço de uma ferramenta nova — mas raramente fazemos a conta inversa. Quanto custa <em>não</em> investir? Quanto custa continuar a responder a leads manualmente, a organizar follow-ups num bloco de notas, a perder horas em tarefas que já podiam estar automatizadas?</p>
+
+                    <p>A resposta, em 2026, já não é uma opinião. É um número. E é maior do que a maioria dos consultores imagina.</p>
+
+                    <p>Enquanto isso acontece, o mercado não está a ficar mais fácil. Os preços da habitação bateram novo recorde histórico em Portugal, o stock de imóveis disponíveis continua escasso e a concorrência entre consultores pela atenção de cada proprietário e comprador nunca foi tão intensa. Neste contexto, continuar a trabalhar sem tecnologia não é uma escolha neutra — é uma desvantagem competitiva que se paga em euros concretos, todos os meses.</p>
+
+                    <hr class="separador-artigo">
+
+                    <h2>A Adoção de Tecnologia Deixou de Ser Exceção — Passou a Ser a Norma</h2>
+
+                    <p>Se ainda pensas em tecnologia no imobiliário como "algo que uns consultores mais tecnológicos usam", os números de 2026 pedem uma atualização urgente. O relatório mais recente da Inman e Real Trends sobre adoção de Inteligência Artificial em agências imobiliárias mostra uma mudança radical em apenas dois anos.</p>
+
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-valor">97%</span>
+                            <span class="stat-descricao">dos líderes de agências reportam que os seus consultores já usam IA no trabalho diário — em 2024, eram apenas 80%</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">4%</span>
+                            <span class="stat-descricao">é a percentagem de agências que ainda não adotou nenhuma forma de IA — e apenas 2% dizem não ter planos de o fazer em 2026</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">2x</span>
+                            <span class="stat-descricao">é o salto na taxa de conversão de equipas com gestão de leads por IA — de 5-8% para 11-12% ou mais</span>
+                        </div>
+                    </div>
+
+                    <p>Ou seja: ficar de fora deixou de ser uma posição neutra entre "inovadores" e "tradicionais". É, cada vez mais, ficar sozinho num grupo cada vez mais pequeno — e a decidir sobre uma minoria que a própria indústria já identificou como estando em risco de perder quota de mercado para quem automatizou primeiro.</p>
+
+                    <h2>A Convenção APEMIP Acabou de Confirmar: Já Não É Uma Questão de "Se", É de "Quando"</h2>
+
+                    <p>No dia 30 de junho de 2026, a 4.ª edição da Convenção APEMIP IMOCIONATE reuniu cerca de 700 profissionais de mediação imobiliária no Centro de Congressos do Estoril. Entre os temas centrais do programa: o impacto da Inteligência Artificial na atividade imobiliária, com uma conferência de encerramento dedicada à transformação tecnológica do setor, protagonizada por Alex Rayón, futurista e especialista internacional em IA.</p>
+
+                    <p>O mais relevante não foi a presença do tema — foi o consenso à volta dele. Entre os consultores e especialistas presentes, a visão sobre a Inteligência Artificial foi unânime: deve ser encarada como "uma aliada, e não uma inimiga", uma ferramenta estratégica que não substitui a componente humana, a relação e a dimensão emocional da mediação imobiliária — mas que já não pode ser ignorada.</p>
+
+                    <p>Quando um dos principais fóruns do setor em Portugal dedica uma conferência de encerramento inteira ao futuro da IA na mediação, com centenas de profissionais na sala, a mensagem para quem ainda hesita é clara: o resto da indústria já decidiu para que lado vai.</p>
+
+                    <div class="destaque-principal">
+                        <p><strong>A pergunta já não é "devo investir em tecnologia?"</strong> É "quanto tempo mais posso adiar, sabendo que os meus concorrentes já não estão a adiar?" Cada mês sem automação não é um mês neutro — é um mês em que a distância entre ti e quem já automatizou aumenta.</p>
+                    </div>
+
+                    <h2>A Calculadora: Quanto Te Custa, Por Mês, Continuar Sem Tecnologia</h2>
+
+                    <p>Chega de argumentos abstratos. Preenche os campos abaixo com números reais da tua atividade e descobre exatamente quanto estás a perder — em horas transformadas em euros, e em negócios que nunca chegam a fechar-se.</p>
+
+                    <div class="calc-wrapper">
+                        <h3>Calculadora do Custo de Não Ter Tecnologia</h3>
+                        <p class="calc-intro">Preenche os teus dados reais. O cálculo é instantâneo e fica só contigo.</p>
+
+                        <div class="calc-fields">
+                            <div class="calc-field">
+                                <label for="c-leads">Leads por mês</label>
+                                <div class="input-group">
+                                    <input type="number" id="c-leads" value="40" min="1" max="9999" oninput="calcularCusto()">
+                                </div>
+                                <p class="hint">Total de contactos que recebes mensalmente</p>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="c-taxa">Taxa de conversão atual</label>
+                                <div class="input-group">
+                                    <input type="number" id="c-taxa" value="12" min="1" max="99" oninput="calcularCusto()">
+                                    <span class="input-unit unit-right">%</span>
+                                </div>
+                                <p class="hint">% de leads que fecham negócio hoje</p>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="c-comissao">Comissão média por negócio</label>
+                                <div class="input-group">
+                                    <span class="input-unit">€</span>
+                                    <input type="number" id="c-comissao" value="4500" min="100" max="999999" oninput="calcularCusto()">
+                                </div>
+                                <p class="hint">Valor médio que recebes por negócio fechado</p>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="c-horas">Horas/semana em tarefas manuais</label>
+                                <div class="input-group">
+                                    <input type="number" id="c-horas" value="12" min="0" max="80" oninput="calcularCusto()">
+                                    <span class="input-unit unit-right">h</span>
+                                </div>
+                                <p class="hint">Follow-ups, mensagens, agenda, dados no CRM</p>
+                            </div>
+
+                            <div class="calc-field">
+                                <label for="c-valorhora">Valor da tua hora</label>
+                                <div class="input-group">
+                                    <span class="input-unit">€</span>
+                                    <input type="number" id="c-valorhora" value="30" min="1" max="9999" oninput="calcularCusto()">
+                                </div>
+                                <p class="hint">O que vales quando estás a vender, não a digitar</p>
+                            </div>
+                        </div>
+
+                        <button class="calc-btn" onclick="calcularCusto(true)">
+                            Calcular o que me está a custar não ter tecnologia →
+                        </button>
+
+                        <div class="calc-resultado" id="calc-resultado">
+                            <div class="resultado-grid">
+                                <div class="resultado-card">
+                                    <p class="rc-label">Custo do tempo perdido</p>
+                                    <p class="rc-valor" id="r-tempo">—</p>
+                                    <p class="rc-sub">por mês, em tarefas manuais</p>
+                                </div>
+                                <div class="resultado-card">
+                                    <p class="rc-label">Negócios extra possíveis</p>
+                                    <p class="rc-valor" id="r-negocios">—</p>
+                                    <p class="rc-sub">com conversão otimizada por IA</p>
+                                </div>
+                                <div class="resultado-card destaque">
+                                    <p class="rc-label">Custo total mensal</p>
+                                    <p class="rc-valor" id="r-total">—</p>
+                                    <p class="rc-sub">de não teres tecnologia</p>
+                                </div>
+                            </div>
+
+                            <div class="resultado-mensagem" id="r-mensagem"></div>
+
+                            <a href="../index.html#contato" class="calc-cta-btn">
+                                Vê como recuperar este valor todos os meses →
+                            </a>
+                        </div>
+                    </div>
+
+                    <p>A fórmula soma dois custos reais: o valor das horas que gastas em tarefas que a automação já resolve sozinha (baseado no dado de que cerca de 70% do tempo de um consultor imobiliário é consumido por tarefas repetitivas), e o valor dos negócios que ficam por fechar porque a tua taxa de conversão atual está abaixo do que equipas com gestão de leads por IA já conseguem alcançar — um salto de 40% documentado pela Inside Real Estate em 2026 na comparação entre nutrição de leads automatizada e manual.</p>
+
+                    <h2>Três Custos Escondidos que Não Aparecem em Nenhum Extrato Bancário</h2>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">CUSTO 1</span>
+                        <h4>O lead que esfria enquanto respondes a outro</h4>
+                        <p>Já sabes, se leste os artigos anteriores deste blog, que 47% dos leads imobiliários chegam fora do horário de expediente e que o tempo de resposta é o fator isolado com maior impacto na conversão. Sem automação, cada lead novo compete pela tua atenção com o lead anterior — e alguém perde sempre.</p>
+            </div>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">CUSTO 2</span>
+                        <h4>A angariação que chega tarde demais</h4>
+                        <p>Com o stock de imóveis para venda em queda em quase todos os distritos portugueses e os preços a bater recordes mês após mês, quem chega primeiro ao proprietário está, cada vez mais, a chegar através de tecnologia — não de sorte ou de mais horas de trabalho. Continuar sem essas ferramentas significa competir com uma mão atrás das costas, precisamente quando a angariação está mais disputada.</p>
+                    </div>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">CUSTO 3</span>
+                        <h4>A equipa esgotada em tarefas que ninguém deveria fazer manualmente</h4>
+                        <p>Introduzir dados no CRM, escrever a mesma mensagem de follow-up pela décima vez, atualizar manualmente uma agenda de visitas — nada disto vende casas. É trabalho invisível que consome a energia que devia estar a construir relações com clientes. O custo aqui não é só financeiro: é o desgaste de uma equipa que sente que trabalha mais e fecha o mesmo.</p>
+                    </div>
+
+                    <h2>Agências Com Tecnologia vs. Agências Sem Tecnologia: A Diferença na Prática</h2>
+
+                    <div class="metodo-comparacao">
+                        <div class="metodo-antigo">
+                            <h4>Sem tecnologia — o dia a dia habitual</h4>
+                            <ul>
+                                <li>Leads respondidos quando há tempo, muitas vezes horas depois</li>
+                                <li>Follow-up feito "de cabeça", sem sequência definida</li>
+                                <li>Dados de clientes espalhados por WhatsApp, papel e memória</li>
+                                <li>Decisões baseadas em intuição, sem visibilidade sobre o funil</li>
+                                <li>Cada consultor novo demora semanas a aprender o processo</li>
+                            </ul>
+                        </div>
+                        <div class="metodo-novo">
+                            <h4>Com tecnologia — o novo padrão em 2026</h4>
+                            <ul>
+                                <li>Primeira resposta automática em segundos, a qualquer hora</li>
+                                <li>Sequências de follow-up ativas mesmo sem intervenção manual</li>
+                                <li>Um único registo centralizado com o histórico de cada lead</li>
+                                <li>Métricas claras sobre o que está a converter e o que não está</li>
+                                <li>Processos replicáveis que qualquer consultor novo segue desde o dia um</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <table class="tabela-comparativa">
+                        <thead>
+                            <tr>
+                                <th>Indicador</th>
+                                <th>Sem tecnologia</th>
+                                <th>Com IA / automação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Taxa de conversão de leads</td>
+                                <td class="td-destaque">5% a 8%</td>
+                                <td class="td-ok">11% a 12%+</td>
+                            </tr>
+                            <tr>
+                                <td>Conversão com nutrição de leads</td>
+                                <td class="td-destaque">Referência (manual)</td>
+                                <td class="td-ok">+40% face ao manual</td>
+                            </tr>
+                            <tr>
+                                <td>Custo mensal de uma ferramenta com IA</td>
+                                <td>—</td>
+                                <td>Entre 100€ e 500€ por consultor</td>
+                            </tr>
+                            <tr>
+                                <td>Tempo até retorno do investimento</td>
+                                <td>—</td>
+                                <td class="td-ok">Tipicamente 6 a 12 meses</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="cta-inline">
+                        <h3>Descobre Quanto Podias Estar a Recuperar</h3>
+                        <p>Não precisas de mudar tudo de um dia para o outro. Vê como a Imovision Digital automatiza a primeira resposta, o follow-up e a organização de leads — sem substituir o teu trabalho, só o teu tempo perdido.</p>
+                        <a href="../index.html#contato">Agenda uma Demonstração Gratuita &rarr;</a>
+                    </div>
+
+                    <h2>"Sempre Funcionou Assim" Já Não É um Argumento</h2>
+
+                    <p>É natural resistir à mudança quando um método, mesmo imperfeito, ainda traz resultados. O problema é que "ainda traz resultados" não é o mesmo que "traz os resultados que podia trazer". A diferença entre os dois é exatamente o valor que a calculadora acima te mostrou.</p>
+
+                    <div class="citacao-box">
+                        <p>"Resisti dois anos a mudar porque sentia que o meu método, mesmo manual, funcionava. Só percebi o custo real quando comparei o que fechava por mês com o que uma colega minha, com metade dos meus leads mas com automação de resposta e follow-up, estava a fechar. Não tinha mais talento do que eu. Tinha menos leads a esfriar por falta de resposta."</p>
+                        <span>— Consultor imobiliário, agência na Grande Lisboa</span>
+                    </div>
+
+                    <p>Esta não é uma história isolada. É, cada vez mais, a norma num setor em que 97% das agências já têm consultores a usar IA no dia a dia — e onde o espaço para quem ainda decide "esperar mais um pouco" está a ficar visivelmente mais pequeno.</p>
+
+                    <h2>O Que Fazer Agora — Antes que o Mercado Decida Por Ti</h2>
+
+                    <p>Não precisas de implementar tudo de uma vez. O caminho mais eficaz é começar pelo custo mais alto que identificaste na calculadora acima:</p>
+
+                    <ul>
+                        <li><strong>Se o maior custo foi o tempo perdido</strong> em tarefas manuais, começa por automatizar follow-up e organização de leads num único sistema — é o que liberta mais horas por semana com menor esforço de implementação.</li>
+                        <li><strong>Se o maior custo foi em negócios que não fecham</strong>, prioriza uma solução de resposta automática imediata e qualificação de leads — é onde o impacto na conversão é mais direto e mais rápido de sentir.</li>
+                        <li><strong>Se os dois pesam de forma semelhante</strong>, procura uma plataforma que resolva ambos ao mesmo tempo, em vez de somares ferramentas isoladas que não conversam entre si.</li>
+                    </ul>
+
+                    <p>O que não compensa é continuar a adiar a decisão à espera do "momento certo". Como mostram os dados deste artigo, o momento certo já passou para 97% do setor — e cada mês de espera é, literalmente, o valor que calculaste acima a sair-te do bolso outra vez.</p>
+
+                    <h2>Em Resumo</h2>
+
+                    <p>Não ter tecnologia na tua imobiliária não é uma posição neutra — é uma escolha com um preço concreto, que a calculadora deste artigo tornou visível: horas gastas em tarefas que já podiam estar automatizadas, e negócios que nunca fecham porque a tua taxa de conversão fica abaixo do que já é possível alcançar com gestão de leads por IA.</p>
+
+                    <p>A Convenção APEMIP IMOCIONATE 2026 confirmou o que os números já mostravam: a Inteligência Artificial deixou de ser um tema de nicho para se tornar consenso entre quem lidera o setor em Portugal. A pergunta que fica não é se vais adotar tecnologia — é quanto tempo, e quanto dinheiro, estás disposto a continuar a perder até o fazeres.</p>
+
+                    <div class="cta-inline">
+                        <h3>Pára de Pagar o Custo de Não Ter Tecnologia</h3>
+                        <p>Experimenta a plataforma que responde, qualifica e faz follow-up automaticamente com os teus leads — 24 horas por dia, 7 dias por semana.</p>
+                        <a href="../index.html#contato">Começa Hoje, Grátis &rarr;</a>
+                    </div>
+
+                </div>
+
+                <footer class="artigo-footer">
+                    <a href="../blog.html" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar ao Blog
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Pronto para Transformar a sua Imobiliária?</h2>
+                <p>Agende uma demonstração gratuita e veja como a Imovision Digital pode revolucionar os seus resultados.</p>
+                <a href="../index.html#contato" class="btn btn-primary btn-large">Agendar Demonstração Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#solucao">Solução</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="../index.html#resultados">Resultados</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <!-- Script da calculadora -->
+    <script>
+        function calcularCusto(mostrarResultado) {
+            const leads    = parseFloat(document.getElementById('c-leads').value)    || 0;
+            const taxa     = parseFloat(document.getElementById('c-taxa').value)     || 0;
+            const comissao = parseFloat(document.getElementById('c-comissao').value) || 0;
+            const horas    = parseFloat(document.getElementById('c-horas').value)    || 0;
+            const valorHora= parseFloat(document.getElementById('c-valorhora').value)|| 0;
+
+            // Custo do tempo perdido em tarefas manuais (4,33 semanas/mês)
+            const custoTempo = horas * valorHora * 4.33;
+
+            // Negócios extra possíveis: ganho de conversão de +40% (nutrição por IA vs. manual)
+            const negociosAtuais = leads * (taxa / 100);
+            const negociosComIA  = negociosAtuais * 1.4;
+            const negociosExtra  = negociosComIA - negociosAtuais;
+            const valorNegociosExtra = negociosExtra * comissao;
+
+            const custoTotal = custoTempo + valorNegociosExtra;
+            const custoAnual = custoTotal * 12;
+
+            document.getElementById('r-tempo').textContent = formatarEuroCusto(custoTempo);
+            document.getElementById('r-negocios').textContent = negociosExtra.toFixed(1).replace('.', ',');
+            document.getElementById('r-total').textContent = formatarEuroCusto(custoTotal);
+
+            let mensagem = '';
+            if (custoTotal < 1500) {
+                mensagem = `Com os teus números, o custo estimado de não teres tecnologia é de <strong>${formatarEuroCusto(custoTotal)} por mês</strong> — ou <strong>${formatarEuroCusto(custoAnual)} por ano</strong>. Mesmo sendo um valor moderado, é dinheiro e tempo que recuperas sem aumentar o número de leads que já geras.`;
+            } else if (custoTotal < 6000) {
+                mensagem = `Não teres tecnologia está a custar-te cerca de <strong>${formatarEuroCusto(custoTotal)} por mês</strong>, entre horas gastas em tarefas manuais e negócios que ficam por fechar. Em 12 meses, isso soma <strong>${formatarEuroCusto(custoAnual)}</strong> — um valor que a automação recupera tipicamente em 6 a 12 meses de utilização.`;
+            } else {
+                mensagem = `🚨 Atenção: os teus dados apontam para um custo de <strong>${formatarEuroCusto(custoTotal)} por mês</strong> — o equivalente a <strong>${formatarEuroCusto(custoAnual)} por ano</strong> — só por continuares sem tecnologia. É exatamente esta conta que a Imovision Digital foi criada para eliminar, com resposta automática, follow-up e gestão de leads num único sistema.`;
+            }
+            document.getElementById('r-mensagem').innerHTML = mensagem;
+
+            const resultado = document.getElementById('calc-resultado');
+            if (!resultado.classList.contains('visivel') || mostrarResultado) {
+                resultado.classList.add('visivel');
+                if (mostrarResultado) {
+                    resultado.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+        }
+
+        function formatarEuroCusto(valor) {
+            if (valor >= 1000) {
+                return valor.toLocaleString('pt-PT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+            }
+            return valor.toLocaleString('pt-PT', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0 });
+        }
+
+        window.addEventListener('DOMContentLoaded', function () {
+            calcularCusto(false);
+        });
+    </script>
+</body>
+</html>

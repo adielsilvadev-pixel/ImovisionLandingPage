@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TikTok já lidera o tempo de ecrã dos portugueses e o Instagram mudou o algoritmo em 2026. Descobre que rede gera mais leads para consultores imobiliários.">
+    <title>Redes Sociais para Consultores Imobiliários: o Que Realmente Funciona em Portugal em 2026 - Imovision Digital</title>
+    <link rel="icon" type="image/png" href="../logo_imagotipo_-08.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .resumo-artigo {
+            background: #0d0e12;
+            border-radius: 14px;
+            padding: 2rem 2.2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            border: 1px solid rgba(3,105,191,0.25);
+        }
+        .resumo-artigo h3 { color: #fff; font-size: 1.05rem; margin: 0 0 1.1rem; }
+        .resumo-artigo ul { margin: 0; padding-left: 1.4rem; }
+        .resumo-artigo li { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 0.5rem; line-height: 1.55; }
+        .resumo-artigo li strong { color: #fff; }
+
+        .separador-artigo { border: none; border-top: 1px solid rgba(0,0,0,0.08); margin: 2rem 0; }
+
+        .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+        .stat-box { background: #f8fafc; border-radius: 12px; padding: 1.4rem 1rem; text-align: center; border: 1px solid rgba(0,0,0,0.07); }
+        .stat-box .stat-valor { font-size: 2rem; font-weight: 800; color: #0369BF; font-family: 'Space Grotesk', sans-serif; display: block; line-height: 1.1; }
+        .stat-box .stat-descricao { font-size: 0.8rem; color: #555; margin-top: 0.4rem; line-height: 1.45; }
+
+        .destaque-principal { background: linear-gradient(135deg, #0369BF 0%, #0284c7 100%); border-radius: 14px; padding: 2rem 2.2rem; margin: 2.5rem 0; color: #fff; }
+        .destaque-principal p { font-size: 1.1rem; line-height: 1.65; margin: 0; color: rgba(255,255,255,0.95); }
+        .destaque-principal p strong { color: #fff; }
+
+        .citacao-box { background: #f8fafc; border-left: 4px solid #0369BF; border-radius: 0 12px 12px 0; padding: 1.5rem 1.8rem; margin: 2rem 0; }
+        .citacao-box p { font-size: 1rem; color: #333; font-style: italic; line-height: 1.7; margin: 0 0 0.6rem; }
+        .citacao-box span { font-size: 0.82rem; color: #777; font-weight: 600; }
+
+        .cta-inline { background: #0d0e12; border-radius: 14px; padding: 2rem 2.2rem; margin: 2.5rem 0; text-align: center; border: 1px solid rgba(3,105,191,0.3); }
+        .cta-inline h3 { color: #fff; font-size: 1.2rem; margin: 0 0 0.8rem; }
+        .cta-inline p { color: rgba(255,255,255,0.7); font-size: 0.92rem; margin: 0 0 1.4rem; }
+        .cta-inline a { display: inline-block; background: #0369BF; color: #fff; padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: background 0.2s; }
+        .cta-inline a:hover { background: #0284c7; }
+
+        .dado-card { background: #f8fafc; border-radius: 12px; padding: 1.5rem 1.6rem; margin-bottom: 1.2rem; border: 1px solid rgba(0,0,0,0.07); }
+        .dado-icone { display: inline-block; background: #0369BF; color: #fff; border-radius: 6px; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.6rem; }
+        .dado-card h4 { font-size: 1rem; font-weight: 700; color: #0d0e12; margin: 0 0 0.5rem; }
+        .dado-card p { font-size: 0.88rem; color: #555; margin: 0; line-height: 1.6; }
+
+        .rede-tabela { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.88rem; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); }
+        .rede-tabela th { background: #0d0e12; color: #fff; padding: 0.9rem 1.1rem; text-align: left; font-size: 0.85rem; font-weight: 600; }
+        .rede-tabela td { padding: 0.85rem 1.1rem; border-bottom: 1px solid rgba(0,0,0,0.06); color: #444; line-height: 1.5; vertical-align: top; }
+        .rede-tabela tr:last-child td { border-bottom: none; }
+        .rede-tabela tr:nth-child(even) td { background: #f8fafc; }
+        .rede-percent { font-weight: 700; color: #0369BF; }
+
+        .metodo-comparacao { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 2rem 0; }
+        .metodo-antigo, .metodo-novo { border-radius: 12px; padding: 1.5rem 1.6rem; }
+        .metodo-antigo { background: #fef2f2; border: 1px solid #fecaca; }
+        .metodo-novo { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .metodo-antigo h4 { color: #991b1b; font-size: 0.95rem; margin: 0 0 0.8rem; }
+        .metodo-novo h4 { color: #15803d; font-size: 0.95rem; margin: 0 0 0.8rem; }
+        .metodo-antigo ul, .metodo-novo ul { margin: 0; padding-left: 1.2rem; }
+        .metodo-antigo li, .metodo-novo li { font-size: 0.85rem; color: #444; margin-bottom: 0.55rem; line-height: 1.5; }
+
+        .vantagem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0; }
+        .vantagem-card { background: #f8fafc; border-radius: 12px; padding: 1.4rem 1.5rem; border: 1px solid rgba(0,0,0,0.07); }
+        .vantagem-card h4 { font-size: 0.95rem; font-weight: 700; color: #0369BF; margin: 0 0 0.5rem; font-family: 'Space Grotesk', sans-serif; }
+        .vantagem-card p { font-size: 0.87rem; color: #555; margin: 0; line-height: 1.6; }
+
+        .estrategia-card { background: #f8fafc; border-radius: 12px; padding: 1.5rem 1.6rem; margin-bottom: 1.2rem; border: 1px solid rgba(0,0,0,0.07); }
+        .estrategia-numero { display: inline-block; background: #0369BF; color: #fff; border-radius: 6px; padding: 0.2rem 0.6rem; font-size: 0.75rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.6rem; }
+        .estrategia-card h4 { font-size: 1rem; font-weight: 700; color: #0d0e12; margin: 0 0 0.5rem; }
+        .estrategia-card p { font-size: 0.88rem; color: #555; margin: 0; line-height: 1.6; }
+
+        @media (max-width: 768px) {
+            .stats-row { grid-template-columns: 1fr; }
+            .metodo-comparacao { grid-template-columns: 1fr; }
+            .vantagem-grid { grid-template-columns: 1fr; }
+            .resumo-artigo { padding: 1.5rem; }
+            .destaque-principal { padding: 1.5rem; }
+            .rede-tabela { font-size: 0.8rem; }
+            .rede-tabela th, .rede-tabela td { padding: 0.7rem 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../logo_imagotipo_horizontal_cortada.png" alt="Imovision Digital" class="logo-img">
+                    </a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#solucao">Solução</a></li>
+                    <li><a href="../index.html#beneficios">Benefícios</a></li>
+                    <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                    <li><a href="../index.html#resultados">Resultados</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#contato" class="btn-nav-cta">Agendar Demonstração</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Artigo -->
+    <main class="artigo-main">
+        <div class="container">
+            <nav class="artigo-breadcrumb">
+                <a href="../index.html">Início</a>
+                <span>/</span>
+                <a href="../blog.html">Blog</a>
+                <span>/</span>
+                <span>Redes Sociais para Consultores Imobiliários</span>
+            </nav>
+
+            <article class="artigo-conteudo">
+                <header class="artigo-header">
+                    <div class="blog-card-categoria">Redes Sociais & Marketing</div>
+
+                    <h1 class="artigo-titulo">Redes Sociais para Consultores Imobiliários: o Que Realmente Funciona em Portugal em 2026</h1>
+
+                    <div class="artigo-meta">
+                        <span class="artigo-autor">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Equipa Imovision Digital
+                        </span>
+                        <span class="artigo-data">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            6 de Julho de 2026
+                        </span>
+                        <span class="artigo-tempo">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            10 min de leitura
+                        </span>
+                    </div>
+
+                    <p class="artigo-resumo">73% dos portugueses já estão nas redes sociais e o TikTok ultrapassou todas as outras plataformas em tempo de ecrã. Mas publicar mais não é o mesmo que gerar leads. Este artigo mostra, com dados de 2026, qual rede social realmente converte para um consultor imobiliário — e como escolher a tua sem te dispersares por todas.</p>
+                </header>
+
+                <div class="artigo-corpo">
+
+                    <div class="resumo-artigo">
+                        <h3>O que vais encontrar neste artigo</h3>
+                        <ul>
+                            <li><strong>O panorama real das redes sociais em Portugal em 2026</strong> — quantos portugueses estão lá, quanto tempo passam e onde está a atenção</li>
+                            <li><strong>Facebook, Instagram, TikTok ou YouTube:</strong> uma comparação directa de qual rede gera mais leads e de que qualidade</li>
+                            <li><strong>O que está a mudar no algoritmo do Instagram</strong> em 2026 — e o que isso significa para o teu alcance orgânico</li>
+                            <li><strong>A mudança de conteúdo</strong> que está a funcionar em Portugal: de montras de imóveis para histórias na primeira pessoa</li>
+                            <li><strong>Um plano de 4 semanas</strong> para escolher a tua rede principal e começar a publicar com intenção, não por obrigação</li>
+                        </ul>
+                    </div>
+
+                    <p>Publicas há meses. Fotografias de imóveis, alguma partilha de anúncios, talvez um vídeo de vez em quando. E, no entanto, os leads continuam a vir sobretudo dos portais e das referências — não das redes sociais onde investes tempo todas as semanas.</p>
+
+                    <p>Não estás sozinho. A maioria dos consultores imobiliários em Portugal está presente nas redes sociais, mas poucos têm uma estratégia real por trás das publicações. O resultado é previsível: tempo investido, sem retorno mensurável, e a sensação de que "as redes sociais não funcionam para o imobiliário" — quando, na verdade, o problema não é a rede, é a forma como está a ser usada.</p>
+
+                    <p>Em 2026, os dados já não deixam margem para dúvida. Há redes que geram mais leads do que outras, há tipos de conteúdo que convertem muito mais do que outros, e há uma mudança de fundo na forma como os portugueses consomem e confiam em conteúdo digital. Este artigo organiza esses dados para que decidas, com informação e não com intuição, onde investir o teu tempo.</p>
+
+                    <hr class="separador-artigo">
+
+                    <h2>O Panorama das Redes Sociais em Portugal em 2026</h2>
+
+                    <p>Antes de decidir onde investir, vale a pena perceber a dimensão real da audiência disponível. O relatório Digital 2026 Portugal, da We Are Social em parceria com a Meltwater, traça um retrato claro de como os portugueses usam as redes sociais este ano — e a escala é maior do que a maioria dos consultores imagina.</p>
+
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-valor">73%</span>
+                            <span class="stat-descricao">dos portugueses usam redes sociais — mais de 7,5 milhões de pessoas, com 8 em cada 10 utilizadores de internet a aceder-lhes semanalmente</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">2h+</span>
+                            <span class="stat-descricao">é o tempo médio diário que os portugueses passam em redes sociais e plataformas de vídeo — mais de duas horas, todos os dias</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-valor">1h23</span>
+                            <span class="stat-descricao">por dia é o tempo médio no TikTok — a rede onde os portugueses passam mais tempo, à frente de qualquer outra plataforma</span>
+                        </div>
+                    </div>
+
+                    <p>Há ainda outro dado que muda a forma como deves pensar o teu conteúdo: 95,9% dos utilizadores de internet em Portugal acedem através do telemóvel. Isto significa que o teu público-alvo não está a ver os teus conteúdos num ecrã grande, com tempo e atenção dedicados — está a fazer scroll rápido, entre tarefas, num ecrã pequeno. Se o teu conteúdo não capta atenção nos primeiros dois segundos, perde-se no meio de centenas de outros vídeos e fotografias.</p>
+
+                    <h2>Facebook, Instagram ou TikTok? O Que os Dados Dizem Sobre Geração de Leads</h2>
+
+                    <p>A pergunta que a maioria dos consultores faz é "em que rede social devo estar?" — mas a pergunta certa é "que rede gera o tipo de lead que preciso, com o esforço que tenho disponível?". Os dados do sector imobiliário mostram diferenças claras entre plataformas, tanto em volume como em qualidade de leads.</p>
+
+                    <table class="rede-tabela">
+                        <thead>
+                            <tr>
+                                <th>Rede social</th>
+                                <th>Uso entre agentes para leads</th>
+                                <th>Tipo de lead que gera</th>
+                                <th>Melhor para</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Facebook</strong></td>
+                                <td class="rede-percent">89%</td>
+                                <td>Volume, público mais alargado e mais velho, forte em anúncios pagos e grupos locais</td>
+                                <td>Alcance geral e retargeting pago</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Instagram</strong></td>
+                                <td class="rede-percent">65%</td>
+                                <td>Leads que já te estão a "vetar" antes de contactar — investigam o teu perfil antes de decidir</td>
+                                <td>Construir credibilidade e autoridade</td>
+                            </tr>
+                            <tr>
+                                <td><strong>YouTube</strong></td>
+                                <td class="rede-percent">32%</td>
+                                <td>Leads mais informados, vindos de tours e vídeos explicativos longos</td>
+                                <td>SEO de vídeo e tours completos de imóveis</td>
+                            </tr>
+                            <tr>
+                                <td><strong>TikTok</strong></td>
+                                <td class="rede-percent">28%</td>
+                                <td>Descoberta orgânica — alcança pessoas que nunca ouviram falar de ti</td>
+                                <td>Alcance viral, mesmo a começar do zero</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>O dado mais relevante para quem está a decidir onde apostar é o crescimento: o uso do TikTok entre agentes imobiliários duplicou de um ano para o outro. E a razão é o algoritmo — ao contrário do Instagram ou Facebook, o TikTok distribui conteúdo com base na relevância, não no número de seguidores. Um consultor com zero seguidores pode ter um vídeo visto por milhares de pessoas na sua área, logo na primeira semana.</p>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">DADO 1</span>
+                        <h4>Vídeos geram 403% mais pedidos de informação do que anúncios sem vídeo</h4>
+                        <p>Anúncios de imóveis com vídeo recebem mais do que o quádruplo dos pedidos de informação face a anúncios apenas com fotografias. O vídeo continua a ser, isoladamente, o formato de maior impacto direto em resultados — seja um tour ao imóvel, seja um Reel sobre o bairro onde está inserido.</p>
+                    </div>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">DADO 2</span>
+                        <h4>Reels geram 67% mais interação do que publicações estáticas</h4>
+                        <p>No Instagram, os Reels superam claramente as fotografias tradicionais em envolvimento. Isto é particularmente relevante porque o Instagram já não distribui de forma igual todo o tipo de conteúdo — o vídeo curto tem prioridade visível no algoritmo de 2026.</p>
+                    </div>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">DADO 3</span>
+                        <h4>52% dos agentes dizem que os leads das redes sociais são de maior qualidade do que os dos portais</h4>
+                        <p>Enquanto apenas 26% atribui essa mesma qualidade superior aos leads vindos de portais e listagens, mais de metade dos agentes considera que os contactos vindos de redes sociais chegam mais informados, mais qualificados e mais próximos da decisão — precisamente porque já viram conteúdo suficiente para confiar antes de contactar.</p>
+                    </div>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">DADO 4</span>
+                        <h4>Contas que só repetem conteúdo perdem até 50% do alcance orgânico</h4>
+                        <p>O algoritmo do Instagram em 2026 identifica activamente publicações repetidas, capturas de ecrã e conteúdo reaproveitado de outras plataformas sem alterações — e penaliza o alcance dessas contas. Conteúdo original, criado especificamente para a plataforma, recebe até três vezes mais distribuição do que conteúdo reciclado.</p>
+                    </div>
+
+                    <div class="destaque-principal">
+                        <p><strong>A pergunta certa não é "Instagram ou TikTok?" — é "o que quero desta rede?".</strong> O Instagram constrói credibilidade: é onde um comprador ou vendedor vai confirmar que és credível antes de te contactar. O TikTok constrói alcance: é onde alguém que nunca ouviu falar de ti te descobre pela primeira vez. As duas coisas, em conjunto, formam um funil completo — mas quase nenhum consultor consegue fazer as duas bem ao mesmo tempo desde o início.</p>
+                    </div>
+
+                    <div class="cta-inline">
+                        <h3>Transforma Cada Lead das Redes Sociais em Resposta Imediata</h3>
+                        <p>De que serve gerar leads nas redes sociais se depois demoras horas a responder? Vê como automatizar a primeira resposta a qualquer contacto, seja de que rede for.</p>
+                        <a href="../index.html#contato">Agenda uma Demonstração Gratuita &rarr;</a>
+                    </div>
+
+                    <h2>O Que Está Realmente a Funcionar em Portugal: Histórias na Primeira Pessoa</h2>
+
+                    <p>Um artigo publicado pelo idealista/news no início de Julho de 2026, com base em testemunhos partilhados na convenção anual da APEMIP, resume bem a mudança de fundo que está a acontecer no mercado português: os consultores que se destacam não são os que publicam mais imóveis — são os que contam histórias na primeira pessoa. Explicações sobre fiscalidade, tendências de crédito habitação, bastidores do dia a dia, o processo real de uma venda do início ao fim.</p>
+
+                    <p>Esta mudança faz sentido à luz dos dados de comportamento: um público que faz scroll rápido no telemóvel não pára para ver mais uma fotografia de sala de estar com luz natural. Pára para ver uma pessoa a explicar, em trinta segundos, porque é que a Euribor influencia a tua prestação — ou o que realmente acontece numa escritura, contado por quem já fez dezenas.</p>
+
+                    <div class="metodo-comparacao">
+                        <div class="metodo-antigo">
+                            <h4>Conteúdo tradicional — o que já não gera alcance</h4>
+                            <ul>
+                                <li>Fotografias de imóveis sem contexto nem história</li>
+                                <li>Legendas cheias de hashtags genéricas sem palavras-chave reais</li>
+                                <li>Repostar o mesmo conteúdo do portal em todas as redes, sem adaptar</li>
+                                <li>Publicar apenas quando há um imóvel novo para mostrar</li>
+                                <li>Foco exclusivo na venda, sem construir confiança antes</li>
+                            </ul>
+                        </div>
+                        <div class="metodo-novo">
+                            <h4>Conteúdo que funciona em 2026 — construir antes de vender</h4>
+                            <ul>
+                                <li>Histórias na primeira pessoa sobre processos, bastidores e decisões reais</li>
+                                <li>Legendas com frases-chave completas que respondem a perguntas reais dos clientes</li>
+                                <li>Conteúdo original, adaptado a cada plataforma e ao seu formato específico</li>
+                                <li>Calendário regular, mesmo sem imóvel novo — educação, mercado, tendências</li>
+                                <li>Construção de autoridade e confiança antes de qualquer intenção de venda</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>Este é o ponto central: as redes sociais deixaram de ser uma montra de imóveis para se tornarem um canal de educação, prova social e construção de autoridade. O objetivo já não é mostrar casas — é mostrar que és a pessoa certa para tratar da venda ou compra de uma casa, muito antes de o cliente estar pronto para agir.</p>
+
+                    <h2>Como Escolher a Tua Rede Principal (Sem Tentares Estar em Todas)</h2>
+
+                    <p>O erro mais comum é tentar manter presença activa em quatro ou cinco redes ao mesmo tempo — o que normalmente resulta em conteúdo fraco em todas, porque o tempo disponível se dilui. A alternativa mais eficaz é escolher uma rede principal, dominá-la, e só depois expandir.</p>
+
+                    <div class="vantagem-grid">
+                        <div class="vantagem-card">
+                            <h4>Instagram — se o teu objetivo é credibilidade</h4>
+                            <p>Ideal para consultores com uma carteira já estabelecida que querem que quem já os conhece, ou já ouviu falar deles, confirme a sua competência antes de contactar. Exige consistência visual e conteúdo original — carrosséis e Reels, não apenas fotografias soltas.</p>
+                        </div>
+                        <div class="vantagem-card">
+                            <h4>TikTok — se o teu objetivo é alcance desde zero</h4>
+                            <p>Ideal para consultores que estão a começar ou que querem crescer rapidamente numa nova zona geográfica. O algoritmo não depende de seguidores — depende de relevância. Um vídeo bom pode alcançar milhares de pessoas mesmo com uma conta recente.</p>
+                        </div>
+                        <div class="vantagem-card">
+                            <h4>Facebook — se o teu público é mais velho ou local</h4>
+                            <p>Continua a ser a rede com maior utilização entre agentes para geração de leads, sobretudo através de grupos locais e anúncios pagos segmentados por zona. É particularmente forte para públicos acima dos 45 anos, ainda muito presentes na compra e venda de imóveis em Portugal.</p>
+                        </div>
+                        <div class="vantagem-card">
+                            <h4>LinkedIn — se trabalhas com investidores ou imóvel comercial</h4>
+                            <p>Menos relevante para o consumidor final, mas com peso crescente para consultores especializados em investimento imobiliário, imóvel comercial ou clientes internacionais que pesquisam antes de investir em Portugal.</p>
+                        </div>
+                    </div>
+
+                    <div class="citacao-box">
+                        <p>"Passei dois anos a tentar publicar em quatro redes ao mesmo tempo e sentia que nenhuma delas dava resultado. Decidi escolher só o Instagram e comprometi-me a publicar três vezes por semana, sempre com uma história real por trás — um cliente, uma dúvida que respondi, um erro que vi outro consultor cometer. Em quatro meses, comecei a ter mensagens de pessoas que diziam 'sigo-te há semanas, queria falar sobre a minha casa'. Isso nunca me tinha acontecido com posts de imóveis."</p>
+                        <span>— Consultora imobiliária, agência em Braga</span>
+                    </div>
+
+                    <h2>O Novo Algoritmo do Instagram em 2026 (E o Que Muda Para Ti)</h2>
+
+                    <p>Se escolheste o Instagram como rede principal, há mudanças recentes no algoritmo que alteram directamente o que deves publicar e como deves escrever as legendas.</p>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">MUDANÇA 1</span>
+                        <h4>Palavras-chave nas legendas substituem as hashtags</h4>
+                        <p>Em 2026, o Instagram funciona cada vez mais como um motor de pesquisa. Legendas com frases-chave completas — "apartamento T2 para arrendar em Cedofeita", em vez de apenas #imobiliario #Porto — têm mais peso na descoberta de conteúdo do que uma lista de hashtags genéricas.</p>
+                    </div>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">MUDANÇA 2</span>
+                        <h4>Reels alcançam 3x mais contas do que publicações no feed</h4>
+                        <p>Em média, um Reel alcança cerca de 6.500 contas contra 2.150 de uma publicação estática — e 55% dessas visualizações vêm de pessoas que ainda não seguem o perfil. É a principal ferramenta de descoberta da plataforma atualmente.</p>
+                    </div>
+
+                    <div class="dado-card">
+                        <span class="dado-icone">MUDANÇA 3</span>
+                        <h4>Carrosséis geram mais envolvimento e mais partilhas privadas</h4>
+                        <p>Apesar de os Reels alcançarem mais contas novas, os carrosséis (publicações com várias imagens) geram 3,1 vezes mais interação e são duas vezes mais guardados. E os envios por mensagem privada (partilhar um post com alguém) pesam de 3 a 5 vezes mais no algoritmo do que um simples gosto — o que faz de um bom carrossel sobre "o que perguntar antes de comprar casa" um formato com potencial de alcance indirecto elevado.</p>
+                    </div>
+
+                    <h2>Plano de Ação: Como Começar Esta Semana</h2>
+
+                    <p>Não precisas de dominar todas as redes nem de publicar todos os dias desde o primeiro momento. Este plano de quatro semanas foi pensado para consultores que querem sair da publicação aleatória e passar a ter uma estratégia com intenção.</p>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">SEMANA 1 — Escolher</span>
+                        <h4>Define a tua rede principal com base no teu público real</h4>
+                        <p>Olha para a tua carteira actual de clientes: são mais jovens ou mais velhos? Procuram-te localmente ou vêm de fora do país? Usa a secção anterior deste artigo para escolher uma rede principal — não quatro. É melhor publicar bem numa rede do que mal em várias.</p>
+                    </div>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">SEMANA 2 — Planear</span>
+                        <h4>Cria um calendário simples com 3 tipos de conteúdo</h4>
+                        <p>Define três categorias que consigas alimentar com regularidade: educação (fiscalidade, crédito, processo de venda), bastidores (o teu dia a dia real, sem filtros) e prova social (testemunhos, casos reais, antes e depois de negociações). Distribui estas categorias ao longo da semana em vez de publicares apenas quando tens um imóvel novo.</p>
+                    </div>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">SEMANA 3 — Publicar</span>
+                        <h4>Publica com consistência mínima e legendas com palavras-chave reais</h4>
+                        <p>Define uma cadência realista — por exemplo, três publicações por semana — e mantém-na durante pelo menos um mês antes de avaliar resultados. Escreve as legendas a pensar nas perguntas reais que os teus clientes fazem, não em hashtags genéricas.</p>
+                    </div>
+
+                    <div class="estrategia-card">
+                        <span class="estrategia-numero">SEMANA 4 — Medir e Ajustar</span>
+                        <h4>Analisa o que gerou mais alcance e mais mensagens diretas</h4>
+                        <p>No final do primeiro mês, olha para os números: que publicações tiveram mais alcance a não-seguidores? Quais geraram mensagens diretas ou perguntas nos comentários? Este é o sinal mais forte de que o conteúdo está a aproximar-te de um lead real. Duplica o que funcionou e abandona rapidamente o que não gerou qualquer reação.</p>
+                    </div>
+
+                    <div class="destaque-principal">
+                        <p><strong>A conta final:</strong> se três publicações consistentes por semana, ao longo de um mês, gerarem apenas duas conversas privadas que se transformam num único cliente — com uma comissão média de milhares de euros — o tempo investido nas redes sociais paga-se várias vezes. A diferença entre "as redes sociais não funcionam" e "as redes sociais são a minha principal fonte de leads" raramente está na rede escolhida. Está na consistência e na intenção por trás de cada publicação.</p>
+                    </div>
+
+                    <h2>Em Resumo</h2>
+
+                    <p>Os dados de 2026 são claros: 73% dos portugueses estão nas redes sociais, o TikTok já lidera o tempo de ecrã, e o Instagram mudou as regras do jogo ao valorizar palavras-chave e conteúdo original acima de hashtags e repostagens. Mas a tecnologia e os algoritmos são apenas metade da equação.</p>
+
+                    <p>A outra metade — e a que realmente separa os consultores que geram leads reais dos que apenas mantêm uma presença digital — é o tipo de conteúdo. Histórias na primeira pessoa, educação genuína e bastidores autênticos estão a substituir a montra tradicional de imóveis como a fórmula que gera confiança antes da venda. Escolhe uma rede, mantém a consistência, e mede o que realmente importa: quantas conversas privadas e reais essa presença está a gerar.</p>
+
+                    <div class="cta-inline">
+                        <h3>Concentra-te no Conteúdo — Deixa a Resposta aos Leads Connosco</h3>
+                        <p>Enquanto constróis a tua presença nas redes sociais, garante que nenhum lead fica sem resposta. Experimenta a plataforma que responde, qualifica e faz follow-up automaticamente, 24 horas por dia.</p>
+                        <a href="../index.html#contato">Começa Hoje, Grátis &rarr;</a>
+                    </div>
+
+                </div>
+
+                <footer class="artigo-footer">
+                    <a href="../blog.html" class="btn btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Voltar ao Blog
+                    </a>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Pronto para Transformar a sua Imobiliária?</h2>
+                <p>Agende uma demonstração gratuita e veja como a Imovision Digital pode revolucionar os seus resultados.</p>
+                <a href="../index.html#contato" class="btn btn-primary btn-large">Agendar Demonstração Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../logo_imagotipo_branco_c_azul.png" alt="Imovision Digital" class="logo-img">
+                    </div>
+                    <p class="footer-tagline">A Evolução Digital do mercado Imobiliário</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#solucao">Solução</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#como-funciona">Como Funciona</a></li>
+                        <li><a href="../index.html#resultados">Resultados</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:geral@imovisiondigital.pt">geral@imovisiondigital.pt</a></li>
+                        <li>Telefone: <a href="tel:+351912638344">+351 912 638 344</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Imovision Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
